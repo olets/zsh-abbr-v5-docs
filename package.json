@@ -1,0 +1,11 @@
+{
+  "name": "zsh-abbr-docs",
+  "version": "1.0.0",
+  "description": "Documentation for zsh-abbr",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Henry Bley-Vroman <olets@olets.dev>",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": "https://github.com/olets/zsh-abbr-docs"
+}
