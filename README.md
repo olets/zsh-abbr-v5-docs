@@ -7,8 +7,7 @@
 
 ## Requirements
 
-Node
-
+- [asdf](https://asdf-vm.com/) and its Node.js plugin
 
 ## Contributing
 
