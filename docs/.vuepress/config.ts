@@ -29,7 +29,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     [
       '@vuepress/plugin-shiki',
       {
-        theme: 'nord',
+        // only github-dark and slack-dark pass color accessibility
+        theme: 'github-dark',
       },
     ],
   ]
