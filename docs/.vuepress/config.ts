@@ -5,12 +5,14 @@ import { sidebar } from './configs/sidebar'
 
 export default defineUserConfig<DefaultThemeOptions>({
   // site config
+  // https://v2.vuepress.vuejs.org/guide/configuration.html#site-config
   lang: 'en-US',
   title: 'zsh-abbr Documentation',
   description: 'Documentation for zsh-abbr',
 
   // theme and its config
   theme: '@vuepress/theme-default',
+  // https://v2.vuepress.vuejs.org/reference/default-theme/config.html
   themeConfig: {
     logo: '/images/zsh-abbr.png',
     repo: 'olets/zsh-abbr',
@@ -19,7 +21,10 @@ export default defineUserConfig<DefaultThemeOptions>({
     navbar: navbar,
     sidebar: sidebar,
   },
+
+  // plugins
   plugins: [
+    // https://v2.vuepress.vuejs.org/reference/plugin/shiki.html
     [
       '@vuepress/plugin-shiki',
       {
