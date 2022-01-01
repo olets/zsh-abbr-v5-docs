@@ -7,4 +7,20 @@ export const navbar: NavbarConfig = [
     text: 'Guide',
     link: '/guide/',
   },
+  {
+    text: 'Changelog',
+    link: 'https://github.com/olets/zsh-abbr/blob/main/CHANGELOG.md',
+  },
+  {
+    text: 'Roadmap',
+    link: 'https://github.com/olets/zsh-abbr/blob/main/ROADMAP.md',
+  },
+  {
+    text: 'Contributing',
+    link: 'https://github.com/olets/zsh-abbr/blob/main/CONTRIBUTING.md',
+  },
+  {
+    text: 'License',
+    link: 'https://github.com/olets/zsh-abbr/blob/main/LICENSE',
+  },
 ]

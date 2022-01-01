@@ -17,10 +17,6 @@ export const sidebar: SidebarConfig = {
         '/advanced.md',
         '/performance.md',
         '/uninstalling.md',
-        '/changelog.md',
-        '/roadmap.md',
-        '/contributing.md',
-        '/license.md',
       ]
     }
   ]
