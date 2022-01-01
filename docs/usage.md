@@ -10,7 +10,7 @@ sidebarDepth: 2
 
 # Usage
 
-```shell
+```shell:no-line-numbers
 abbr [<SCOPE>] [<TYPE>] <COMMAND> [<ARGS>]
 ```
 
@@ -42,7 +42,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `add`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr [(add | -a)] [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [--force] ABBREVIATION=EXPANSION
   ```
 
@@ -52,7 +52,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   To add a global abbreviation, use the **--global** flag. Otherwise the new abbreviation will be a command abbreviation.
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr add gcm='git checkout main'
   % gcm[Space] # expands as git checkout main
   % gcm[Enter] # expands and accepts git checkout main
@@ -60,7 +60,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   `add` is the default command, and does not need to be explicit:
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr gco='git checkout'
   % gco[Space] # expands as git checkout
   % gco[Enter] # expands and accepts git checkout
@@ -68,7 +68,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   The ABBREVIATION may be more than one word long.
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr "git cp"="git cherry-pick"
   % git cp[Space] # expands as git cherry-pick
   % abbr g=git
@@ -77,7 +77,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   As with aliases, to include whitespace, quotation marks, or other special characters like `;`, `|`, or `&` in the EXPANSION, quote the EXPANSION or `\`-escape the characters as necessary.
 
-  ```shell
+  ```shell:no-line-numbers
   abbr a=b\;c  # allowed
   abbr a="b|c" # allowed
   ```
@@ -94,7 +94,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `clear-session`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr (clear-session | c)
   ```
 
@@ -102,7 +102,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `erase`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr (erase | e) [<SCOPE>] [<TYPE>] [--dry-run] [--quiet] ABBREVIATION
   ```
 
@@ -112,7 +112,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Use the **--global** flag to erase a session abbreviation. Otherwise a cross-session abbreviation will be erased.
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr gcm="git checkout main"
   % gcm[Enter] # expands and accepts git checkout main
   Switched to branch 'main'
@@ -124,13 +124,13 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `expand`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr (expand | x) ABBREVIATION
   ```
 
   Output the ABBREVIATION's EXPANSION.
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr gc="git checkout"
   % abbr -x gc; # or `abbr -x gc[Ctrl-Space][Enter]`
   git checkout
@@ -138,7 +138,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `export-aliases`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr export-aliases [<SCOPE>] [<TYPE>]
   ```
 
@@ -150,7 +150,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Combine a scope flag and a type flag to further limit the output.
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr gcm="git checkout main"
   % abbr -S g=git
   % abbr export-aliases
@@ -161,13 +161,13 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `import-aliases`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr import-aliases [<type>] [--dry-run] [--quiet]
   ```
 
   Add regular abbreviations for every regular alias in the session, and global abbreviations for every global alias in the session.
 
-  ```shell
+  ```shell:no-line-numbers
   % cat ~/.zshrc
   # --snip--
   alias -S d='bin/deploy'
@@ -183,7 +183,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `import-fish`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr import-fish [<SCOPE>] FILE [--dry-run] [--quiet]
   ```
 
@@ -191,13 +191,13 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   In fish:
 
-  ```shell
+  ```shell:no-line-numbers
   abbr -s > file/to/save/fish/abbreviations/to
   ```
 
   Then in zsh:
 
-  ```shell
+  ```shell:no-line-numbers
   abbr import-fish file/to/save/fish/abbreviations/to
   # file is no longer needed, so feel free to
   # rm file/to/save/fish/abbreviations/to
@@ -209,7 +209,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `import-git-aliases`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr import-git-aliases [<SCOPE>] [<TYPE>] [--dry-run] [--quiet] [--file <config-file>] [--prefix <ABBREVIATION prefix>]
   ```
 
@@ -220,7 +220,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   Use `--prefix <prefix>` to add a prefix to the ABBREVIATION.
 
   > Tip: add the abbreviation `g=git` and then prefix Git abbreviations with `git `
-  > ```shell
+  > ```shell:no-line-numbers
   > % abbr g=git
   > % abbr import-git-aliases -g --prefix "git "
   > Added the regular user abbreviation `co` # for example
@@ -228,7 +228,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   > ```
 
   > The zsh-abbr v4 `import-git-aliases` behavior can be recreated with
-  > ```shell
+  > ```shell:no-line-numbers
   > abbr import-git-aliases
   > abbr import-git-aliases -g --prefix g
   > ```
@@ -245,13 +245,13 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `list`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr [list] [<SCOPE>] [<TYPE>]
   ```
 
   List the abbreviations with their expansions, like zsh's `alias`. Regular abbreviations follow global abbreviations. Session abbreviations follow user abbreviations.
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr a=apple
   % abbr -g b=ball
   % abbr -S c=cat
@@ -269,7 +269,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   `list` is the default when no additional arguments are passed; it does not need to be made explicit:
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr a=apple
   % abbr
   a="apple"
@@ -277,13 +277,13 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `list-abbreviations`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr (list-abbreviations | l) [<SCOPE>] [<TYPE>]
   ```
 
   List the abbreviations only, like fish's `abbr -l`. Regular abbreviations follow global abbreviations. Session abbreviations follow user abbreviations.
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr a=apple
   % abbr -g b=ball
   % abbr -S c=cat
@@ -301,13 +301,13 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `list-commands`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr (list-commands | L) [<SCOPE>] [<TYPE>]
   ```
 
   List as commands suitable for export, like zsh's `alias -L`. Regular abbreviations follow global abbreviations. Session abbreviations follow user abbreviations.
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr a=apple
   % abbr -g b=ball
   % abbr -S c=cat
@@ -325,7 +325,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 ### `rename`
 
-  ```shell
+  ```shell:no-line-numbers
   abbr (rename | R) [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] OLD NEW
   ```
 
@@ -337,7 +337,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Rename is scope- and type-specific. If you get a "no matching abbreviation" error, make sure you added the right flags (list abbreviations if you are not sure).
 
-  ```shell
+  ```shell:no-line-numbers
   % abbr add gcm git checkout main
   % gcm[Space] # expands to git checkout main
   % gm[Space] # no expansion

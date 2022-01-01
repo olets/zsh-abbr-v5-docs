@@ -11,19 +11,19 @@ next:
 
 Delete the session data storage directory
 
-```shell
+```shell:no-line-numbers
 % rm -rf $ABBR_TMPDIR
 ```
 
 If you want to delete the user abbreviations file,
 
-```shell
+```shell:no-line-numbers
 % rm $ABBR_USER_ABBREVIATIONS_FILE
 ```
 
 If you haven't customized `$ABBR_USER_ABBREVIATIONS_FILE`, you will probably want to delete its parent directory
 
-```shell
+```shell:no-line-numbers
 # see if there's anything in there
 % ls $ABBR_USER_ABBREVIATIONS_FILE:h
 # IF you want to delete it

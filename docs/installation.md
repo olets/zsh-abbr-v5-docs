@@ -25,7 +25,7 @@ You can install zsh-abbr with a zsh plugin manager. Each has their own way of do
 
 After adding the plugin to the manager, restart zsh:
 
-```shell
+```shell:no-line-numbers
 exec zsh
 ```
 
@@ -33,6 +33,6 @@ exec zsh
 
 Clone this repo and add `source path/to/zsh-abbr.zsh` to your `.zshrc`. Then restart zsh:
 
-```shell
+```shell:no-line-numbers
 exec zsh
 ```

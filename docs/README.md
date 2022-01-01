@@ -16,7 +16,7 @@ Run `abbr help` for documentation; if the package is installed with Homebrew, `m
 
 ## Crash Course
 
-```shell
+```shell:no-line-numbers:no-line-numbers
 # Add and use an abbreviation
 % abbr gc="git checkout"
 % gc[Space] # space expands this to `git checkout `
