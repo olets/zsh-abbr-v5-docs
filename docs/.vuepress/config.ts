@@ -14,4 +14,12 @@ export default defineUserConfig<DefaultThemeOptions>({
     docsDir: 'docs',
     docsRepo: 'olets/zsh-abbr-docs',
   },
+  plugins: [
+    [
+      '@vuepress/plugin-shiki',
+      {
+        theme: 'nord',
+      },
+    ],
+  ]
 })
