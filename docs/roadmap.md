@@ -7,6 +7,6 @@ next:
   link: /contributing/
 ---
 
-## Roadmap
+# Roadmap
 
 See the [ROADMAP](ROADMAP.md) file.

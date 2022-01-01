@@ -7,9 +7,9 @@ next:
   link: /performance/
 ---
 
-## Advanced
+# Advanced
 
-### Configuration variables
+## Configuration variables
 
 In addition to the following, setting `NO_COLOR` (regardless of its value) will disable color output. See https://no-color.org/.
 
@@ -30,7 +30,7 @@ Variable | Type | Use | Default
 
 \** If changing this, you may want to delete the default file.
 
-### Exported variables
+## Exported variables
 
 In addition to exporting the configuration variables above, zsh-abbr creates the following variables:
 
@@ -47,7 +47,7 @@ Variable | Type | Value
 
 Each element in `ABBR_GLOBAL_SESSION_ABBREVIATIONS`, `ABBR_GLOBAL_USER_ABBREVIATIONS`, `ABBR_REGULAR_SESSION_ABBREVIATIONS`, and `ABBR_REGULAR_USER_ABBREVIATIONS` has the form `ABBREVIATION=EXPANSION`.The expansion value is quoted. Scripters will probably want to remove one level of quotes, using the [Q modifier](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Modifiers) (e.g. `for v in ${(Qv)ABBR_REGULAR_USER_ABBREVIATIONS}...`).
 
-### Storage and manual editing
+## Storage and manual editing
 
 User abbreviations live in a plain text file which you can edit directly, share, keep in version control, etc. Abbreviations in this file are loaded when each new session is opened; non-`abbr` commands will be ignored and then excised from the file.
 
@@ -57,7 +57,7 @@ Every time an `abbr` command is run, the session's updates its user abbreviatons
 
 To refresh the user abbreviations from the user abbreviation, run `abbr load` (or any other `abbr` command).
 
-### Bindings
+## Bindings
 
 By default
 
@@ -97,7 +97,7 @@ bindkey "^ " abbr-expand-and-space
 # -- snip --
 ```
 
-### Highlighting
+## Highlighting
 
 [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting) users see [#24](https://github.com/olets/zsh-abbr/issues/24).
 
@@ -119,7 +119,7 @@ ZSH_HIGHLIGHT_REGEXP=('^[[:blank:][:space:]]*('"${(j:|:)${(k)ABBR_REGULAR_USER_A
 ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('"${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}"')$' <styles for global abbreviations>)
 ```
 
-### vi mode compatibility
+## vi mode compatibility
 
 Switching to vi mode —with plain old `bindkey -v` or with plugin vi/Vim mode plugin that calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. For example, the simplest `.zshrc` for a zinit user would be
 
@@ -128,7 +128,7 @@ bindkey -v
 zinit light olets/zsh-abbr
 ```
 
-### macOS System Text Substitutions
+## macOS System Text Substitutions
 
 The following snippet will make your global macOS text substitutions available in the shell.
 

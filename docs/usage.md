@@ -7,7 +7,7 @@ next:
   link: /advanced/
 ---
 
-## Usage
+# Usage
 
 ```shell
 abbr [<SCOPE>] [<TYPE>] <COMMAND> [<ARGS>]
@@ -19,7 +19,7 @@ Commands which have output can be passed `--quiet`.
 
 `<COMMAND> [<ARGS>]` must be last.
 
-### Scopes
+## Scopes
 
 A given abbreviation can be limited to the current zsh session (i.e. the current terminal) —these are called *session* abbreviations— or to all terminals —these are called *user* abbreviations. Select commands take **scope** as an argument.
 
@@ -27,13 +27,13 @@ Newly added user abbreviations are available to all open sessions immediately.
 
 Default is user.
 
-### Types
+## Types
 
 Regular abbreviations match the word at the start of the command line, and global abbreviations match any word on the line. Select commands take **type** as an argument.
 
 Default is regular.
 
-### Commands
+## Commands
 
 zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviations for every alias or Git alias; to list the available abbreviations with or without their expansions; and to create aliases from abbreviations.
 

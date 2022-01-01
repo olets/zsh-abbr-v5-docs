@@ -7,7 +7,7 @@ next:
   link: /license/
 ---
 
-## Contributing
+# Contributing
 
 Thanks for your interest. Contributions are welcome!
 

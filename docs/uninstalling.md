@@ -7,7 +7,7 @@ next:
   link: /changelog/
 ---
 
-## Uninstalling
+# Uninstalling
 
 Delete the session data storage directory
 

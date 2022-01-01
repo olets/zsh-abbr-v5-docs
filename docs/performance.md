@@ -7,7 +7,7 @@ next:
   link: /uninstalling/
 ---
 
-## Performance
+# Performance
 
 zsh-abbr will not affect time between prompts. The following is the impact of zsh-abbr on time to start a new session, profiled with `zprof` and `zinit light olets/zsh-abbr`.
 
