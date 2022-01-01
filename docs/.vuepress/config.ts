@@ -61,6 +61,53 @@ export default defineUserConfig<DefaultThemeOptions>({
         content: '#ffffff',
       },
     ],
+
+    // social metas
+    [
+      "meta",
+      { property: "og:title", content: "zsh-abbr Documentation" },
+    ],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "Documentation for zsh-abbr",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:url",
+        content: "https://zsh-abbr.netlify.com/",
+      },
+    ],
+    ["meta", { property: "og:site_name", content: "zsh-abbr Documentation" }],
+    ["meta", { property: "og:type", content: "website" }],
+    [
+      "meta",
+      {
+        property: "og:image",
+        content: "https://zsh-abbr.netlify.com/images/share/zsh-abbr.png",
+      },
+    ],
+    ["meta", { property: "og:image:width", content: "1200" }],
+    ["meta", { property: "og:image:height", content: "630" }],
+    ["meta", { name: "twitter:title", content: "zsh-abbr Documentation" }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    [
+      "meta",
+      {
+        name: "twitter:description",
+        content: "Documentation for zsh-abbr",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:image",
+        content: "https://zsh-abbr.netlify.com/images/share/zsh-abbr.png",
+      },
+    ],
   ],
 
   // site config
@@ -73,10 +120,10 @@ export default defineUserConfig<DefaultThemeOptions>({
   theme: '@vuepress/theme-default',
   // https://v2.vuepress.vuejs.org/reference/default-theme/config.html
   themeConfig: {
-    logo: '/images/zsh-abbr.png',
     repo: 'olets/zsh-abbr',
     docsDir: 'docs',
     docsRepo: 'olets/zsh-abbr-docs',
+    logo: "/images/logo/zsh-abbr.png",
     navbar: navbar,
     sidebar: sidebar,
     sidebarDepth: 1,
