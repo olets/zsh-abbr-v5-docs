@@ -6,12 +6,13 @@ import { sidebar } from './configs/sidebar'
 export default defineUserConfig<DefaultThemeOptions>({
   // site config
   lang: 'en-US',
-  title: 'zsh-abbr',
-  description: 'zsh-abbr docs',
+  title: 'zsh-abbr Documentation',
+  description: 'Documentation for zsh-abbr',
 
   // theme and its config
   theme: '@vuepress/theme-default',
   themeConfig: {
+    logo: '/images/zsh-abbr.png',
     repo: 'olets/zsh-abbr',
     docsDir: 'docs',
     docsRepo: 'olets/zsh-abbr-docs',
