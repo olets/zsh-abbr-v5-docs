@@ -39,7 +39,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
 `abbr` with no arguments is shorthand for `abbr list`. `abbr ...` with arguments is shorthand for `abbr add ...`.
 
-- **`add`**
+### `add`
 
   ```shell
   abbr [(add | -a)] [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [--force] ABBREVIATION=EXPANSION
@@ -91,7 +91,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Will warn if the abbreviation would replace an existing command. To add in spite of the warning, use `--force`. To silence the warning, use `--quieter`.
 
-- **`clear-session`**
+### `clear-session`
 
   ```shell
   abbr (clear-session | c)
@@ -99,7 +99,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Erase all session abbreviations.
 
-- **`erase`**
+### `erase`
 
   ```shell
   abbr (erase | e) [<SCOPE>] [<TYPE>] [--dry-run] [--quiet] ABBREVIATION
@@ -121,7 +121,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   User abbreviations can also be manually erased from the `ABBR_USER_ABBREVIATIONS_FILE`. See **Storage** below.
 
-- **`expand`**
+### `expand`
 
   ```shell
   abbr (expand | x) ABBREVIATION
@@ -135,7 +135,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   git checkout
   ```
 
-- **`export-aliases`**
+### `export-aliases`
 
   ```shell
   abbr export-aliases [<SCOPE>] [<TYPE>]
@@ -158,7 +158,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   alias g='git'
   ```
 
-- **`import-aliases`**
+### `import-aliases`
 
   ```shell
   abbr import-aliases [<type>] [--dry-run] [--quiet]
@@ -180,7 +180,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Use `--dry-run` to see what would result, without making any actual changes.
 
-- **`import-fish`**
+### `import-fish`
 
   ```shell
   abbr import-fish [<SCOPE>] FILE [--dry-run] [--quiet]
@@ -206,7 +206,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Use `--dry-run` to see what would result, without making any actual changes.
 
-- **`import-git-aliases`**
+### `import-git-aliases`
 
   ```shell
   abbr import-git-aliases [<SCOPE>] [<TYPE>] [--dry-run] [--quiet] [--file <config-file>] [--prefix <ABBREVIATION prefix>]
@@ -242,7 +242,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Use `--dry-run` to see what would result, without making any actual changes.
 
-- **`list`**
+### `list`
 
   ```shell
   abbr [list] [<SCOPE>] [<TYPE>]
@@ -274,7 +274,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   a="apple"
   ```
 
-- **`list-abbreviations`**
+### `list-abbreviations`
 
   ```shell
   abbr (list-abbreviations | l) [<SCOPE>] [<TYPE>]
@@ -298,7 +298,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   b
   ```
 
-- **`list-commands`**
+### `list-commands`
 
   ```shell
   abbr (list-commands | L) [<SCOPE>] [<TYPE>]
@@ -322,7 +322,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   abbr -g b="ball"
   ```
 
-- **`rename`**
+### `rename`
 
   ```shell
   abbr (rename | R) [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] OLD NEW
