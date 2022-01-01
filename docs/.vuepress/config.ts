@@ -1,5 +1,6 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
+import { navbar } from './configs/navbar'
 
 export default defineUserConfig<DefaultThemeOptions>({
   // site config
@@ -13,6 +14,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     repo: 'olets/zsh-abbr',
     docsDir: 'docs',
     docsRepo: 'olets/zsh-abbr-docs',
+    navbar: navbar,
   },
   plugins: [
     [
