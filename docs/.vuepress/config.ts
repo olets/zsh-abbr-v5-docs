@@ -65,13 +65,13 @@ export default defineUserConfig<DefaultThemeOptions>({
     // social metas
     [
       "meta",
-      { property: "og:title", content: "zsh-abbr Documentation" },
+      { property: "og:title", content: "zsh-abbr" },
     ],
     [
       "meta",
       {
         property: "og:description",
-        content: "Documentation for zsh-abbr",
+        content: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
       },
     ],
     [
@@ -81,7 +81,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         content: "https://zsh-abbr.netlify.com/",
       },
     ],
-    ["meta", { property: "og:site_name", content: "zsh-abbr Documentation" }],
+    ["meta", { property: "og:site_name", content: "zsh-abbr" }],
     ["meta", { property: "og:type", content: "website" }],
     [
       "meta",
@@ -92,13 +92,13 @@ export default defineUserConfig<DefaultThemeOptions>({
     ],
     ["meta", { property: "og:image:width", content: "1200" }],
     ["meta", { property: "og:image:height", content: "630" }],
-    ["meta", { name: "twitter:title", content: "zsh-abbr Documentation" }],
+    ["meta", { name: "twitter:title", content: "zsh-abbr" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     [
       "meta",
       {
         name: "twitter:description",
-        content: "Documentation for zsh-abbr",
+        content: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
       },
     ],
     [
@@ -113,8 +113,8 @@ export default defineUserConfig<DefaultThemeOptions>({
   // site config
   // https://v2.vuepress.vuejs.org/guide/configuration.html#site-config
   lang: "en-US",
-  title: "zsh-abbr Documentation",
-  description: "Documentation for zsh-abbr",
+  title: "zsh-abbr",
+  description: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
 
   // theme and its config
   theme: "@vuepress/theme-default",
