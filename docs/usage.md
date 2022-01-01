@@ -1,3 +1,12 @@
+---
+prev:
+  text: Installation
+  link: /installation/
+next:
+  text: Advanced
+  link: /advanced/
+---
+
 ## Usage
 
 ```shell
@@ -341,4 +350,3 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   Abbreviations can also be manually renamed in the `ABBR_USER_ABBREVIATIONS_FILE`. See **Storage** below.
 
   Conflicts will error or warn. See **add** for details.
-

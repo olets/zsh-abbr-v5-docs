@@ -1,3 +1,12 @@
+---
+prev:
+  text: Performance
+  link: /performance/
+next:
+  text: Changelog
+  link: /changelog/
+---
+
 ## Uninstalling
 
 Delete the session data storage directory
@@ -22,4 +31,3 @@ If you haven't customized `$ABBR_USER_ABBREVIATIONS_FILE`, you will probably wan
 ```
 
 Then follow the standard uninstallation procedure for your installation method. This is typically the reverse of what you did to install.
-

@@ -1,3 +1,12 @@
+---
+prev:
+  text: Usage
+  link: /usage/
+next:
+  text: Performance
+  link: /performance/
+---
+
 ## Advanced
 
 ### Configuration variables
