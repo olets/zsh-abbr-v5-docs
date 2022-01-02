@@ -108,6 +108,15 @@ export default defineUserConfig<DefaultThemeOptions>({
         content: "https://zsh-abbr.netlify.com/images/share/zsh-abbr.png",
       },
     ],
+
+    [
+      "script",
+      {
+        src: "https://cdn.usefathom.com/script.js",
+        'data-site': "PSZVZLUT",
+        'defer': true,
+      }
+    ]
   ],
 
   // site config
