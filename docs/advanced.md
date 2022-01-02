@@ -15,12 +15,12 @@ In addition to the following, setting `NO_COLOR` (regardless of its value) will 
 
 Variable | Type | Use | Default
 ---|---|---|---
-`ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbrevations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
+`ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbreviations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
 `ABBR_DEBUG` | integer | If non-zero, print debugging messages | 0
 `ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (see [Bindings](#bindings)) | 1
 `ABBR_DRY_RUN` | integer | If non-zero, use dry run mode without passing `--dry-run` | 0
-`ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (see [`add`](#add)) | 0
-`ABBR_PRECMD_LOGS` | interger | If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
+`ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (see [Usage > Commands > `add`](/usage.html#add)) | 0
+`ABBR_PRECMD_LOGS` | integer | If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
 `ABBR_QUIET` | integer | If non-zero, use quiet mode without passing `--quiet` | 0
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
 `ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. _Ends in `/`_ | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` *
@@ -53,7 +53,7 @@ User abbreviations live in a plain text file which you can edit directly, share,
 
 zsh-abbr automatically keeps the user abbreviations storage file alphabetized, with all global user abbreviations before the first regular user abbreviation.
 
-Every time an `abbr` command is run, the session's updates its user abbreviatons with the latest from the user abbreviations file. This should add no appreciable time, but you prefer it can be turned off by setting `ABBR_AUTOLOAD=0`.
+Every time an `abbr` command is run, the session's updates its user abbreviations with the latest from the user abbreviations file. This should add no appreciable time, but you prefer it can be turned off by setting `ABBR_AUTOLOAD=0`.
 
 To refresh the user abbreviations from the user abbreviation, run `abbr load` (or any other `abbr` command).
 
@@ -97,7 +97,9 @@ bindkey "^ " abbr-expand-and-space
 # -- snip --
 ```
 
-## Highlighting
+## Integrations
+
+### Highlighting
 
 [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting) users see [#24](https://github.com/olets/zsh-abbr/issues/24).
 
@@ -119,7 +121,7 @@ ZSH_HIGHLIGHT_REGEXP=('^[[:blank:][:space:]]*('"${(j:|:)${(k)ABBR_REGULAR_USER_A
 ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('"${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}"')$' <styles for global abbreviations>)
 ```
 
-## vi mode compatibility
+### vi mode compatibility
 
 Switching to vi mode —with plain old `bindkey -v` or with plugin vi/Vim mode plugin that calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. For example, the simplest `.zshrc` for a zinit user would be
 
@@ -128,7 +130,7 @@ bindkey -v
 zinit light olets/zsh-abbr
 ```
 
-## macOS System Text Substitutions
+### macOS System Text Substitutions
 
 The following snippet will make your global macOS text substitutions available in the shell.
 
