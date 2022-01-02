@@ -20,19 +20,67 @@ Commands which have output can be passed `--quiet`.
 
 `<COMMAND> [<ARGS>]` must be last.
 
-## Scopes
+## Scope
 
-A given abbreviation can be limited to the current zsh session (i.e. the current terminal) —these are called *session* abbreviations— or to all terminals —these are called *user* abbreviations. Select commands take **scope** as an argument.
+By default, abbreviations are **immediately available to all current and future sessions** (that is, in all open and future terminals). These are called "user" abbreviations.
 
-Newly added user abbreviations are available to all open sessions immediately.
+```shell{1-2}:no-line-numbers
+# terminal 1
+% abbr hw="echo hello world"
+Added the regular session abbreviation `wh`
+% hw[Enter] # expands to `echo hello world` and runs the command
+hello world
+%
+```
+```shell{2}:no-line-numbers
+# terminal 2
+% hw[Enter] # expands to `echo hello world` and runs the command
+hello world
+%
+```
 
-Default is user.
+You can also create **"session" abbreviations scoped the current session**:
 
-## Types
 
-Regular abbreviations match the word at the start of the command line, and global abbreviations match any word on the line. Select commands take **type** as an argument.
+```shell{2-3}:no-line-numbers
+# terminal 1
+% abbr -S hw="echo hello world"
+Added the regular session abbreviation `hw`
+% hw[Enter] # expands to `echo hello world` and runs the command
+hello world
+%
+```
+```shell{2}:no-line-numbers
+# terminal 2
+% hw[Enter] # abbreviation is scoped to terminal 1
+zsh: command not found: hw
+%
+```
 
-Default is regular.
+Some commands take **scope** as an argument.
+
+## Type
+
+By default abbreviations only **expand at the start of the command line**. These are called **"regular"** abbreviations. You can also create **"global" abbreviations which expand everywhere**:
+
+```shell{3,5,9-13}:no-line-numbers
+% abbr hw="echo hello world"
+Added the regular user abbreviation `hw`
+% echo foo && hw[Enter]
+foo
+zsh: command not found: hw
+%
+% abbr erase hw
+Erased regular user abbreviation `hw`
+% abbr -g hw="echo hello world"
+Added the global user abbreviation `hw`
+% echo foo && hw[Enter]
+foo
+hello world
+%
+```
+
+Some commands take **type** as an argument.
 
 ## Commands
 
@@ -48,32 +96,44 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Add a new abbreviation.
 
-  To add a session abbreviation, use the **--session** or **-S** scope flag. Otherwise, or if the **--user** or **-U** scope flag is used, the new abbreviation will be available to all sessions.
-
-  To add a global abbreviation, use the **--global** flag. Otherwise the new abbreviation will be a command abbreviation.
-
-  ```shell:no-line-numbers
-  % abbr add gcm='git checkout main'
-  % gcm[Space] # expands as git checkout main
-  % gcm[Enter] # expands and accepts git checkout main
+  ```shell{1-2}:no-line-numbers
+  % abbr add hw="echo hello world"
+  Added the regular user abbreviation `hw`
+  %
   ```
 
-  `add` is the default command, and does not need to be explicit:
+  `add` is the default command, and does not need to be explicit.
 
-  ```shell:no-line-numbers
-  % abbr gco='git checkout'
-  % gco[Space] # expands as git checkout
-  % gco[Enter] # expands and accepts git checkout
+  ```shell{1-2}:no-line-numbers
+  % abbr hw="echo hello world"
+  Added the regular user abbreviation `hw`
+  %
   ```
 
-  The ABBREVIATION may be more than one word long.
+  As seen above, the EXPANSION can be more than one word. The ABBREVIATION can also be more than one word. This means you can scope abbreviations to a context:
 
-  ```shell:no-line-numbers
+  ```shell{3-4}:no-line-numbers
   % abbr "git cp"="git cherry-pick"
-  % git cp[Space] # expands as git cherry-pick
-  % abbr g=git
-  % g[Space]cp[Space] # expands to git cherry-pick
+  Added the regular user abbreviation `git cp`
+  % cp[Space] # no special behavior. you can use cp as usual
+  % git cp[Space] # expands to `git cherry-pick `
   ```
+
+  In effect you can compose multi-step abbreviations:
+
+  ```shell{1,4,6-7}:no-line-numbers
+  % abbr g=git
+  Added the regular user abbreviation `g`
+  % g[Space] # expands to `git `
+  % abbr "git cp"="git cherry-pick"
+  Added the regular user abbreviation `git cp`
+  % cp[Space] # no special behavior. you can use cp as usual
+  % g[Space]cp[Space] # expands to `git cherry-pick `
+  ```
+
+  To add a session abbreviation, use the **--session** or **-S** scope flag. Otherwise, or if the **--user** or **-U** scope flag is used, the new abbreviation will be available to all sessions. See [Scope](#scope).
+
+  To add a global abbreviation, use the **--global** flag. Otherwise the new abbreviation will be a command abbreviation. See [Type](#type).
 
   As with aliases, to include whitespace, quotation marks, or other special characters like `;`, `|`, or `&` in the EXPANSION, quote the EXPANSION or `\`-escape the characters as necessary.
 
@@ -82,7 +142,7 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   abbr a="b|c" # allowed
   ```
 
-  User-scope abbreviations can also be manually to the user abbreviations file. See **Storage** below.
+  User-scope abbreviations can also be manually to the user abbreviations file. See [Advanced > Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
   The session regular, session global, user regular, and user global abbreviation sets are independent. If you wanted, you could have more than one abbreviation with the same ABBREVIATION. Order of precedence is "session command > user command > session global > user global".
 
@@ -108,19 +168,23 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Erase an abbreviation.
 
-  Use the **--session** or **-S** scope flag to erase a session abbreviation. Otherwise, or if the **--user** or **-U** scope flag is used, a cross-session abbreviation will be erased.
+  Use the **--session** or **-S** scope flag to erase a session abbreviation. Otherwise, or if the **--user** or **-U** scope flag is used, a cross-session abbreviation will be erased. See [Scope](#scope).
 
-  Use the **--global** flag to erase a session abbreviation. Otherwise a cross-session abbreviation will be erased.
+  Use the **--global** flag to erase a session abbreviation. Otherwise a cross-session abbreviation will be erased. See [Type](#type).
 
-  ```shell:no-line-numbers
-  % abbr gcm="git checkout main"
-  % gcm[Enter] # expands and accepts git checkout main
-  Switched to branch 'main'
-  % abbr -e gcm;[Enter] # or abbr -e gcm[Ctrl-Space][Enter]
-  % gcm[Space|Enter] # normal
+  ```shell{4-5}:no-line-numbers
+  % abbr hw="echo hello world"
+  Added the regular user abbreviation `hw`
+  % hw[Enter] # expands to `echo hello world` and runs the command
+  hello world
+  % abbr erase hw
+  Erased regular user abbreviation `hw`
+  % hw[Enter] # no special behavior
+  zsh: command not found: hw
+  %
   ```
 
-  User abbreviations can also be manually erased from the `ABBR_USER_ABBREVIATIONS_FILE`. See **Storage** below.
+  User abbreviations can also be manually erased from the `ABBR_USER_ABBREVIATIONS_FILE`. See [Advanced > Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
 ### `expand`
 
@@ -130,10 +194,19 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Output the ABBREVIATION's EXPANSION.
 
-  ```shell:no-line-numbers
-  % abbr gc="git checkout"
-  % abbr -x gc; # or `abbr -x gc[Ctrl-Space][Enter]`
-  git checkout
+  ```shell{2}:no-line-numbers
+  % abbr hw="echo hello world"
+  % abbr expand hw
+  echo hello world
+  ```
+
+  :::tip
+  To output the expansion of a global abbreviation, circumvent expansion with a `;` or `[Ctrl-Space][Enter]`
+
+  ```shell{2}:no-line-numbers
+  % abbr hw="echo hello world"
+  % abbr expand hw;
+  echo hello world
   ```
 
 ### `export-aliases`
@@ -144,19 +217,30 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Export abbreviations as alias commands. Regular abbreviations follow global abbreviations. Session abbreviations follow user abbreviations.
 
-  Use the **--session** or **-S** scope flag to export only session abbreviations. Use the **--user** or **-U** scope flag to export only user abbreviations.
+  Use the **--session** or **-S** scope flag to export only session abbreviations. Use the **--user** or **-U** scope flag to export only user abbreviations. See [Scope](#scope).
 
-  Use the **--global** or **-g** type flag to export only global abbreviations. Use the **--regular** or **-r** type flag to export only regular abbreviations.
+  Use the **--global** or **-g** type flag to export only global abbreviations. Use the **--regular** or **-r** type flag to export only regular abbreviations. See [Type](#type).
 
-  Combine a scope flag and a type flag to further limit the output.
-
-  ```shell:no-line-numbers
-  % abbr gcm="git checkout main"
-  % abbr -S g=git
+  ```shell{5}:no-line-numbers
+  % abbr hw="echo hello world"
+  % abbr -S e=echo
+  % abbr -g g=git
   % abbr export-aliases
-  alias gcm='git checkout main'
-  % abbr export-aliases --session
-  alias g='git'
+  alias hw='echo hello world'
+  alias e=echo
+  alias -g g=git
+  ```
+
+  Combine a scope flag and a type flag to limit the output.
+
+  ```shell{4,6}:no-line-numbers
+  % abbr hw="echo hello world"
+  % abbr -S e=echo
+  % abbr -g g=git
+  % abbr export-aliases -S
+  alias e=echo
+  % abbr export-aliases -g
+  alias -g g=git
   ```
 
 ### `import-aliases`
@@ -168,13 +252,18 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   Add regular abbreviations for every regular alias in the session, and global abbreviations for every global alias in the session.
 
   ```shell:no-line-numbers
-  % cat ~/.zshrc
-  # --snip--
-  alias -S d='bin/deploy'
-  # --snip--
-
+  # shell config file, likely ~/.zshrc
+  alias e=echo
+  alias -g hw="hello world"
+  ```
+  ```shell{1-4,6}:no-line-numbers
   % abbr import-aliases
-  % d[Space] # expands to bin/deploy
+  Added the regular user abbreviation `e`
+  Added the global user abbreviation `hw`
+  % e[Space]hw[Enter] # expands to `echo hello world` and runs the command
+  hello world
+  % e[Ctrl-Space]hw; # no expansion; uses the zsh aliases
+  hello world
   ```
 
   Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double check the result before taking further actions.
@@ -215,27 +304,88 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Add an abbreviation for every Git alias available in the current session. The EXPANSION is prefixed with `git[Space]`.
 
-  Use `--file <config-file>` to use a config file instead of the one specified by GIT_CONFIG (see `man git-config`).
+  ```shell:no-line-numbers
+  # Git config file, likely ~/.gitconfig
+  [alias]
+    co = checkout
+  ```
+  ```shell{1,5,8}:no-line-numbers
+  % abbr import-git-aliases
+  Added the regular user abbreviation `co`
+  % git checkout -b feature
+  Switched to a new branch 'feature'
+  % git co[Space]main # expands to `git checkout main`
+  Switched to branch 'main'
+  Your branch is up to date with 'origin/main'.
+  % git co[Ctrl-Space]feature # no expansion; uses the Git alias
+  Switched to branch 'feature'
+  ```
+
+  Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** or **-U** scope flag is used, the Git abbreviations will be user. See [Scope](#scope).
+
+  Use the **--global** or **-g** type flag to create global abbreviations. Use the **--regular** or **-r** type flag to create regular abbreviations. See [Type](#type).
+
+  ```shell:no-line-numbers
+  # Git config file, likely ~/.gitconfig
+  [alias]
+    co = checkout
+  ```
+  ```shell{1,5,8}:no-line-numbers
+  % abbr import-git-aliases -g -S
+  Added the global session abbreviation `co`
+  ```
+
+  Use `--file <config-file>` to use a config file instead of the default (see `man git-config`).
+
+  ```shell:no-line-numbers
+  # ~/my-other-git-config
+  [alias]
+    co = checkout
+  ```
+  ```shell:no-line-numbers
+  % abbr import-git-aliases --file ~/my-other-git-config
+  Added the regular user abbreviation `co`
+  ```
 
   Use `--prefix <prefix>` to add a prefix to the ABBREVIATION.
 
-  > Tip: add the abbreviation `g=git` and then prefix Git abbreviations with `git `
-  > ```shell:no-line-numbers
-  > % abbr g=git
-  > % abbr import-git-aliases -g --prefix "git "
-  > Added the regular user abbreviation `co` # for example
-  > % g[Space]co[Space] # expands to `git checkout`
-  > ```
+  ```shell:no-line-numbers
+  # Git config file, likely ~/.gitconfig
+  [alias]
+    co = checkout
+  ```
+  ```shell{1,5,8}:no-line-numbers
+  % abbr import-git-aliases --prefix g
+  Added the regular user abbreviation `gco`
+  ```
+  ```
 
-  > The zsh-abbr v4 `import-git-aliases` behavior can be recreated with
-  > ```shell:no-line-numbers
-  > abbr import-git-aliases
-  > abbr import-git-aliases -g --prefix g
-  > ```
+  :::tip
+  Add the abbreviation `g=git` and then prefix Git abbreviations with `git `
 
-  Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** or **-U** scope flag is used, the Git abbreviations will be user.
+  ```shell:no-line-numbers
+  # Git config file, likely ~/.gitconfig
+  [alias]
+    co = checkout
+  ```
+  ```shell{1,3,5}:no-line-numbers
+  % abbr -g g=git
+  Added the global user abbreviation `g` 
+  % abbr import-git-aliases -g --prefix "git "
+  Added the global user abbreviation `co` # for example
+  % g[Space]co[Space] # expands to `git checkout`
+  ```
+  :::
 
-  Use the **--global** or **-g** type flag to export only global abbreviations. Use the **--regular** or **-r** type flag to export only regular abbreviations.
+  :::warn
+  The `import-git-aliases` behavior changed in zsh-abbr v5. The previous behavior can be recreated with
+
+  ```shell:no-line-numbers
+  abbr import-git-aliases
+  abbr import-git-aliases -g --prefix g
+  ```
+  :::
+
 
   Note for users migrating from Oh-My-Zsh: [OMZ's Git aliases are shell aliases](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh), not aliases in the Git config. To add abbreviations for them, use **import-aliases**.
 
@@ -331,23 +481,28 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
 
   Rename an abbreviation.
 
-  Use the **--session** or **-S** scope flag to rename a session abbreviation. Otherwise, or if the **--user** or **-U** scope flag is used, a cross-session abbreviation will be renamed.
+  ```shell{5-7,10-11}:no-line-numbers
+  % abbr hw="echo hello world"
+  Added the regular user abbreviation `hw`
+  % hw[Enter] # expands to `echo hello world` and runs the command
+  hello world
+  % abbr rename hw wh
+  Added the regular user abbreviation `wh`
+  Erased regular user abbreviation `hw`
+  % hw[Enter] # no special behavior
+  zsh: command not found: hw
+  % wh[Enter] # expands to `echo hello world` and runs the command
+  hello world
+  ```
 
-  Use the **--global** flag to rename a global abbreviation. Otherwise a command abbreviation will be renamed.
+  Use the **--session** or **-S** scope flag to rename a session abbreviation. Otherwise, or if the **--user** or **-U** scope flag is used, a cross-session abbreviation will be renamed. See [Scope](#scope).
+
+  Use the **--global** flag to rename a global abbreviation. Otherwise a command abbreviation will be renamed. See [Type](#type).
 
   Rename is scope- and type-specific. If you get a "no matching abbreviation" error, make sure you added the right flags (list abbreviations if you are not sure).
 
-  ```shell:no-line-numbers
-  % abbr add gcm git checkout main
-  % gcm[Space] # expands to git checkout main
-  % gm[Space] # no expansion
-  % abbr rename gcm[Ctrl-Space] gm
-  % gcm[Space] # no expansion
-  % gm[Space] # expands to git checkout main
-  ```
-
   Use `--dry-run` to see what would result, without making any actual changes.
 
-  Abbreviations can also be manually renamed in the `ABBR_USER_ABBREVIATIONS_FILE`. See **Storage** below.
+  Abbreviations can also be manually renamed in the `ABBR_USER_ABBREVIATIONS_FILE`. See [Advanced > Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
-  Conflicts will error or warn. See **add** for details.
+  Conflicts will error or warn. See [add](#add) for details.
