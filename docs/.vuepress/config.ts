@@ -129,7 +129,6 @@ export default defineUserConfig<DefaultThemeOptions>({
   theme: "@vuepress/theme-default",
   // https://v2.vuepress.vuejs.org/reference/default-theme/config.html
   themeConfig: {
-    logo: "/images/logo/zsh-abbr.png",
     repo: "olets/zsh-abbr",
     docsDir: "docs",
     docsRepo: "olets/zsh-abbr-docs",
