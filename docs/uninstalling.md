@@ -30,4 +30,4 @@ If you haven't customized `$ABBR_USER_ABBREVIATIONS_FILE`, you will probably wan
 % rm -rf $ABBR_USER_ABBREVIATIONS_FILE:h
 ```
 
-Then follow the standard uninstallation procedure for your installation method. This is typically the reverse of what you did to install.
+Then follow the standard uninstall procedure for your installation method. This is typically the reverse of what you did to install.
