@@ -5,7 +5,6 @@ prev:
 next:
   text: Advanced
   link: /advanced/
-sidebarDepth: 2
 ---
 
 # Usage

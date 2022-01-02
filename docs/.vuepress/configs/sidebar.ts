@@ -8,10 +8,7 @@ export const sidebar: SidebarConfig = {
     {
       text: "Guide",
       children: [
-        {
-          link: "/README.md",
-          text: "Introduction",
-        },
+        "/README.md",
         "/installation",
         "/usage.md",
         "/advanced.md",

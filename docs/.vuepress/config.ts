@@ -135,7 +135,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     docsRepo: "olets/zsh-abbr-docs",
     navbar: navbar,
     sidebar: sidebar,
-    sidebarDepth: 1,
+    sidebarDepth: 3,
   },
 
   // plugins
