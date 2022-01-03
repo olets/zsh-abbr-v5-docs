@@ -2,9 +2,6 @@
 prev:
   text: Performance
   link: /performance/
-next:
-  text: Changelog
-  link: /changelog/
 ---
 
 # Uninstalling
