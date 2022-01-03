@@ -87,7 +87,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       "meta",
       {
         property: "og:image",
-        content: "https://zsh-abbr.netlify.com/images/share/zsh-abbr.png",
+        content: "https://zsh-abbr.netlify.com/images/zsh-abbr.png",
       },
     ],
     ["meta", { property: "og:image:width", content: "1200" }],
@@ -105,7 +105,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       "meta",
       {
         name: "twitter:image",
-        content: "https://zsh-abbr.netlify.com/images/share/zsh-abbr.png",
+        content: "https://zsh-abbr.netlify.com/images/zsh-abbr.png",
       },
     ],
 
