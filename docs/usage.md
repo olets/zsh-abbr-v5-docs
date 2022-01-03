@@ -35,7 +35,7 @@ Pass `--dry-run` and/or `--quiet` before other arguments.
 
 By default, abbreviations are **immediately available to all current and future sessions** (that is, in all open and future terminals). These are called "**user**" abbreviations.
 
-```shell{1-2}:no-line-numbers
+```shell:no-line-numbers
 # terminal 1
 % abbr hw="echo hello world"
 Added the regular session abbreviation `wh`
@@ -54,7 +54,7 @@ hello world
 You can also create **session** abbreviations which are available only in the session they are created in:
 
 
-```shell{2-3}:no-line-numbers
+```shell:no-line-numbers
 # terminal 1
 % abbr -S hw="echo hello world"
 Added the regular session abbreviation `hw`
@@ -63,7 +63,7 @@ hello world
 %
 ```
 
-```shell{2}:no-line-numbers
+```shell{2-3}:no-line-numbers
 # terminal 2
 % hw[Enter] # abbreviation is scoped to terminal 1
 zsh: command not found: hw
@@ -76,7 +76,7 @@ Some commands take **scope** as an argument.
 
 By default, abbreviations only **expand at the start of the command line**. These are called **"regular"** abbreviations. You can also create **"global" abbreviations which expand everywhere**:
 
-```shell{3,5}:no-line-numbers
+```shell{1,5}:no-line-numbers
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
 % echo foo && hw[Enter]
@@ -85,7 +85,7 @@ zsh: command not found: hw
 %
 ```
 
-```shell{3,5}:no-line-numbers
+```shell{1,5}:no-line-numbers
 % abbr -g hw="echo hello world"
 Added the global user abbreviation `hw`
 % echo foo && hw[Enter]
