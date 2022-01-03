@@ -77,7 +77,7 @@ Widget | Behavior | Default binding
 
 In the following example, additional bindings are added such that <kbd>Ctrl</kbd><kbd>e</kbd> expands abbreviations without adding a trailing space and <kbd>Ctrl</kbd><kbd>a</kbd> has the same behavior as <kbd>Space</kbd>.
 
-```shell:no-line-numbers
+```shell{3-4}:no-line-numbers
 % cat ~/.zshrc
 # -- snip --
 bindkey "^E" abbr-expand
@@ -87,7 +87,7 @@ bindkey "^A" abbr-expand-and-space
 
 To prevent the creation of the default bindings, set `ABBR_DEFAULT_BINDINGS` to `0` before initializing zsh-abbr. In the following example, <kbd>Ctrl</kbd><kbd>Space</kbd> expands abbreviations and <kbd>Space</kbd> is not bound to any zsh-abbr widget.
 
-```shell:no-line-numbers
+```shell{3-4}:no-line-numbers
 % cat ~/.zshrc
 # -- snip --
 ABBR_DEFAULT_BINDINGS=0
@@ -101,11 +101,13 @@ bindkey "^ " abbr-expand-and-space
 
 ### Highlighting
 
-[fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting) users see [#24](https://github.com/olets/zsh-abbr/issues/24).
+#### [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
 
-To highlight user abbreviations that will expand, [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr is loaded.
+See [#24](https://github.com/olets/zsh-abbr/issues/24).
 
-Replace `<styles for global abbreviations>` with a [zsh character highlighting](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting) string (start at "The available types of highlighting are the following."). For example `fg=blue`, `fg=blue,bg=red,bold`, etc.
+#### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+To highlight user abbreviations that will expand, add these lines to `.zshrc` *below* where zsh-abbr is loaded. Replace `<styles for global abbreviations>` with a [zsh character highlighting](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting) string (start at "The available types of highlighting are the following."). For example `fg=blue`, `fg=blue,bg=red,bold`, etc.
 
 Linux:
 
@@ -123,16 +125,18 @@ ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('"${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}"
 
 ### vi mode compatibility
 
-Switching to vi mode —with plain old `bindkey -v` or with plugin vi/Vim mode plugin that calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. For example, the simplest `.zshrc` for a zinit user would be
+Switching to vi mode —with plain old `bindkey -v` or with a vi/Vim mode plugin that calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. 
 
-```shell:no-line-numbers
+```shell{4}:no-line-numbers
+# .zshrc
+
 bindkey -v
-zinit light olets/zsh-abbr
+# load zsh-abbr here
 ```
 
 ### macOS System Text Substitutions
 
-The following snippet will make your global macOS text substitutions available in the shell.
+Add the following snippet to your `.zshrc` file make your macOS text substitutions available in the shell.
 
 ```shell:no-line-numbers
 for substitution in ${(f)"$(defaults read ~/Library/Preferences/.GlobalPreferences.plist NSUserDictionaryReplacementItems | plutil -convert json -o - - | jq -r 'to_entries[] | "\(.value.replace)=\(.value.with)"')"}; do
