@@ -109,6 +109,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       },
     ],
 
+    // Analytics
     [
       "script",
       {
@@ -116,7 +117,28 @@ export default defineUserConfig<DefaultThemeOptions>({
         'data-site': "PSZVZLUT",
         'defer': true,
       }
-    ]
+    ],
+
+    // Font
+    [
+      "link", {
+        "rel": "preconnect",
+        "href": "https://fonts.googleapis.com"
+      },
+    ],
+    [
+      "link", {
+        "rel": "preconnect",
+        "href": "https://fonts.gstatic.com",
+        "crossorigin": "true",
+      },
+    ],
+    [
+      "link", {
+        "href": "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
+        "rel": "stylesheet",
+      },
+    ],
   ],
 
   // site config

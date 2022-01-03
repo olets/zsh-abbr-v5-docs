@@ -1,3 +1,7 @@
+:root {
+  --font-family-code: 'Fira Code', monospace;
+}
+
 .navbar {
   .logo {
     margin-right: calc(3 * var(--navbar-padding-v)); // default is `var(--navbar-padding-v)`
