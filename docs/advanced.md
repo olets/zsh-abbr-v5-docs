@@ -71,9 +71,9 @@ There are three available widgets:
 
 Widget | Behavior | Default binding
 ---|---|---
-`abbr-expand` | If following an abbreviation, expands it.<br>Replaces deprecated `_abbr_expand_widget` | Not bound
-`abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line.<br>Replaces deprecated `_abbr_expand_and_accept` | <kbd>Enter</kbd>
-`abbr-expand-and-space` | If following an abbreviation, expands it; then adds a space<br>Replaces deprecated `_abbr_expand_and_space` | <kbd>Space</kbd>
+`abbr-expand` | If following an abbreviation, expands it | Not bound
+`abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line | <kbd>Enter</kbd>
+`abbr-expand-and-space` | If following an abbreviation, expands it; then adds a space | <kbd>Space</kbd>
 
 In the following example, additional bindings are added such that <kbd>Ctrl</kbd><kbd>e</kbd> expands abbreviations without adding a trailing space and <kbd>Ctrl</kbd><kbd>a</kbd> has the same behavior as <kbd>Space</kbd>.
 
