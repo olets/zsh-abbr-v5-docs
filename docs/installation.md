@@ -13,7 +13,7 @@ next:
 
 zsh-abbr is available on Homebrew. Run
 
-```
+```shell:no-line-numbers
 brew install olets/tap/zsh-abbr
 ```
 
