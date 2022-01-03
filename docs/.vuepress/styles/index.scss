@@ -2,6 +2,10 @@
   --font-family-code: 'Fira Code', monospace;
 }
 
+div[class*=language-].ext-sh:before {
+  content: "zsh";
+}
+
 .navbar {
   .logo {
     margin-right: calc(3 * var(--navbar-padding-v)); // default is `var(--navbar-padding-v)`

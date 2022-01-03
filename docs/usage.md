@@ -387,7 +387,7 @@ abbr import-git-aliases [<SCOPE>] [<TYPE>] [--dry-run] [--quiet] [--file <config
 
 Add an abbreviation for every Git alias available in the current session. The EXPANSION is prefixed with `git[Space]`.
 
-```shell:no-line-numbers
+```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
 [alias]
   co = checkout
@@ -411,7 +411,7 @@ Use the **--session**  or **-S** scope flag to create session abbreviations. Oth
 
 Use the **--global** or **-g** type flag to create global abbreviations. Use the **--regular** or **-r** type flag to create regular abbreviations. See [Type](#type).
 
-```shell:no-line-numbers
+```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
 [alias]
   co = checkout
@@ -424,7 +424,7 @@ Added the global session abbreviation `co`
 
 Use `--file <config-file>` to use a config file instead of the default (see `man git-config`).
 
-```shell:no-line-numbers
+```text:no-line-numbers
 # ~/my-other-git-config
 [alias]
   co = checkout
@@ -437,7 +437,7 @@ Added the regular user abbreviation `co`
 
 Use `--prefix <prefix>` to add a prefix to the ABBREVIATION.
 
-```shell:no-line-numbers
+```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
 [alias]
   co = checkout
@@ -451,7 +451,7 @@ Added the regular user abbreviation `gco`
 :::tip
 For beautiful command line Git efficiency, add a abbreviation `g=git` and then prefix Git abbreviations with `git ` (that prefix is "git[Space]")
 
-```shell:no-line-numbers
+```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
 [alias]
   co = checkout

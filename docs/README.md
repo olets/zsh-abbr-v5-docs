@@ -106,7 +106,7 @@ hello world
 
 and **Git** aliases:
 
-```shell:no-line-numbers
+```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
 [alias]
   co = checkout
