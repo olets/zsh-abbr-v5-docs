@@ -9,6 +9,10 @@ next:
 
 # Installation
 
+:::danger
+These docs are for the not-yet-released v5
+:::
+
 ## Package
 
 zsh-abbr is available on Homebrew. Run

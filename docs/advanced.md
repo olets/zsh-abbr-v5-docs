@@ -9,6 +9,10 @@ next:
 
 # Advanced
 
+:::danger
+These docs are for the not-yet-released v5
+:::
+
 ## Configuration variables
 
 In addition to the following, setting `NO_COLOR` (regardless of its value) will disable color output. See https://no-color.org/.

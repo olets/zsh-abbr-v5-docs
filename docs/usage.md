@@ -9,6 +9,10 @@ next:
 
 # Usage
 
+:::danger
+These docs are for the not-yet-released v5
+:::
+
 ```shell:no-line-numbers
 abbr [<SCOPE>] [<TYPE>] <COMMAND> [<ARGS>]
 ```

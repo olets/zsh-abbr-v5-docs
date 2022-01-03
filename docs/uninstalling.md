@@ -6,6 +6,10 @@ prev:
 
 # Uninstalling
 
+:::danger
+These docs are for the not-yet-released v5
+:::
+
 Delete the session data storage directory
 
 ```shell:no-line-numbers
