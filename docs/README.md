@@ -7,7 +7,8 @@ next:
 # Introduction
 
 :::danger
-These docs are for the not-yet-released v5
+These docs are for the not-yet-released v5.  
+For v4 docs see <https://github.com/olets/zsh-abbr>
 :::
 
 ## zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr)

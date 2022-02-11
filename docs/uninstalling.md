@@ -7,7 +7,8 @@ prev:
 # Uninstalling
 
 :::danger
-These docs are for the not-yet-released v5
+These docs are for the not-yet-released v5.  
+For v4 docs see <https://github.com/olets/zsh-abbr>
 :::
 
 Delete the session data storage directory

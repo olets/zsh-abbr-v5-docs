@@ -10,7 +10,8 @@ next:
 # Performance
 
 :::danger
-These docs are for the not-yet-released v5
+These docs are for the not-yet-released v5.  
+For v4 docs see <https://github.com/olets/zsh-abbr>
 :::
 
 zsh-abbr will not affect time between prompts. The following is the impact of zsh-abbr on time to start a new session, profiled with `zprof` and `zinit light olets/zsh-abbr`.
