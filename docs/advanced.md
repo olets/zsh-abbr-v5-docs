@@ -106,7 +106,7 @@ bindkey "^ " abbr-expand-and-space
 
 ### Highlighting
 
-#### [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
+#### [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 
 See [#24](https://github.com/olets/zsh-abbr/issues/24).
 
