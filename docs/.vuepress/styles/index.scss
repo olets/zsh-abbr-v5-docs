@@ -15,6 +15,20 @@ html.dark {
   --c-tip-text-accent: #0d9488;
 }
 
+.sidebar .sidebar-items {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.sidebar-item:not(.sidebar-heading).active {
+  border-left: 4px solid var(--c-text-accent);
+  color: inherit;
+}
+
+.sidebar-item-children .sidebar-item-children .sidebar-item:not(.sidebar-heading).active {
+  border-left-color: var(--c-text-accent);
+}
+
 div[class*=language-].ext-sh:before {
   content: "zsh";
 }
