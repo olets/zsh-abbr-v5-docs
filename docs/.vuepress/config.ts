@@ -113,7 +113,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     [
       "script",
       {
-        src: "https://cdn.usefathom.com/script.js",
+        src: "https://innovate-remarkable.olets.dev/script.js",
         'data-site': "PSZVZLUT",
         'defer': true,
       }
