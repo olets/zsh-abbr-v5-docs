@@ -143,7 +143,7 @@ Added the regular user abbreviation `git cp`
 ```
 
 :::tip
-If the above Git case is useful for you, check out [add-git](#add-git)
+If the above Git case is useful for you, check out the [git](#git) command
 :::
 
 To add a session abbreviation, use the **--session** scope flag (**-S** for short). Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the new abbreviation will be available to all sessions. See [Scope](#scope).
@@ -208,25 +208,6 @@ Use `--dry-run` to see what would result, without making any actual changes.
 Will error rather than overwrite an existing abbreviation.
 
 Will warn if the abbreviation would replace an existing command. To add in spite of the warning, use `--force`. To silence the warning, use `--quieter`.
-
-### `add-git`
-
-```shell:no-line-numbers
-abbr [(add | -a)] [<SCOPE>] [--dry-run] [(--quiet | --quieter)] [--force] ABBREVIATION=EXPANSION
-```
-
-Add two new abbreviations:
-
-- a regular abbreviation, the expansion of which is prefixed with `git `
-- a global abbreviation, the abbreviation and expansion of which are prefixed with `git `
-
-```shell{1,4-5}:no-line-numbers
-% abbr g m="checkout main"
-Added the regular user abbreviation `m`
-Added the global user abbreviation `git m`
-% m[Enter] # expands and runs `git checkout main`
-% echo hello world && git m[Enter] # expands and runs `git commit && git checkout main`
-```
 
 ### `clear-session`
 
@@ -341,6 +322,30 @@ Use the **--global** or **-g** type flag to export only global abbreviations. Us
 alias e=echo
 % abbr export-aliases -g
 alias -g g=git
+```
+
+### `git`
+
+```shell:no-line-numbers
+abbr [(git | g)] [<SCOPE>] [--dry-run] [(--quiet | --quieter)] [--force] ABBREVIATION=EXPANSION
+```
+
+Add two new abbreviations:
+
+- a regular abbreviation, the expansion of which is prefixed with `git `
+- a global abbreviation, the abbreviation and expansion of which are prefixed with `git `
+
+```shell{1,7,10}:no-line-numbers
+% abbr git m="checkout main"
+Added the regular user abbreviation `m`
+Added the global user abbreviation `git m`
+% abbr list-commands
+abbr -g "git m"="git checkout main"
+abbr "m"="git checkout main"
+% m[Enter] # expands and runs `git checkout main`
+% echo m[Enter] # no expansion
+m
+% echo hello world && git m[Enter] # expands and runs `git commit && git checkout main`
 ```
 
 ### `import-aliases`
