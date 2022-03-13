@@ -8,6 +8,13 @@
   }
 }
 
+:root,
+html.dark {
+  --c-brand: #2dd4bf;
+  --c-brand-light: #34d399;
+  --c-tip-text-accent: #0d9488;
+}
+
 div[class*=language-].ext-sh:before {
   content: "zsh";
 }
