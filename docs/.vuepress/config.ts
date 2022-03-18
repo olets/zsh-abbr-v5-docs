@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 import { navbar } from "./configs/navbar";
@@ -161,6 +162,15 @@ export default defineUserConfig<DefaultThemeOptions>({
 
   // plugins
   plugins: [
+    [
+      // https://v2.vuepress.vuejs.org/reference/plugin/docsearch.html
+      '@vuepress/docsearch',
+      {
+        apiKey: process.env.SEARCH_KEY,
+        appId: process.env.APPLICATION_ID,
+        indexName: process.env.INDEX_NAME,
+      },
+    ],
     // https://v2.vuepress.vuejs.org/reference/plugin/shiki.html
     [
       "@vuepress/plugin-shiki",

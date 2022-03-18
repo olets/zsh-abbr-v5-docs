@@ -8,6 +8,33 @@
 ## Requirements
 
 - [asdf](https://asdf-vm.com/) and its Node.js plugin
+- [Yarn](https://yarnpkg.com/)
+
+## Dev
+
+### Setup
+
+```shell
+cp .env{.example,}
+```
+
+and fill in values in `.env`.
+
+```shell
+yarn
+```
+
+### Update Algolia index
+
+```shell
+yarn algolia:index
+```
+
+### Serve and watch
+
+```shell
+yarn docs:dev
+```
 
 ## Contributing
 
