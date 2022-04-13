@@ -38,3 +38,7 @@ div[class*=language-].ext-sh:before {
     margin-right: calc(3 * var(--navbar-padding-v)); // default is `var(--navbar-padding-v)`
   }
 }
+
+.external-link::after {
+  content: ' \279A';
+}

@@ -148,6 +148,16 @@ export default defineUserConfig<DefaultThemeOptions>({
   title: "zsh-abbr",
   description: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
 
+  markdown: {
+    links: {
+      externalAttrs: {
+        class: "external-link",
+        rel: "",
+        target: "",
+      }
+    }
+  },
+
   // theme and its config
   theme: "@vuepress/theme-default",
   // https://v2.vuepress.vuejs.org/reference/default-theme/config.html
@@ -158,6 +168,9 @@ export default defineUserConfig<DefaultThemeOptions>({
     navbar: navbar,
     sidebar: sidebar,
     sidebarDepth: 3,
+    themePlugins: {
+      externalLinkIcon: false,
+    }
   },
 
   // plugins
