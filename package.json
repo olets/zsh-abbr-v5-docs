@@ -4,7 +4,7 @@
   "description": "Documentation for zsh-abbr",
   "main": "index.js",
   "scripts": {
-    "algolia:index": "docker run --platform=linux/amd64 -it --env-file=./.env -e \"CONFIG=$(node docsearch.algolia.config.js)\" algolia/docsearch-scraper",
+    "algolia:index": "docker run --platform=linux/amd64 -it --env-file=./.env -e \"CONFIG=$(node docsearch.config.js)\" algolia/docsearch-scraper",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
