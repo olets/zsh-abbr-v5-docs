@@ -13,9 +13,9 @@
   "license": "SEE LICENSE IN LICENSE",
   "repository": "https://github.com/olets/zsh-abbr-docs",
   "devDependencies": {
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.38",
-    "@vuepress/plugin-shiki": "^2.0.0-beta.38",
-    "dotenv": "^16.0.0",
-    "vuepress": "^2.0.0-beta.39"
+    "@vuepress/plugin-docsearch": "2.0.0-beta.49",
+    "@vuepress/plugin-shiki": "2.0.0-beta.49",
+    "dotenv": "16.0.1",
+    "vuepress": "2.0.0-beta.49"
   }
 }
