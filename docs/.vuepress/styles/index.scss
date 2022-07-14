@@ -42,3 +42,9 @@ div[class*=language-].ext-sh:before {
 .external-link::after {
   content: ' ↗︎';
 }
+
+main {
+  a {
+    text-decoration: underline;
+  }
+}
