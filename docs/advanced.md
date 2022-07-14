@@ -16,8 +16,6 @@ For v4 docs see <https://github.com/olets/zsh-abbr>
 
 ## Configuration variables
 
-In addition to the following, setting `NO_COLOR` (regardless of its value) will disable color output. See https://no-color.org/.
-
 Variable | Type | Use | Default
 ---|---|---|---
 `ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbreviations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
@@ -30,6 +28,7 @@ Variable | Type | Use | Default
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
 `ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. _Ends in `/`_ | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` *
 `ABBR_USER_ABBREVIATIONS_FILE` | String | Path to the file user abbreviation are stored in (see [Storage and manual editing](#storage-and-manual-editing)) | `$HOME/.config/zsh/abbreviations` **
+`NO_COLOR` | mixed | If set (to any value or no value at all) abbr will not use color in its output. See <https://no-color.org/>.
 
 \* If changing this, you may want to delete the default directory.
 
