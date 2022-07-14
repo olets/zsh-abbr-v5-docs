@@ -410,6 +410,19 @@ Use `--dry-run` to see what would result, without making any actual changes.
 
 ### `import-git-aliases`
 
+:::warning
+The `import-git-aliases` behavior changed in zsh-abbr v5. The previous behavior can be recreated with
+
+```shell:no-line-numbers
+% abbr import-git-aliases
+% abbr import-git-aliases -g --prefix g
+```
+:::
+
+:::tip
+For users migrating from Oh-My-Zsh: [OMZ's Git aliases are shell aliases](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh), not aliases in the Git config. To add abbreviations for them, use [import-aliases](#import-aliases).
+:::
+
 ```shell:no-line-numbers
 abbr import-git-aliases [<SCOPE>] [<TYPE>] [--dry-run] [--quiet] [--file <config-file>] [--prefix <ABBREVIATION prefix>]
 ```
@@ -435,6 +448,8 @@ Added the regular user abbreviation `co`
 % git co[Ctrl-Space]feature # no expansion; uses the Git alias
 Switched to branch 'feature'
 ```
+
+Use `--dry-run` to see what would result, without making any actual changes. zsh-abbr does not lint the imported abbreviations.
 
 Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the Git abbreviations will be user. See [Scope](#scope).
 
@@ -478,47 +493,17 @@ Added the regular user abbreviation `gco`
 ```
 
 :::tip
-For beautiful command line Git efficiency, add a abbreviation `g=git` and then prefix Git abbreviations with `git ` (that prefix is "git[Space]")
-
-```text:no-line-numbers
-# Git config file, likely ~/.gitconfig
-[alias]
-  co = checkout
-```
+Try this pattern: add abbreviation `g=git` and then prefix Git abbreviations with `git ` (that prefix is "git[Space]")
 
 ```shell{1,3,6}:no-line-numbers
+% git config --global alias.cp cherry-pick
 % abbr -g g=git
 Added the global user abbreviation `g` 
 % abbr import-git-aliases -g --prefix "git "
-Added the global user abbreviation `co` # for example
-% g[Space]co[Space] # expands to `git checkout `
-```
-
-and when adding more Git abbreviations, start them with "git ":
-
-```shell:no-line-numbers
-% abbr -g "git cp"="git cherry-pick"
+Added the global user abbreviation `cp`
 % g[Space]cp[Space] # expands to `git cherry-pick `
 ```
 :::
-
-:::warning
-The `import-git-aliases` behavior changed in zsh-abbr v5. The previous behavior can be recreated with
-
-```shell:no-line-numbers
-% abbr import-git-aliases
-% abbr import-git-aliases -g --prefix g
-```
-:::
-
-
-:::tip
-For users migrating from Oh-My-Zsh: [OMZ's Git aliases are shell aliases](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh), not aliases in the Git config. To add abbreviations for them, use [import-aliases](#import-aliases).
-:::
-
-Note that zsh-abbr does not lint the imported abbreviations. It is up to the user to double check the result before taking further actions.
-
-Use `--dry-run` to see what would result, without making any actual changes.
 
 ### `list`
 
