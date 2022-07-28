@@ -103,13 +103,11 @@ bindkey "^ " abbr-expand-and-space
 
 ## Integrations
 
-### Highlighting
+### [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 
-#### [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
+See [zsh-abbr issue #24](https://github.com/olets/zsh-abbr/issues/24).
 
-See [#24](https://github.com/olets/zsh-abbr/issues/24).
-
-#### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 To highlight user abbreviations that will expand, add these lines to `.zshrc` *below* where zsh-abbr is loaded. Replace `<styles for global abbreviations>` with a [zsh character highlighting](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting) string (start at "The available types of highlighting are the following."). For example `fg=blue`, `fg=blue,bg=red,bold`, etc.
 
