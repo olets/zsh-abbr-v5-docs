@@ -16,7 +16,7 @@ For v4 docs see <https://github.com/olets/zsh-abbr>
 
 ## Configuration variables
 
-Variable | Type | Use | Default
+Variable | Type | <div style="width: 300px">Use</div> | Default
 ---|---|---|---
 `ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbreviations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
 `ABBR_DEBUG` | integer | If non-zero, print debugging messages | 0
