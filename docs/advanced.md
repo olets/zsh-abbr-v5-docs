@@ -109,7 +109,7 @@ See [zsh-abbr issue #24](https://github.com/olets/zsh-abbr/issues/24).
 
 ### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-To highlight user abbreviations that will expand, add these lines to `.zshrc` *below* where zsh-abbr is loaded. Replace `<styles for global abbreviations>` with a [zsh character highlighting](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting) string (start at "The available types of highlighting are the following."). For example `fg=blue`, `fg=blue,bg=red,bold`, etc.
+To highlight user abbreviations that will expand, add these lines to `.zshrc` *below* where zsh-abbr is loaded. Replace `<styles for global abbreviations>` with a [zsh character highlighting](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting:~:text=The%20available%20types%20of%20highlighting%20are%20the%20following.%20Note%20that%20not%20all%20types%20of%20highlighting%20are%20available%20on%20all%20terminals%3A) string (start at "The available types of highlighting are the following."). For example `fg=blue`, `fg=blue,bg=red,bold`, etc.
 
 Linux:
 
