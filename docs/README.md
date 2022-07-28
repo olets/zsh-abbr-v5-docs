@@ -86,44 +86,11 @@ Added the regular user abbreviation `git cp`
 You can also **erase or rename** an abbreviation, **export** abbreviations, **list** abbreviations, and more. See [Usage > Commands](/usage.html#commands).
 :::
 
+## As a replacement for aliases
+
 Find you **prefer abbreviations to aliases**? zsh-abbr makes it easy to create abbreviations from your aliases. The aliases are left **untouched** so you can still use them when you want to… or delete them!
 
-zsh-abbr has support for importing both **zsh** aliases (the abbreviation uses the **alias's scope**):
+zsh-abbr has support for importing both [**zsh** aliases](https://zsh.sourceforge.io/Intro/intro_8.html) and [**Git** aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases). See
 
-```shell:no-line-numbers
-# shell config file, likely ~/.zshrc
-alias e=echo
-alias -g hw="hello world"
-```
-```shell{1-4,6}:no-line-numbers
-% abbr import-aliases
-Added the regular user abbreviation `e`
-Added the global user abbreviation `hw`
-% e[Space]hw[Enter] # expands to `echo hello world` and runs the command
-hello world
-% e[Ctrl-Space]hw; # no expansion; uses the zsh aliases
-hello world
-```
-
-and **Git** aliases:
-
-```text:no-line-numbers
-# Git config file, likely ~/.gitconfig
-[alias]
-  co = checkout
-```
-```shell{1,5,8}:no-line-numbers
-% abbr import-git-aliases
-Added the regular user abbreviation `co`
-% git checkout -b feature
-Switched to a new branch 'feature'
-% git co[Space]main # expands to `git checkout main`
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
-% git co[Ctrl-Space]feature # no expansion; uses the Git alias
-Switched to branch 'feature'
-```
-
-:::tip
-`abbr import-git-aliases` can take either or both of "scope" and "type" flags, and a **"prefix" argument**. This makes it simple to follow the context-dependent composition pattern (see above) when creating abbreviations from your Git aliases. See [Usage > Commands](/usage.html#commands).
-:::
+- [Usage > Commands > `import-aliases`](/usage.html#import-aliases)
+- [Usage > Commands > `import-git-aliases`](/usage.html#import-git-aliases).
