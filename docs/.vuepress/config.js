@@ -197,7 +197,16 @@ export default {
           children: [
             "/README.md",
             "/installation",
-            "/usage.md",
+            {
+              text: "Usage",
+              link: "/usage/",
+              children: [
+                "/usage/README.md",
+                "/usage/scope.md",
+                "/usage/type.md",
+                "/usage/commands.md",
+              ]
+            },
             "/advanced.md",
             "/performance.md",
             "/uninstalling.md",

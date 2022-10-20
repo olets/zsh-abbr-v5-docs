@@ -1,105 +1,20 @@
 ---
 prev:
-  text: Installation
-  link: /installation/
+  text: Type
+  link: /usage/type/
 next:
   text: Advanced
   link: /advanced/
 ---
 
-# Usage
+# Commands
 
 :::danger
 These docs are for the not-yet-released v5.  
 For v4 docs see <https://github.com/olets/zsh-abbr>
 :::
 
-```shell:no-line-numbers
-abbr [<SCOPE>] [<TYPE>] <COMMAND> [<ARGS>]
-```
-
-zsh-abbr has **commands** to [add](#add), [rename](#rename), and [erase](#erase) abbreviations; to add abbreviations for every [alias](#import-aliases) or [Git alias](#import-git-aliases); to list the available abbreviations [with](#list) or [without](#list-abbreviations) their expansions; to [import fish shell abbreviations](#import-fish); and to [export abbreviations as aliases](#export-aliases).
-
-**[Scope](#scope)** determines whether a new abbreviation is available in all sessions or just the current one.
-
-**[Type](#type)** determines whether an abbreviation expands everywhere on a command line or just at the start.
-
-Commands which make changes can be passed `--dry-run`.
-
-Commands which have output can be passed `--quiet`.
-
-Pass `--dry-run` and/or `--quiet` before other arguments.
-
-`abbr` with no arguments is shorthand for `abbr list`. `abbr ...` with arguments is shorthand for `abbr add ...`.
-
-## Scope
-
-By default, abbreviations are **immediately available to all current and future sessions** (that is, in all open and future terminals). These are called "**user**" abbreviations.
-
-```shell:no-line-numbers
-# terminal 1
-% abbr hw="echo hello world"
-Added the regular session abbreviation `wh`
-% hw[Enter] # expands to `echo hello world` and runs the command
-hello world
-%
-```
-
-```shell{2-3}:no-line-numbers
-# terminal 2
-% hw[Enter] # expands to `echo hello world` and runs the command
-hello world
-%
-```
-
-You can also create **session** abbreviations which are available only in the session they are created in:
-
-
-```shell:no-line-numbers
-# terminal 1
-% abbr -S hw="echo hello world"
-Added the regular session abbreviation `hw`
-% hw[Enter] # expands to `echo hello world` and runs the command
-hello world
-%
-```
-
-```shell{2-3}:no-line-numbers
-# terminal 2
-% hw[Enter] # abbreviation is scoped to terminal 1
-zsh: command not found: hw
-%
-```
-
-Some commands take **scope** as an argument.
-
-## Type
-
-By default, abbreviations only **expand at the start of the command line**. These are called **"regular"** abbreviations. You can also create **"global" abbreviations which expand everywhere**:
-
-```shell{1,5}:no-line-numbers
-% abbr hw="echo hello world"
-Added the regular user abbreviation `hw`
-% echo foo && hw[Enter]
-foo
-zsh: command not found: hw
-%
-```
-
-```shell{1,5}:no-line-numbers
-% abbr -g hw="echo hello world"
-Added the global user abbreviation `hw`
-% echo foo && hw[Enter]
-foo
-hello world
-%
-```
-
-Some commands take **type** as an argument.
-
-## Commands
-
-### `add`
+## `add`
 
 ```shell:no-line-numbers
 abbr [(add | -a)] [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [--force] ABBREVIATION=EXPANSION
@@ -113,7 +28,7 @@ Added the regular user abbreviation `hw`
 %
 ```
 
-`add` is the default command, and does not need to be explicit.
+`add` is the default command, and does not need to be specified.
 
 ```shell{1}:no-line-numbers
 % abbr hw="echo hello world"
@@ -143,12 +58,12 @@ Added the regular user abbreviation `git cp`
 ```
 
 :::tip
-If the above Git case is useful for you, check out the [git](#git) command
+If the above Git case is useful for you, check out the [git command](#git)
 :::
 
-To add a session abbreviation, use the **--session** scope flag (**-S** for short). Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the new abbreviation will be available to all sessions. See [Scope](#scope).
+To add a session abbreviation, use the **--session** scope flag (**-S** for short). Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the new abbreviation will be available to all sessions. See [Usage > Scope](/usage/scope/).
 
-To add a global abbreviation, use the **--global** flag (**-g** for short). Otherwise the new abbreviation will be a command abbreviation. See [Type](#type).
+To add a global abbreviation, use the **--global** flag (**-g** for short). Otherwise the new abbreviation will be a command abbreviation. See [Usage > Type](/usage/type/).
 
 As with aliases, to include whitespace, quotation marks, or other special characters like `;`, `|`, or `&` in the EXPANSION, quote the EXPANSION or `\`-escape the characters as necessary.
 
@@ -209,7 +124,7 @@ Will error rather than overwrite an existing abbreviation.
 
 Will warn if the abbreviation would replace an existing command. To add in spite of the warning, use `--force`. To silence the warning, use `--quieter`.
 
-### `clear-session`
+## `clear-session`
 
 ```shell:no-line-numbers
 abbr (clear-session | c)
@@ -224,7 +139,7 @@ Added the regular session abbreviation `x`
 % abbr c
 % x[Space] # no expansion
 ```
-### `erase`
+## `erase`
 
 ```shell:no-line-numbers
 abbr (erase | e) [<SCOPE>] [<TYPE>] [--dry-run] [--quiet] ABBREVIATION
@@ -244,7 +159,7 @@ zsh: command not found: hw
 %
 ```
 
-If there are multiple abbreviations with the same ABBREVIATION (see [add](#add)) you will be prompted to disambiguate. Use the **--session** (**-S** for short) or **--user** (**-U** for short) flag to specify the scope (see [Scope](#scope)) and/or the **--global** (**-g** for short) or **--regular** (**-r** for short) flag to specify the type (see [Type](#type)).
+If there are multiple abbreviations with the same ABBREVIATION (see [add](#add)) you will be prompted to disambiguate. Use the **--session** (**-S** for short) or **--user** (**-U** for short) flag to specify the scope (see [Usage > Scope](/usage/scope/)) and/or the **--global** (**-g** for short) or **--regular** (**-r** for short) flag to specify the type (see [Usage > Type](/usage/type/)).
 
 
 ```shell{9-10}:no-line-numbers
@@ -262,7 +177,7 @@ Erased global user abbreviation `x`
 
 User abbreviations can also be manually erased from the user abbreviations file. See [Advanced > Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
-### `expand`
+## `expand`
 
 ```shell:no-line-numbers
 abbr (expand | x) ABBREVIATION
@@ -288,7 +203,7 @@ echo hello world
 ```
 :::
 
-### `export-aliases`
+## `export-aliases`
 
 ```shell:no-line-numbers
 abbr export-aliases [<SCOPE>] [<TYPE>]
@@ -310,9 +225,9 @@ alias e=echo
 alias -g g=git
 ```
 
-Use the **--session** scope flag (**-S** for short) to export only session abbreviations. Use the **--user** scope flag (**-U** for short) to export only user abbreviations. See [Scope](#scope).
+Use the **--session** scope flag (**-S** for short) to export only session abbreviations. Use the **--user** scope flag (**-U** for short) to export only user abbreviations. See [Usage > Scope](/usage/scope/).
 
-Use the **--global** or **-g** type flag to export only global abbreviations. Use the **--regular** or **-r** type flag to export only regular abbreviations. See [Type](#type).
+Use the **--global** or **-g** type flag to export only global abbreviations. Use the **--regular** or **-r** type flag to export only regular abbreviations. See [Usage > Type](/usage/type/).
 
 ```shell{4,6}:no-line-numbers
 % abbr hw="echo hello world"
@@ -324,7 +239,7 @@ alias e=echo
 alias -g g=git
 ```
 
-### `git`
+## `git`
 
 ```shell:no-line-numbers
 abbr [(git | g)] [<SCOPE>] [--dry-run] [(--quiet | --quieter)] [--force] ABBREVIATION=EXPANSION
@@ -348,7 +263,7 @@ m
 % echo hello world && git m[Enter] # expands and runs `git commit && git checkout main`
 ```
 
-### `import-aliases`
+## `import-aliases`
 
 ```shell:no-line-numbers
 abbr import-aliases [<type>] [--dry-run] [--quiet]
@@ -382,7 +297,7 @@ Note that zsh-abbr does not lint the imported abbreviations. An effort is made t
 
 Use `--dry-run` to see what would result, without making any actual changes.
 
-### `import-fish`
+## `import-fish`
 
 ```shell:no-line-numbers
 abbr import-fish [<SCOPE>] FILE [--dry-run] [--quiet]
@@ -408,7 +323,7 @@ Note that zsh-abbr does not lint the imported abbreviations. An effort is made t
 
 Use `--dry-run` to see what would result, without making any actual changes.
 
-### `import-git-aliases`
+## `import-git-aliases`
 
 :::warning
 The `import-git-aliases` behavior changed in zsh-abbr v5. The previous behavior can be recreated with
@@ -451,9 +366,9 @@ Switched to branch 'feature'
 
 Use `--dry-run` to see what would result, without making any actual changes. zsh-abbr does not lint the imported abbreviations.
 
-Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the Git abbreviations will be user. See [Scope](#scope).
+Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the Git abbreviations will be user. See [Usage > Scope](/usage/scope/).
 
-Use the **--global** or **-g** type flag to create global abbreviations. Use the **--regular** or **-r** type flag to create regular abbreviations. See [Type](#type).
+Use the **--global** or **-g** type flag to create global abbreviations. Use the **--regular** or **-r** type flag to create regular abbreviations. See [Usage > Type](/usage/type/).
 
 ```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
@@ -505,7 +420,7 @@ Added the global user abbreviation `cp`
 ```
 :::
 
-### `list`
+## `list`
 
 ```shell:no-line-numbers
 abbr [list] [<SCOPE>] [<TYPE>]
@@ -547,7 +462,7 @@ d="globalsession"
 a="regularsession"
 ```
 
-### `list-abbreviations`
+## `list-abbreviations`
 
 ```shell:no-line-numbers
 abbr (list-abbreviations | l) [<SCOPE>] [<TYPE>]
@@ -571,7 +486,7 @@ d
 a
 ```
 
-### `list-commands`
+## `list-commands`
 
 ```shell:no-line-numbers
 abbr (list-commands | L) [<SCOPE>] [<TYPE>]
@@ -595,7 +510,7 @@ abbr -S -g d=globalsession
 abbr -S a=regularsession
 ```
 
-### `rename`
+## `rename`
 
 ```shell:no-line-numbers
 abbr (rename | R) [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] OLD NEW
@@ -617,9 +532,9 @@ zsh: command not found: hw
 hello world
 ```
 
-Use the **--session** scope flag (**-S** for short) to rename a session abbreviation. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, a user abbreviation will be renamed. See [Scope](#scope).
+Use the **--session** scope flag (**-S** for short) to rename a session abbreviation. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, a user abbreviation will be renamed. See [Usage > Scope](/usage/scope/).
 
-Use the **--global** flag (**-g** for short) to rename a global abbreviation. Otherwise a command abbreviation will be renamed. See [Type](#type).
+Use the **--global** flag (**-g** for short) to rename a global abbreviation. Otherwise a command abbreviation will be renamed. See [Usage > Type](/usage/type/).
 
 Rename is scope- and type-specific. If you get a "no matching abbreviation" error, make sure you added the right flags (list abbreviations if you are not sure).
 

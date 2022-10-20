@@ -1,7 +1,7 @@
 ---
 prev:
-  text: Usage
-  link: /usage/
+  text: Commands
+  link: /usage/commands/
 next:
   text: Performance
   link: /performance/
