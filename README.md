@@ -8,7 +8,7 @@
 ## Requirements
 
 - [asdf](https://asdf-vm.com/) and its Node.js plugin
-- [Yarn](https://yarnpkg.com/)
+- [pnpm](https://pnpm.io/)
 
 ## Dev
 
@@ -21,19 +21,19 @@ cp .env{.example,}
 and fill in values in `.env`.
 
 ```shell
-yarn
+pnpm
 ```
 
 ### Update Algolia index
 
 ```shell
-yarn algolia:index
+pnpm algolia:index
 ```
 
 ### Serve and watch
 
 ```shell
-yarn docs:dev
+pnpm docs:dev
 ```
 
 ## Contributing
