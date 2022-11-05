@@ -1,6 +1,11 @@
 # zsh-abbr-docs ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr-docs)
 
-<!-- TOC -->
+Source for zsh-abbr's documentation. Read the documentation at <https://zsh-abbr.olets.dev/>.
+
+For the source of zsh-abbr itself, visit <https://github.com/olets/zsh-abbr>.
+
+## Contents
+
 - [Requirements](#requirements)
 - [Contributing](#contributing)
 - [License](#License)
@@ -10,7 +15,7 @@
 - [asdf](https://asdf-vm.com/) and its Node.js plugin
 - [pnpm](https://pnpm.io/)
 
-## Dev
+## Development
 
 ### Setup
 
