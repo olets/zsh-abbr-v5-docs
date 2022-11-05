@@ -24,7 +24,7 @@ Added the regular user abbreviation `hw`
 %
 ```
 
-> By default, abbreviations are **immediately available to all current and future sessions** (that is, in all open and future terminals). You can also create **session** abbreviations which are available only in the session they are created in. See [Usage > Scope](/usage/scope/).
+> By default, abbreviations are **immediately available to all current and future sessions** (that is, in all open and future terminals). You can also create **session** abbreviations which are available only in the session they are created in. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
 
 <kbd>Space</kbd> **expands** abbreviations:
 
@@ -44,7 +44,7 @@ hello world
 %
 ```
 
-> By default, abbreviations only **expand at the start of the command line**. These are called **"regular"** abbreviations. You can also create **"global" abbreviations which expand everywhere**. See [Usage > Type](/usage/type/).
+> By default, abbreviations only **expand at the start of the command line**. These are called **"regular"** abbreviations. You can also create **"global" abbreviations which expand everywhere**. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
 
 As seen above, the EXPANSION can be more than one word. The ABBREVIATION can be too. This lets you create context-dependent abbreviations:
 

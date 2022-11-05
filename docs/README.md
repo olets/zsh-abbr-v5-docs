@@ -29,5 +29,5 @@ Find you **prefer abbreviations to aliases**? zsh-abbr makes it easy to create a
 
 zsh-abbr has support for importing both [**zsh** aliases](https://zsh.sourceforge.io/Intro/intro_8.html) and [**Git** aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases). See
 
-- [Usage > Commands > `import-aliases`](/usage.html#import-aliases)
-- [Usage > Commands > `import-git-aliases`](/usage.html#import-git-aliases).
+- [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`import-aliases`](/usage.html#import-aliases)
+- [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`import-git-aliases`](/usage.html#import-git-aliases).

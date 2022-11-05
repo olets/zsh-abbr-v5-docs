@@ -61,9 +61,9 @@ Added the regular user abbreviation `git cp`
 If the above Git case is useful for you, check out the [git command](#git)
 :::
 
-To add a session abbreviation, use the **--session** scope flag (**-S** for short). Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the new abbreviation will be available to all sessions. See [Usage > Scope](/usage/scope/).
+To add a session abbreviation, use the **--session** scope flag (**-S** for short). Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the new abbreviation will be available to all sessions. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
 
-To add a global abbreviation, use the **--global** flag (**-g** for short). Otherwise the new abbreviation will be a command abbreviation. See [Usage > Type](/usage/type/).
+To add a global abbreviation, use the **--global** flag (**-g** for short). Otherwise the new abbreviation will be a command abbreviation. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
 
 As with aliases, to include whitespace, quotation marks, or other special characters like `;`, `|`, or `&` in the EXPANSION, quote the EXPANSION or `\`-escape the characters as necessary.
 
@@ -83,7 +83,7 @@ Added the regular user abbreviation `x`
 % x[Space] # expands to `y z  `
 ```
 
-User abbreviations can also be manually added to the user abbreviations file. See [Advanced > Storage and manual editing](/advanced.html#storage-and-manual-editing).
+User abbreviations can also be manually added to the user abbreviations file. See [Advanced&nbsp;>&nbsp;Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
 The regular session abbreviations, global session abbreviations, regular user abbreviations, and user global abbreviations are all independent. You can have more than one abbreviation with the same ABBREVIATION. Order of precedence is 
 
@@ -159,7 +159,7 @@ zsh: command not found: hw
 %
 ```
 
-If there are multiple abbreviations with the same ABBREVIATION (see [add](#add)) you will be prompted to disambiguate. Use the **--session** (**-S** for short) or **--user** (**-U** for short) flag to specify the scope (see [Usage > Scope](/usage/scope/)) and/or the **--global** (**-g** for short) or **--regular** (**-r** for short) flag to specify the type (see [Usage > Type](/usage/type/)).
+If there are multiple abbreviations with the same ABBREVIATION (see [add](#add)) you will be prompted to disambiguate. Use the **--session** (**-S** for short) or **--user** (**-U** for short) flag to specify the scope (see [Usage&nbsp;>&nbsp;Scope](/usage/scope/)) and/or the **--global** (**-g** for short) or **--regular** (**-r** for short) flag to specify the type (see [Usage&nbsp;>&nbsp;Type](/usage/type/)).
 
 
 ```shell{9-10}:no-line-numbers
@@ -175,7 +175,7 @@ Did not erase abbreviation `x`. Please specify one of
 Erased global user abbreviation `x`
 ```
 
-User abbreviations can also be manually erased from the user abbreviations file. See [Advanced > Storage and manual editing](/advanced.html#storage-and-manual-editing).
+User abbreviations can also be manually erased from the user abbreviations file. See [Advanced&nbsp;>&nbsp;Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
 ## `expand`
 
@@ -225,9 +225,9 @@ alias e=echo
 alias -g g=git
 ```
 
-Use the **--session** scope flag (**-S** for short) to export only session abbreviations. Use the **--user** scope flag (**-U** for short) to export only user abbreviations. See [Usage > Scope](/usage/scope/).
+Use the **--session** scope flag (**-S** for short) to export only session abbreviations. Use the **--user** scope flag (**-U** for short) to export only user abbreviations. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
 
-Use the **--global** or **-g** type flag to export only global abbreviations. Use the **--regular** or **-r** type flag to export only regular abbreviations. See [Usage > Type](/usage/type/).
+Use the **--global** or **-g** type flag to export only global abbreviations. Use the **--regular** or **-r** type flag to export only regular abbreviations. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
 
 ```shell{4,6}:no-line-numbers
 % abbr hw="echo hello world"
@@ -366,9 +366,9 @@ Switched to branch 'feature'
 
 Use `--dry-run` to see what would result, without making any actual changes. zsh-abbr does not lint the imported abbreviations.
 
-Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the Git abbreviations will be user. See [Usage > Scope](/usage/scope/).
+Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the Git abbreviations will be user. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
 
-Use the **--global** or **-g** type flag to create global abbreviations. Use the **--regular** or **-r** type flag to create regular abbreviations. See [Usage > Type](/usage/type/).
+Use the **--global** or **-g** type flag to create global abbreviations. Use the **--regular** or **-r** type flag to create regular abbreviations. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
 
 ```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
@@ -532,14 +532,14 @@ zsh: command not found: hw
 hello world
 ```
 
-Use the **--session** scope flag (**-S** for short) to rename a session abbreviation. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, a user abbreviation will be renamed. See [Usage > Scope](/usage/scope/).
+Use the **--session** scope flag (**-S** for short) to rename a session abbreviation. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, a user abbreviation will be renamed. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
 
-Use the **--global** flag (**-g** for short) to rename a global abbreviation. Otherwise a command abbreviation will be renamed. See [Usage > Type](/usage/type/).
+Use the **--global** flag (**-g** for short) to rename a global abbreviation. Otherwise a command abbreviation will be renamed. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
 
 Rename is scope- and type-specific. If you get a "no matching abbreviation" error, make sure you added the right flags (list abbreviations if you are not sure).
 
 Use `--dry-run` to see what would result, without making any actual changes.
 
-User abbreviations can also be manually renamed in the user abbreviations file. See [Advanced > Storage and manual editing](/advanced.html#storage-and-manual-editing).
+User abbreviations can also be manually renamed in the user abbreviations file. See [Advanced&nbsp;>&nbsp;Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
 Conflicts will error or warn. See [add](#add) for details.
