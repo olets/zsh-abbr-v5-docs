@@ -210,6 +210,7 @@ export default {
             "/advanced.md",
             "/performance.md",
             "/uninstalling.md",
+            "/contributors.md",
           ],
         },
       ],

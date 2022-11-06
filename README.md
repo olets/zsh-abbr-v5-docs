@@ -17,6 +17,10 @@ For the source of zsh-abbr itself, visit <https://github.com/olets/zsh-abbr>.
 
 ## Development
 
+### Clone
+
+This project uses Git submodules. When cloning, add the `--recurse-submodules` flag to your `git clone` command.
+
 ### Setup
 
 Run
@@ -37,6 +41,14 @@ pnpm
 
 ```shell
 pnpm algolia:index
+```
+
+### Update contributors
+
+Contributors are managed in the zsh-abbr repo. To copy the file over, run
+
+```shell
+pnpm update-contributors
 ```
 
 ### Serve and watch
