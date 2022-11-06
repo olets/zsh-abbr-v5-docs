@@ -1,12 +1,3 @@
----
-prev:
-  text: Quick Start
-  link: /usage/
-next:
-  text: Type
-  link: /usage/type/
----
-
 # Scope
 
 :::danger

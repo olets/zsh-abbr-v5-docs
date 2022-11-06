@@ -1,9 +1,3 @@
----
-next:
-  text: Installation
-  link: /installation/
----
-
 # Introduction ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr)
 
 :::danger

@@ -1,9 +1,3 @@
----
-prev:
-  text: Performance
-  link: /performance/
----
-
 # Uninstalling
 
 :::danger

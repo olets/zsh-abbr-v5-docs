@@ -1,12 +1,3 @@
----
-prev:
-  text: Commands
-  link: /usage/commands/
-next:
-  text: Performance
-  link: /performance/
----
-
 # Advanced
 
 :::danger

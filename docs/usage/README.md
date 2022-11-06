@@ -1,7 +1,4 @@
 ---
-prev:
-  text: Installation
-  link: /installation/
 next:
   text: Scope
   link: /usage/scope/

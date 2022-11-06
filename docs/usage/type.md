@@ -1,12 +1,3 @@
----
-prev:
-  text: Scope
-  link: /usage/scope/
-next:
-  text: Commands
-  link: /usage/commands/
----
-
 # Type
 
 :::danger

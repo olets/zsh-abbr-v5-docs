@@ -1,12 +1,3 @@
----
-prev:
-  text: Introduction
-  link: /
-next:
-  text: Usage
-  link: /usage/
----
-
 # Installation
 
 :::danger

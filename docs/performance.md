@@ -1,12 +1,3 @@
----
-prev:
-  text: Advanced
-  link: /advanced/
-next:
-  text: Uninstalling
-  link: /uninstalling/
----
-
 # Performance
 
 :::danger

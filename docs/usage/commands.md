@@ -1,7 +1,4 @@
 ---
-prev:
-  text: Type
-  link: /usage/type/
 next:
   text: Advanced
   link: /advanced/
