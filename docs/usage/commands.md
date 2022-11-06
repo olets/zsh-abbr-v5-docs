@@ -407,10 +407,11 @@ Use `--prefix <prefix>` to add a prefix to the ABBREVIATION.
 Added the regular user abbreviation `gco`
 ```
 
-:::tip
-Try this pattern: add abbreviation `g=git` and then prefix Git abbreviations with `git ` (that prefix is "git[Space]")
+:::tip Try this pattern
+1. add abbreviation `g=git`
+1. import Git aliases, with the prefix `git `
 
-```shell{1,3,6}:no-line-numbers
+```shell{2,4,6}:no-line-numbers
 % git config --global alias.cp cherry-pick
 % abbr -g g=git
 Added the global user abbreviation `g` 
