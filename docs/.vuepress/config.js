@@ -110,7 +110,7 @@ export default {
       },
     ],
 
-    // Analytics
+    // Fathom analytics
     [
       "script",
       {
