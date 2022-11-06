@@ -19,11 +19,15 @@ For the source of zsh-abbr itself, visit <https://github.com/olets/zsh-abbr>.
 
 ### Setup
 
+Run
+
 ```shell
 cp .env{.example,}
 ```
 
 and fill in values in `.env`.
+
+Then install dependencies by running
 
 ```shell
 pnpm
