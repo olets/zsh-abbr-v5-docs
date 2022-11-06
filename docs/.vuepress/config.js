@@ -165,6 +165,8 @@ export default {
       appId: process.env.APPLICATION_ID,
       indexName: process.env.INDEX_NAME,
     },
+    contributors: false,
+    lastUpdated: false,
     repo: "olets/zsh-abbr",
     docsDir: "docs",
     docsRepo: "olets/zsh-abbr-docs",
