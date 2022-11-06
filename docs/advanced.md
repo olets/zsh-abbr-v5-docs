@@ -105,6 +105,10 @@ bindkey "^ " abbr-expand-and-space
 
 ## Integrations
 
+:::warning
+These integrations are not regularly tested. It is possible that they are out of date. Pull requests are welcome to fix broken integrations. The zsh-abbr maintainer does not commit to keeping them working — if something breaks and the community does not have a fix, it will be removed from this documentation.
+:::
+
 ### [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 
 See [zsh-abbr issue #24](https://github.com/olets/zsh-abbr/issues/24).
