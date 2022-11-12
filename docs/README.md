@@ -5,7 +5,7 @@ These docs are for the not-yet-released v5.
 For v4 docs see <https://github.com/olets/zsh-abbr>
 :::
 
-![](/images/zsh-abbr.png)
+![splash card: the text '% abbr' as green neon lettering](/images/zsh-abbr.png)
 
 **abbr** is the zsh manager for **auto-expanding abbreviations** - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.
 
