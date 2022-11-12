@@ -167,7 +167,7 @@ export default {
     },
     contributors: false,
     lastUpdated: false,
-    repo: "olets/zsh-abbr",
+    repo: "olets/zsh-abbr/tree/v5",
     docsDir: "docs",
     docsRepo: "olets/zsh-abbr-docs",
     navbar: [
