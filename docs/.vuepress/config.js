@@ -201,6 +201,7 @@ export default {
             "/reference/performance.md",
           ],
         },
+        "/migrating-from-v4.md",
         {
           text: "Contributing",
           link: "/contributing/",
