@@ -195,32 +195,42 @@ export default {
     sidebar: {
       "/": [
         {
-          text: "Guide",
+          text: "Introduction",
+          link: "/",
           children: [
-            "/README.md",
-            "/installation",
-            {
-              text: "Usage",
-              link: "/usage/",
-              children: [
-                "/usage/README.md",
-                "/usage/scope.md",
-                "/usage/type.md",
-                "/usage/commands.md",
-              ]
-            },
-            "/advanced.md",
-            "/performance.md",
-            "/uninstalling.md",
-            "/contributors.md",
+            "/introduction/essential-commands.md",
           ],
         },
+        "/installation",
+        {
+          text: "Reference",
+          link: "/reference/",
+          children: [
+            "/reference/scope.md",
+            "/reference/type.md",
+            "/reference/commands.md",
+            "/reference/advanced.md",
+            "/reference/performance.md",
+          ],
+        },
+        {
+          text: "Contributing",
+          link: "/contributing/",
+          children: [
+            {
+              text: "Sponsoring",
+              link: "/contributing/README.md#sponsoring",
+            },
+            "/contributing/contributors.md",
+          ],
+        },
+        "/uninstalling.md",
       ],
     },
     sidebarDepth: 3,
     themePlugins: {
       externalLinkIcon: false,
-    }
+    },
   }),
 
   // plugins

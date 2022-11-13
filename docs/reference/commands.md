@@ -1,9 +1,3 @@
----
-next:
-  text: Advanced
-  link: /advanced/
----
-
 # Commands
 
 :::danger

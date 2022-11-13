@@ -7,7 +7,7 @@
     "algolia:index": "docker run --platform=linux/amd64 -it --env-file=./.env -e \"CONFIG=$(node docsearch.config.js)\" algolia/docsearch-scraper",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "update-contributors": "git submodule update --remote && cp ./zsh-abbr/CONTRIBUTORS.md ./docs/contributors.md"
+    "update-contributors": "git submodule update --remote && cp ./zsh-abbr/CONTRIBUTORS.md ./docs/contributing/contributors.md"
   },
   "keywords": [],
   "author": "Henry Bley-Vroman <olets@olets.dev>",

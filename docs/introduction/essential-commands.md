@@ -1,10 +1,4 @@
----
-next:
-  text: Scope
-  link: /usage/scope/
----
-
-# Quick start
+# Essential commands
 
 :::danger
 These docs are for the not-yet-released v5.  

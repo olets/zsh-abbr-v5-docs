@@ -1,4 +1,10 @@
-# Introduction ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr?include_prereleases&label=pre-release)
+---
+next:
+  text: Essential Commands
+  link: /introduction/essential-commands
+---
+
+# zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr?include_prereleases&label=pre-release)
 
 :::danger
 These docs are for the not-yet-released v5.  
@@ -6,6 +12,7 @@ For v4 docs see <https://github.com/olets/zsh-abbr>
 :::
 
 ![splash card: the text '% abbr' as green neon lettering](/images/zsh-abbr.png)
+
 
 **abbr** is the zsh manager for **auto-expanding abbreviations** - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.
 

@@ -2,7 +2,7 @@
   --font-family-code: 'Fira Code', monospace;
 
   scroll-behavior: smooth;
-  
+
   @media screen and (prefers-reduced-motion: reduce), (update: slow) {
     scroll-behavior: auto;
   }
@@ -16,15 +16,45 @@ html.dark {
 }
 
 .sidebar .sidebar-items {
-  padding-left: 20px;
-  padding-right: 10px;
+  padding-left: 1.25rem;
+  padding-right: 0.625rem;
+}
+
+.sidebar ul.sidebar-item-children {
+  padding-left: 0.625rem;
+}
+
+.sidebar-item.sidebar-heading {
+  font-weight: normal;
+}
+
+.sidebar-item:not(.sidebar-heading) {
+  padding-left: 1.5rem;
 }
 
 .sidebar-item:not(.sidebar-heading).active {
   border-left: 4px solid var(--c-text-accent);
-  color: inherit;
+  // color: inherit;
 }
 
+[aria-current="page"] {
+  color: var(--c-text-accent);
+}
+
+.sidebar-item.active:not(p.sidebar-heading) {
+  font-weight: normal;
+}
+
+.sidebar-item.active:not(p.sidebar-heading):not([aria-current="page"]) {
+  color: var(--c-text);
+}
+
+.sidebar-item-children,
+.sidebar-item:not(.active) {
+  color: var(--c-text);
+}
+
+a.sidebar-heading + .sidebar-item-children .sidebar-item:not(.sidebar-heading).active,
 .sidebar-item-children .sidebar-item-children .sidebar-item:not(.sidebar-heading).active {
   border-left-color: var(--c-text-accent);
 }

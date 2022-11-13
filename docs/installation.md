@@ -1,3 +1,9 @@
+---
+prev:
+  text: Essential Commands
+  link: /introduction/essential-commands
+---
+
 # Installation
 
 :::danger
