@@ -209,7 +209,7 @@ export default {
               text: "Sponsoring",
               link: "/contributing/README.md#sponsoring",
             },
-            "/contributing/contributors.md",
+            "/contributors.md",
           ],
         },
         "/uninstalling.md",
