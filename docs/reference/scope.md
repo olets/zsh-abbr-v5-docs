@@ -10,7 +10,7 @@ By default, abbreviations are **immediately available to all current and future 
 ```shell:no-line-numbers
 # terminal 1
 % abbr hw="echo hello world"
-Added the regular session abbreviation `wh`
+Added the regular session abbreviation `hw`
 % hw[Enter] # expands to `echo hello world` and runs the command
 hello world
 %
