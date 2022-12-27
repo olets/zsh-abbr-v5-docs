@@ -2,11 +2,15 @@ lockfileVersion: 5.4
 
 specifiers:
   '@vuepress/client': 2.0.0-beta.59
+  '@vuepress/plugin-shiki': 2.0.0-beta.59
+  '@vuepress/plugin-toc': 2.0.0-beta.59
   vue: ^3.2.45
   vuepress: 2.0.0-beta.59
 
 devDependencies:
   '@vuepress/client': 2.0.0-beta.59
+  '@vuepress/plugin-shiki': 2.0.0-beta.59
+  '@vuepress/plugin-toc': 2.0.0-beta.59
   vue: 3.2.45
   vuepress: 2.0.0-beta.59_zuhh5cekyzsqox63zj3ccba2ny
 
@@ -659,6 +663,15 @@ packages:
       - supports-color
     dev: true
 
+  /@vuepress/plugin-shiki/2.0.0-beta.59:
+    resolution: {integrity: sha512-vfqt0ezxE6TlI+/XEaWtW1mkw61Dv75niqGBe7+IS1DyojOxRQz6yRnvMUMVNGT7ZDvSCx6NbJ9ao21S+03GUg==}
+    dependencies:
+      '@vuepress/core': 2.0.0-beta.59
+      shiki: 0.11.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@vuepress/plugin-theme-data/2.0.0-beta.59:
     resolution: {integrity: sha512-Nhf+VwnsXArcXxigaO6a3hyP2TY+80lM+rbBMjJcw6p7ZfD8DH1Wy8PMi08A5yWTBJYpofCs7e2LvzJ4LIyLvg==}
     dependencies:
@@ -668,6 +681,18 @@ packages:
       '@vuepress/shared': 2.0.0-beta.59
       '@vuepress/utils': 2.0.0-beta.59
       vue: 3.2.45
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@vuepress/plugin-toc/2.0.0-beta.59:
+    resolution: {integrity: sha512-AdWTLR9PHq/s4qpUbaK6gWPw3yAdy4sXiJZvSuplex63FTAh6U2E5gpRSuMg+YJvadm84TkQ2qCT4TAnt3gdfg==}
+    dependencies:
+      '@vuepress/client': 2.0.0-beta.59
+      '@vuepress/core': 2.0.0-beta.59
+      '@vuepress/utils': 2.0.0-beta.59
+      vue: 3.2.45
+      vue-router: 4.1.6_vue@3.2.45
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1186,6 +1211,10 @@ packages:
       esprima: 4.0.1
     dev: true
 
+  /jsonc-parser/3.2.0:
+    resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
+    dev: true
+
   /jsonfile/6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
     dependencies:
@@ -1501,6 +1530,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /shiki/0.11.1:
+    resolution: {integrity: sha512-EugY9VASFuDqOexOgXR18ZV+TbFrQHeCpEYaXamO+SZlsnT/2LxuLBX25GGtIrwaEVFXUAbUQ601SWE2rMwWHA==}
+    dependencies:
+      jsonc-parser: 3.2.0
+      vscode-oniguruma: 1.7.0
+      vscode-textmate: 6.0.0
+    dev: true
+
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
@@ -1633,6 +1670,14 @@ packages:
       rollup: 3.8.1
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vscode-oniguruma/1.7.0:
+    resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
+    dev: true
+
+  /vscode-textmate/6.0.0:
+    resolution: {integrity: sha512-gu73tuZfJgu+mvCSy4UZwd2JXykjK9zAZsfmDeut5dx/1a7FeTk0XwJsSuqQn+cuMCGVbIBfl+s53X4T19DnzQ==}
     dev: true
 
   /vue-demi/0.13.11_vue@3.2.45:
