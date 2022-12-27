@@ -210,7 +210,7 @@ export default {
             },
           ],
         },
-        "/community",
+        "/external/community.md",
         "/migrating-between-versions",
         "/uninstalling",
       ],
