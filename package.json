@@ -1,5 +1,5 @@
 {
-  "name": "zsh-abbr-docs",
+  "name": "zsh-abbr-v5-docs",
   "version": "1.0.0",
   "description": "Documentation for zsh-abbr",
   "main": "index.js",
@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "Henry Bley-Vroman <olets@olets.dev>",
   "license": "SEE LICENSE IN LICENSE",
-  "repository": "https://github.com/olets/zsh-abbr-docs",
+  "repository": "https://github.com/olets/zsh-abbr-v5-docs",
   "devDependencies": {
     "@algolia/client-search": "^4.9.1",
     "@vuepress/client": "^2.0.0-beta.50",

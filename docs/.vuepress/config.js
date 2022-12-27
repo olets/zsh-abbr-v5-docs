@@ -170,7 +170,7 @@ export default {
     lastUpdated: false,
     repo: "olets/zsh-abbr/tree/v5",
     docsDir: "docs",
-    docsRepo: "olets/zsh-abbr-docs",
+    docsRepo: "olets/zsh-abbr-v5-docs",
     navbar: [
       {
         text: "Changelog",
