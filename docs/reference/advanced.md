@@ -124,6 +124,12 @@ ZSH_HIGHLIGHT_REGEXP=('^[[:blank:][:space:]]*('${(j:|:)${(Qk)ABBR_REGULAR_USER_A
 ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('${(j:|:)${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
 ```
 
+After adding the snippets, all new terminals will use them. To use them in an already-open terminal, restart zsh in that terminal:
+
+```shell:no-line-numbers
+exec zsh
+```
+
 ### vi mode
 
 Switching to vi mode —with plain old `bindkey -v` or with a vi/Vim mode plugin that calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. 

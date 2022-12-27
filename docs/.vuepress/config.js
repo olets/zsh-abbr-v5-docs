@@ -199,7 +199,6 @@ export default {
             "/reference/performance.md",
           ],
         },
-        "/migrating-from-v4.md",
         {
           text: "Contributing",
           link: "/contributing/",
@@ -211,6 +210,7 @@ export default {
             "/contributors.md",
           ],
         },
+        "/migrating-between-versions",
         "/uninstalling.md",
       ],
     },

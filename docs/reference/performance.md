@@ -1,7 +1,7 @@
 ---
 next:
-  text: Migrating from v4
-  link: /migrating-from-v4/
+  text: Contributing
+  link: /contributing/
 ---
 
 # Performance

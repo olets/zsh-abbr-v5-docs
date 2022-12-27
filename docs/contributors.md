@@ -1,7 +1,7 @@
 ---
 next:
-  text: Uninstalling
-  link: /uninstalling
+  text: Migrating between versions
+  link: /migrating-between-versions
 ---
 
 # Contributors
