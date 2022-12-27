@@ -1,10 +1,4 @@
----
-next:
-  text: Migrating between versions
-  link: /migrating-between-versions
----
-
-# Contributors
+# Community
 
 :::danger
 These docs are for the not-yet-released v5.  

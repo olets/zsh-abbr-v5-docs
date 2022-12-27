@@ -1,9 +1,3 @@
----
-prev:
-  text: Contributors
-  link: /contributors
----
-
 # Migrating between versions
 
 :::danger

@@ -1,9 +1,11 @@
 ---
+prev:
+  text: Performance
+  link: /reference/performance
 next:
-  text: Contributors
-  link: /contributing/contributors/
+  text: Community
+  link: /community
 ---
-
 
 # Contributing
 

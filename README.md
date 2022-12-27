@@ -41,12 +41,12 @@ pnpm
 pnpm algolia:index
 ```
 
-### Update contributors
+### Update community
 
-Contributors are managed in the zsh-abbr repo. To copy the file over, run
+Community is managed in the zsh-abbr repo. To copy the file over, run
 
 ```shell
-pnpm update-contributors
+pnpm update-community
 ```
 
 ### Serve and watch

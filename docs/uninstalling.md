@@ -1,9 +1,3 @@
----
-prev:
-  text: Contributors
-  link: /contributors
----
-
 # Uninstalling
 
 :::danger

@@ -206,11 +206,11 @@ export default {
           children: [
             {
               text: "Sponsoring",
-              link: "/contributing/README.md#sponsoring",
+              link: "/contributing#sponsoring",
             },
-            "/contributors.md",
           ],
         },
+        "/community.md",
         "/migrating-between-versions",
         "/uninstalling.md",
       ],
