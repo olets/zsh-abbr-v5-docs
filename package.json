@@ -4,7 +4,8 @@
   "description": "Documentation for zsh-abbr v4.x",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "keywords": [
     "zsh",
@@ -13,5 +14,10 @@
     "zsh-abbr"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.59",
+    "vue": "^3.2.45",
+    "vuepress": "2.0.0-beta.59"
+  }
 }
