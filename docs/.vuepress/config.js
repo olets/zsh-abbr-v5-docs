@@ -112,7 +112,7 @@ export default {
     [
       "script",
       {
-        src: "https://cdn.usefathom.com/script.js",
+        src: "https://upright-genius.olets.dev/script.js",
         'data-site': "VZXVXKRZ",
         'defer': true,
       }
