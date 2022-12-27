@@ -5,6 +5,8 @@ These docs are for the not-yet-released v5.
 For v4 docs see <https://github.com/olets/zsh-abbr>
 :::
 
+[[toc]]
+
 ## Configuration variables
 
 Variable | Type | <div style="width: 300px">Use</div> | Default

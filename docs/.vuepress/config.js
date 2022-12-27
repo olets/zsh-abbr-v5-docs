@@ -3,6 +3,7 @@ dotenv.config()
 import { defaultTheme } from 'vuepress';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { tocPlugin } from '@vuepress/plugin-toc';
 
 export default {
   // https://v2.vuepress.vuejs.org/reference/config.html#head
@@ -233,5 +234,6 @@ export default {
       // only github-dark and slack-dark pass color accessibility
       theme: "github-dark",
     }),
+    tocPlugin(),
   ],
 };

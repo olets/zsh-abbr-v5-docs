@@ -11,6 +11,8 @@ These docs are for the not-yet-released v5.
 For v4 docs see <https://github.com/olets/zsh-abbr>
 :::
 
+[[toc]]
+
 ## Upgrading v4 to v5
 
 1. If you've set up something custom with [Advanced&nbsp;>&nbsp;Widgets&nbsp;and&nbsp;key&nbsp;bindings](/advanced#widgets-and-key-bindings) and are coming from a 4.x version less than 4.8.1, migrate off deprecated functions.
