@@ -174,7 +174,7 @@ export default {
     navbar: [
       {
         text: "Changelog",
-        link: "https://github.com/olets/zsh-abbr/blob/main/CHANGELOG.md",
+        link: "https://github.com/olets/zsh-abbr/blob/main/CHANGELOG",
       },
       {
         text: "License",
@@ -193,11 +193,11 @@ export default {
           text: "Reference",
           link: "/reference",
           children: [
-            "/scope.md",
-            "/type.md",
-            "/commands.md",
-            "/advanced.md",
-            "/performance.md",
+            "/scope",
+            "/type",
+            "/commands",
+            "/advanced",
+            "/performance",
           ],
         },
         {
@@ -210,9 +210,9 @@ export default {
             },
           ],
         },
-        "/community.md",
+        "/community",
         "/migrating-between-versions",
-        "/uninstalling.md",
+        "/uninstalling",
       ],
     },
     sidebarDepth: 3,
