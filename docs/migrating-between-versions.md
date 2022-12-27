@@ -22,7 +22,7 @@ For v4 docs see <https://github.com/olets/zsh-abbr>
 
 1. Install the latest zsh-abbr following the instructions at [Installation](/installation).
 
-1. If you use `zsh-syntax-highlighting` to highlight abbreviations, use the new snippets at [Reference&nbsp;>&nbsp;Advanced&nbsp;>&nbsp;Syntax highlighting](/reference/advanced.html#syntax-highlighting).
+1. If you use `zsh-syntax-highlighting` to highlight abbreviations, use the new snippets at [Reference&nbsp;>&nbsp;Advanced&nbsp;>&nbsp;Syntax highlighting](/advanced.html#syntax-highlighting).
 
 ## Downgrading v5 to v4
 

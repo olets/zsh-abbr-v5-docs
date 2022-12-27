@@ -1,7 +1,7 @@
 ---
 prev:
   text: Performance
-  link: /reference/performance
+  link: /performance
 next:
   text: Community
   link: /community

@@ -1,3 +1,9 @@
+---
+prev:
+  text: Reference
+  link: /reference
+---
+
 # Scope
 
 :::danger

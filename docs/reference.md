@@ -1,7 +1,10 @@
 ---
+prev:
+  text: Essential commands
+  link: /essential-commands
 next:
   text: Scope
-  link: /reference/scope
+  link: /scope
 ---
 
 # Reference

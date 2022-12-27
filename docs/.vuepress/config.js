@@ -191,13 +191,13 @@ export default {
         "/essential-commands",
         {
           text: "Reference",
-          link: "/reference/",
+          link: "/reference",
           children: [
-            "/reference/scope.md",
-            "/reference/type.md",
-            "/reference/commands.md",
-            "/reference/advanced.md",
-            "/reference/performance.md",
+            "/scope.md",
+            "/type.md",
+            "/commands.md",
+            "/advanced.md",
+            "/performance.md",
           ],
         },
         {
