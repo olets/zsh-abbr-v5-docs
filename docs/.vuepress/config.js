@@ -80,7 +80,7 @@ export default {
       "meta",
       {
         property: "og:url",
-        content: "https://zsh-abbr.netlify.com/",
+        content: "https://zsh-abbr.olets.dev/",
       },
     ],
     ["meta", { property: "og:site_name", content: "zsh-abbr" }],
@@ -89,7 +89,7 @@ export default {
       "meta",
       {
         property: "og:image",
-        content: "https://zsh-abbr.netlify.com/images/zsh-abbr.png",
+        content: "https://zsh-abbr.olets.dev/images/zsh-abbr.png",
       },
     ],
     ["meta", { property: "og:image:width", content: "1200" }],
@@ -107,7 +107,7 @@ export default {
       "meta",
       {
         name: "twitter:image",
-        content: "https://zsh-abbr.netlify.com/images/zsh-abbr.png",
+        content: "https://zsh-abbr.olets.dev/images/zsh-abbr.png",
       },
     ],
 
