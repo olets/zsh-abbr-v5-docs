@@ -168,7 +168,6 @@ export default {
     },
     contributors: false,
     lastUpdated: false,
-    repo: "olets/zsh-abbr/tree/v5",
     docsDir: "docs",
     docsRepo: "olets/zsh-abbr-v5-docs",
     navbar: [
@@ -178,16 +177,25 @@ export default {
           {
             text: "4.x",
             "link": "https://v4.zsh-abbr.olets.dev",
+            target: "_self",
           },
         ]
       },
       {
         text: "Changelog",
-        link: "https://github.com/olets/zsh-abbr/blob/main/CHANGELOG",
+        link: "https://github.com/olets/zsh-abbr/blob/main/CHANGELOG.md",
+        target: "_self",
       },
       {
         text: "License",
         link: "https://github.com/olets/zsh-abbr/blob/main/LICENSE",
+        target: "_self",
+      },
+      // Manual instead of with defaultTheme's `repo` so that we can specify the `target`
+      {
+        text: "GitHub",
+        link: "https://github.com/olets/zsh-abbr",
+        target: "_self",
       },
     ],
     sidebar: {
