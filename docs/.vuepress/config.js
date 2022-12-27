@@ -185,11 +185,9 @@ export default {
         {
           text: "Introduction",
           link: "/",
-          children: [
-            "/introduction/essential-commands.md",
-          ],
         },
         "/installation",
+        "/essential-commands",
         {
           text: "Reference",
           link: "/reference/",
