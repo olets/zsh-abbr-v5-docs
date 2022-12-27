@@ -173,6 +173,15 @@ export default {
     docsRepo: "olets/zsh-abbr-v5-docs",
     navbar: [
       {
+        text: "v5.x",
+        children: [
+          {
+            text: "4.x",
+            "link": "https://v4.zsh-abbr.olets.dev",
+          },
+        ]
+      },
+      {
         text: "Changelog",
         link: "https://github.com/olets/zsh-abbr/blob/main/CHANGELOG",
       },
