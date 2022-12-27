@@ -41,12 +41,12 @@ pnpm
 pnpm algolia:index
 ```
 
-### Update community
+### Update external content
 
-Community is managed in the zsh-abbr repo. To copy the file over, run
+Some content is managed in the zsh-abbr repo. To update this repo's copy, run
 
 ```shell
-pnpm update-community
+pnpm update-external-content
 ```
 
 ### Serve and watch
