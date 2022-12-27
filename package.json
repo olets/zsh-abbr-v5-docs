@@ -1,0 +1,17 @@
+{
+  "name": "zsh-abbr-v4-docs",
+  "version": "1.0.0",
+  "description": "Documentation for zsh-abbr v4.x",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zsh",
+    "abbreviations",
+    "abbr",
+    "zsh-abbr"
+  ],
+  "author": "",
+  "license": "ISC"
+}
