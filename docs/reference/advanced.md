@@ -11,7 +11,7 @@ Variable | Type | <div style="width: 300px">Use</div> | Default
 ---|---|---|---
 `ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbreviations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
 `ABBR_DEBUG` | integer | If non-zero, print debugging messages | 0
-`ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (see [Bindings](#bindings)) | 1
+`ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (see [Widgets&nbsp;and&nbsp;key&nbsp;bindings](#widgets-and-key-bindings)) | 1
 `ABBR_DRY_RUN` | integer | If non-zero, use dry run mode without passing `--dry-run` | 0
 `ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (see [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`add`](/usage.html#add)) | 0
 `ABBR_PRECMD_LOGS` | integer | If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
@@ -54,7 +54,7 @@ Every time an `abbr` command is run, the session's updates its user abbreviation
 
 To refresh the user abbreviations from the user abbreviation, run `abbr load` (or any other `abbr` command).
 
-## Bindings
+## Widgets and key bindings
 
 By default
 
