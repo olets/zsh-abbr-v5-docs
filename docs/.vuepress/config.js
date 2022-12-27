@@ -108,6 +108,16 @@ export default {
       },
     ],
 
+    // Fathom analytics
+    [
+      "script",
+      {
+        src: "https://cdn.usefathom.com/script.js",
+        'data-site': "VZXVXKRZ",
+        'defer': true,
+      }
+    ],
+
     // Font
     [
       "link", {
