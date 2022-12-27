@@ -146,7 +146,7 @@ export default {
   // site config
   // https://v2.vuepress.vuejs.org/guide/configuration.html#site-config
   lang: "en-US",
-  title: "zsh-abbr",
+  title: "zsh-abbr v5",
   description: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
 
   markdown: {
