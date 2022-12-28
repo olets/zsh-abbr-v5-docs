@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Get zsh-abbr Help
+    url: https://github.com/olets/zsh-abbr/discussions/new?category=help
+    about: If you can't get something to work the way you expect, open a question in our discussion forums.
+  - name: zsh-abbr Feature Request
+    url: https://github.com/olets/zsh-abbr/discussions/new?category=ideas
+    about: 'Suggest any ideas you have using our discussion forums.'
+  - name: zsh-abbr Bug
+    url: https://github.com/olets/zsh-abbr/issues/new/choose
+    about: 'For issues related to the documentation site, suggest changes on our documentation repository.'
