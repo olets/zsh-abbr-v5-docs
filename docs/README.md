@@ -17,12 +17,3 @@ Why? Like aliases, abbreviations **save keystrokes**. Unlike aliases, abbreviati
 Like **zsh's `alias`**, zsh-abbr supports **"regular"** (i.e. command-position) and **"global"** (anywhere on the line) abbreviations. Like **fish's `abbr`**, zsh-abbr supports **interactive creation** of persistent abbreviations which are immediately available in all terminal sessions. Abbreviations automatically **sync to a file**, ready for your dotfile management.
 
 Run `abbr help` for documentation; if the package is installed with Homebrew, `man abbr` is also available.
-
-## As a replacement for aliases
-
-Find you **prefer abbreviations to aliases**? zsh-abbr makes it easy to create abbreviations from your aliases. The aliases are left **untouched** so you can still use them when you want to… or delete them!
-
-zsh-abbr has support for importing both [**zsh** aliases](https://zsh.sourceforge.io/Intro/intro_8.html) and [**Git** aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases). See
-
-- [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`import-aliases`](/usage.html#import-aliases)
-- [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`import-git-aliases`](/usage.html#import-git-aliases).
