@@ -1,3 +1,8 @@
+<!--
+  This file is managed in zsh-abbr#v4
+  and is reused by zsh-abbr-v4-docs
+-->
+
 # zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr)
 
 **abbr** is the zsh manager for auto-expanding abbreviations - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.
@@ -598,28 +603,43 @@ Then follow the standard uninstallation procedure for your installation method. 
 
 ## Changelog
 
-See the [CHANGELOG](CHANGELOG.md) file.
+See the [CHANGELOG](https://github.com/olets/zsh-abbr/blob/v4/CHANGELOG.md) file.
 
 ## Roadmap
 
-See the [ROADMAP](ROADMAP.md) file.
+See the [ROADMAP](https://github.com/olets/zsh-abbr/blob/v4/ROADMAP.md) file.
 
 ## Contributing
 
 Thanks for your interest. Contributions are welcome!
 
-> Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+> Please note that this project is released with a [Contributor Code of Conduct](https://github.com/olets/zsh-abbr/blob/v4/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 Check the [Issues](https://github.com/olets/zsh-abbr/issues) to see if your topic has been discussed before or if it is being worked on. You may also want to check the roadmap (see above).
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+Please read [CONTRIBUTING.md](https://github.com/olets/zsh-abbr/blob/v4/CONTRIBUTING.md) before opening a pull request.
 
 The test suite uses [zsh-test-runner](https://github.com/olets/zsh-test-runner). Run with test suite with `. ./tests/abbr.ztr`.
 
 ## License
 
-<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" property="dct:title" href="https://www.github.com/olets/zsh-abbr">zsh-abbr</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.github.com/olets">Henry Bley-Vroman</a> is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> with a human rights condition from <a href="https://firstdonoharm.dev/version/2/1/license.html">Hippocratic License 2.1</a>. Persons interested in using or adapting this work for commercial purposes should contact the author.</p>
+<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" property="dct:title" href="https://www.github.com/olets/zsh-abbr">zsh-abbr</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.github.com/olets">Henry Bley-Vroman</a> is licensed under a license which is the unmodified text of <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> and ethics conditions taken without modification from <a href="https://firstdonoharm.dev/version/2/1/license.html">Hippocratic License 2.1</a>. It is not affiliated with either.
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" />
+Human-readable summary of (and not a substitute for) the [LICENSE](https://github.com/olets/zsh-abbr/blob/v4/LICENSE) file:
 
-For the full text of the license, see the [LICENSE](LICENSE) file.
+You are free to
+
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+
+Under the following terms
+
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- NonCommercial — You may not use the material for commercial purposes.
+- Ethics - You must abide by the ethical standards specified in the Hippocratic License clause.
+- ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+- No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+## Acknowledgments
+
+- Human-readable license summary is modified from https://creativecommons.org/licenses/by-nc-sa/4.0. The ethics point was added.
