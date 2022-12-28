@@ -145,7 +145,7 @@ bindkey -v
 
 ### macOS System Text Substitutions
 
-Add the following snippet to your `.zshrc` file make your macOS text substitutions available in the shell.
+Add the following snippet to your `.zshrc` file to create abbreviation for all macOS text substitutions.
 
 ```shell:no-line-numbers
 for substitution in ${(f)"$(defaults read ~/Library/Preferences/.GlobalPreferences.plist NSUserDictionaryReplacementItems | plutil -convert json -o - - | jq -r 'to_entries[] | "\(.value.replace)=\(.value.with)"')"}; do
