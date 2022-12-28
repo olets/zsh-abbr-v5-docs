@@ -256,6 +256,14 @@ m
 % echo hello world && git m[Enter] # expands and runs `git commit && git checkout main`
 ```
 
+## `help`
+
+```shell:no-line-numbers
+abbr (help | --help)
+```
+
+Show the manpage.
+
 ## `import-aliases`
 
 ```shell:no-line-numbers
@@ -504,6 +512,14 @@ abbr -S -g d=globalsession
 abbr -S a=regularsession
 ```
 
+## `profile`
+
+```shell:no-line-numbers
+abbr profile
+```
+
+Log profile information for debugging.
+
 ## `rename`
 
 ```shell:no-line-numbers
@@ -537,3 +553,11 @@ Use `--dry-run` to see what would result, without making any actual changes.
 User abbreviations can also be manually renamed in the user abbreviations file. See [Advanced&nbsp;>&nbsp;Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
 Conflicts will error or warn. See [add](#add) for details.
+
+## `version`
+
+```shell:no-line-numbers
+abbr (version | --version | -v)
+```
+
+Show the current version.
