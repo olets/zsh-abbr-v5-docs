@@ -623,7 +623,7 @@ The test suite uses [zsh-test-runner](https://github.com/olets/zsh-test-runner).
 
 ## License
 
-<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" property="dct:title" href="https://www.github.com/olets/zsh-abbr">zsh-abbr</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.github.com/olets">Henry Bley-Vroman</a> is licensed under a license which is the unmodified text of <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> and ethics conditions taken without modification from <a href="https://firstdonoharm.dev/version/2/1/license.html">Hippocratic License 2.1</a>. It is not affiliated with either.
+<a href="https://www.github.com/olets/zsh-abbr">zsh-abbr</a> by <a href="https://www.github.com/olets">Henry Bley-Vroman</a> is licensed under a license which is the unmodified text of <a href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> and ethics conditions taken without modification from <a href="https://firstdonoharm.dev/version/2/1/license.html">Hippocratic License 2.1</a>. It is not affiliated with Creative Commons or the Organization for Ethical Source.
 
 Human-readable summary of (and not a substitute for) the [LICENSE](https://github.com/olets/zsh-abbr/blob/v4/LICENSE) file:
 
