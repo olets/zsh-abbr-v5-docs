@@ -30,7 +30,7 @@ exec zsh
 ## Manual
 
 - Either download the latest release's archive from <https://github.com/olets/zsh-abbr/releases> and expand it (ensures you have the latest official release)
-- or clone a single brach branch:
+- or clone a single branch:
     ```shell:no-line-numbers
     git clone https://github.com/olets/zsh-abbr --single-branch --branch <branch> --depth 1
     ```

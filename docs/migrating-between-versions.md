@@ -10,9 +10,9 @@ For v4 docs see <https://github.com/olets/zsh-abbr>
 ## Upgrading v4 to v5
 
 1. If you've set up something custom with [Advanced&nbsp;>&nbsp;Widgets&nbsp;and&nbsp;key&nbsp;bindings](/advanced#widgets-and-key-bindings) and are coming from a 4.x version less than 4.8.1, migrate off deprecated functions.
-    - instead of `_abbr_widget_expand` use `abbr-expand`
-    - instead of `_abbr_widget_expand_and_accept` use `abbr-expand-and-accept`
-    - instead of `_abbr_widget_expand_and_space` use `abbr-expand-and-space`
+    - Instead of `_abbr_widget_expand` use `abbr-expand`
+    - Instead of `_abbr_widget_expand_and_accept` use `abbr-expand-and-accept`
+    - Instead of `_abbr_widget_expand_and_space` use `abbr-expand-and-space`
 
 1. If you anticipate wanting to downgrade back to v4, backing up your user abbreviations file will make things easier for you in the future.
 
@@ -57,6 +57,7 @@ For v4 docs see <https://github.com/olets/zsh-abbr>
 1. Install v4.x
     - Plugin manager: use your manager to install zsh-abbr from branch `v4`.
     - Homebrew:
+        install v4
         ```shell:no-line-numbers
         brew uninstall --force zsh-abbr && brew install olets/tap/zsh-abbr@4
         ```

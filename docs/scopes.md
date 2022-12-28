@@ -83,7 +83,7 @@ zsh: command not found: hw
 zsh: command not found: s
 ```
 
-For many users, session scope can be thought of as "scoped to the current terminal". In fact it is more restrictive. In the following example, a session abbreviation is not available to a subshell:
+For many users, session scope can be thought of as "scoped to the current terminal". In fact, it is more restrictive. In the following example, a session abbreviation is not available to a subshell:
 
 ```shell{5-7}:no-line-numbers
 % abbr --session hw="echo hello world"

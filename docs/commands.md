@@ -38,7 +38,7 @@ Added the regular user abbreviation `git cp`
 % git cp[Space] # expands to `git cherry-pick `
 ```
 
-In effect you can compose multi-step abbreviations:
+This lets you compose multi-stage abbreviations:
 
 ```shell{1,4,6-7}:no-line-numbers
 % abbr g=git
@@ -56,7 +56,7 @@ If the above Git case is useful for you, check out the [git command](#git)
 
 To add a session abbreviation, use the **--session** scope flag (**-S** for short). Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the new abbreviation will be available to all sessions. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
 
-To add a global abbreviation, use the **--global** flag (**-g** for short). Otherwise the new abbreviation will be a command abbreviation. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
+To add a global abbreviation, use the **--global** flag (**-g** for short). Otherwise, the new abbreviation will be a command abbreviation. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
 
 As with aliases, to include whitespace, quotation marks, or other special characters like `;`, `|`, or `&` in the EXPANSION, quote the EXPANSION or `\`-escape the characters as necessary.
 
@@ -286,7 +286,7 @@ Added the global user abbreviation `hw`
 hello world
 ```
 
-Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double check the result before taking further actions.
+Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double-check the result before taking further actions.
 
 Use `--dry-run` to see what would result, without making any actual changes.
 
@@ -312,7 +312,7 @@ abbr import-fish file/to/save/fish/abbreviations/to
 # rm file/to/save/fish/abbreviations/to
 ```
 
-Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double check the result before taking further actions.
+Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double-check the result before taking further actions.
 
 Use `--dry-run` to see what would result, without making any actual changes.
 
@@ -359,7 +359,7 @@ Switched to branch 'feature'
 
 Use `--dry-run` to see what would result, without making any actual changes. zsh-abbr does not lint the imported abbreviations.
 
-Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the Git abbreviations will be user. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
+Use the **--session** or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, the Git abbreviations will be user. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
 
 Use the **--global** or **-g** type flag to create global abbreviations. Use the **--regular** or **-r** type flag to create regular abbreviations. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
 
@@ -528,7 +528,7 @@ hello world
 
 Use the **--session** scope flag (**-S** for short) to rename a session abbreviation. Otherwise, or if the **--user** scope flag (**-U** for short) is passed, a user abbreviation will be renamed. See [Usage&nbsp;>&nbsp;Scope](/usage/scope/).
 
-Use the **--global** flag (**-g** for short) to rename a global abbreviation. Otherwise a command abbreviation will be renamed. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
+Use the **--global** flag (**-g** for short) to rename a global abbreviation. Otherwise, a command abbreviation will be renamed. See [Usage&nbsp;>&nbsp;Type](/usage/type/).
 
 Rename is scope- and type-specific. If you get a "no matching abbreviation" error, make sure you added the right flags (list abbreviations if you are not sure).
 

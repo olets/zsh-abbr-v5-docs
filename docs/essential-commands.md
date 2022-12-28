@@ -50,7 +50,7 @@ Added the regular user abbreviation `git cp`
 % git cp[Space] # expands to `git cherry-pick `
 ```
 
-In effect you can compose multi-step abbreviations:
+This lets you compose multi-stage abbreviations:
 
 ```shell{1,4,6-7}:no-line-numbers
 % abbr g=git
@@ -68,7 +68,7 @@ If the above example excites you, check out zsh-abbr's [git command](/usage/comm
 
 ## Ditch aliases
 
-Find you **prefer abbreviations to aliases**? zsh-abbr makes it easy to create abbreviations from your aliases. The aliases are left **untouched** so you can still use them when you want to… or delete them!
+Find you **prefer abbreviations to aliases**? zsh-abbr makes it easy to create abbreviations from your aliases. The aliases are left **untouched**, so you can still use them when you want to… or delete them!
 
 zsh-abbr has support for importing both [**zsh** aliases](https://zsh.sourceforge.io/Intro/intro_8.html) and [**Git** aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases). See
 
