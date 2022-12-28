@@ -8,7 +8,7 @@ prev:
 
 :::danger
 These docs are for the not-yet-released v5.  
-For v4 docs see <https://github.com/olets/zsh-abbr>
+For v4 docs see <https://v4.zsh-abbr.olets.dev>
 :::
 
 Some zsh-abbr commands take a **scope** parameter. There are two supported scopes: **session** and **user**. Session abbreviations are available in the terminal session they are created in. User abbreviations are available in all terminal sessions.

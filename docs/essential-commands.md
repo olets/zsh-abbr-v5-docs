@@ -2,7 +2,7 @@
 
 :::danger
 These docs are for the not-yet-released v5.  
-For v4 docs see <https://github.com/olets/zsh-abbr>
+For v4 docs see <https://v4.zsh-abbr.olets.dev>
 :::
 
 zsh-abbr has broad capabilities for managing abbreviations. Add, rename, erase, import, export. Customize the interactive behavior. Customize where data is stored. There's a lot you can learn. Here's what you need to know:
