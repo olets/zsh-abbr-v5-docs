@@ -391,6 +391,14 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   abbr -g b="ball"
   ```
 
+- **`profile`**
+
+  ```shell
+  abbr profile
+  ```
+
+  Log profile information for debugging.
+
 - **`rename`**
 
   ```shell
