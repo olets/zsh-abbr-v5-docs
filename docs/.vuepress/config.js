@@ -208,10 +208,10 @@ export default {
         "/essential-commands",
         {
           text: "Reference",
-          link: "/reference",
+          link: "/scopes",
           children: [
-            "/scope",
-            "/type",
+            "/scopes",
+            "/types",
             "/commands",
             "/advanced",
             "/performance",
