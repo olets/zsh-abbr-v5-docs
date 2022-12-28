@@ -226,6 +226,14 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   alias g='git'
   ```
 
+- **`help`**
+
+  ```shell
+  abbr (help | --help)
+  ```
+
+  Show the manpage.
+
 - **`import-aliases`**
 
   ```shell
@@ -427,6 +435,14 @@ zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviati
   Abbreviations can also be manually renamed in the `ABBR_USER_ABBREVIATIONS_FILE`. See **Storage** below.
 
   Conflicts will error or warn. See **add** for details.
+
+- **`version`**
+
+  ```shell
+  abbr (version | --version | -v)
+  ```
+
+  Show the current version.
 
 ## Advanced
 
