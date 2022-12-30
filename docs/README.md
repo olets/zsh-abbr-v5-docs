@@ -8,7 +8,7 @@ Like zsh's `alias`, zsh-abbr supports "regular" (i.e. command-position) and "glo
 
 Run `abbr help` for documentation; if the package is installed with Homebrew, `man abbr` is also available.
 
-## Crash Course
+## Essential commands
 
 ```shell:no-line-numbers
 # Add and use an abbreviation
