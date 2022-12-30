@@ -7,7 +7,7 @@ next: /scopes.md
 
 [[toc]]
 
-```shell
+```shell:no-line-numbers
 abbr [<SCOPE>] [<TYPE>] <COMMAND> [<ARGS>]
 ```
 

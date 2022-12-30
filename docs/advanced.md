@@ -72,7 +72,7 @@ Widget | Behavior | Default binding
 
 In the following example, additional bindings are added such that <kbd>Ctrl</kbd><kbd>e</kbd> expands abbreviations without adding a trailing space and <kbd>Ctrl</kbd><kbd>a</kbd> has the same behavior as <kbd>Space</kbd>.
 
-```shell
+```shell:no-line-numbers
 % cat ~/.zshrc
 # -- snip --
 bindkey "^E" abbr-expand
@@ -82,7 +82,7 @@ bindkey "^A" abbr-expand-and-space
 
 To prevent the creation of the default bindings, set `ABBR_DEFAULT_BINDINGS` to `0` before initializing zsh-abbr. In the following example, <kbd>Ctrl</kbd><kbd>Space</kbd> expands abbreviations and <kbd>Space</kbd> is not bound to any zsh-abbr widget.
 
-```shell
+```shell:no-line-numbers
 % cat ~/.zshrc
 # -- snip --
 ABBR_DEFAULT_BINDINGS=0
@@ -102,14 +102,14 @@ Replace `<styles for global abbreviations>` with a [zsh character highlighting](
 
 Linux:
 
-```shell
+```shell:no-line-numbers
 ZSH_HIGHLIGHT_REGEXP+=('^[[:blank:][:space:]]*('${(j:|:)${(k)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' <styles for regular abbreviations>)
 ZSH_HIGHLIGHT_REGEXP+=('\<('${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
 ```
 
 macOS:
 
-```shell
+```shell:no-line-numbers
 ZSH_HIGHLIGHT_REGEXP=('^[[:blank:][:space:]]*('${(j:|:)${(k)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' <styles for regular abbreviations>)
 ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
 ```
@@ -118,7 +118,7 @@ ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}')
 
 Switching to vi mode —with plain old `bindkey -v` or with plugin vi/Vim mode plugin that calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. For example, the simplest `.zshrc` for a zinit user would be
 
-```shell
+```shell:no-line-numbers
 bindkey -v
 zinit light olets/zsh-abbr
 ```
@@ -127,7 +127,7 @@ zinit light olets/zsh-abbr
 
 The following snippet will make your global macOS text substitutions available in the shell.
 
-```shell
+```shell:no-line-numbers
 for substitution in ${(f)"$(defaults read ~/Library/Preferences/.GlobalPreferences.plist NSUserDictionaryReplacementItems | plutil -convert json -o - - | jq -r 'to_entries[] | "\(.value.replace)=\(.value.with)"')"}; do
   abbr add [options] "$substitution"
 done
