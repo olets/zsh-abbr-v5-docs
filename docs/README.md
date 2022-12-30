@@ -1,4 +1,4 @@
-# zsh-abbr ![v4.8.4](https://img.shields.io/badge/release-v4.8.4-blue)
+# zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr)
 
 **zsh-abbr** is the zsh manager for auto-expanding abbreviations - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.
 
