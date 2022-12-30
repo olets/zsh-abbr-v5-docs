@@ -3,7 +3,7 @@ require('dotenv').config();
 const config = {
   index_name: process.env.INDEX_NAME,
   start_urls: [
-    "https://zsh-abbr.olets.dev/"
+    "https://v5.zsh-abbr.olets.dev/"
   ],
   stop_urls: [],
   selectors: {
