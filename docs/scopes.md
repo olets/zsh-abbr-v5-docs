@@ -1,5 +1,5 @@
 ---
-prev: /usage.md
+prev: /reference.md
 ---
 
 # Scopes
