@@ -16,7 +16,7 @@ Add a new abbreviation.
 
 To add a session abbreviation, use the **--session** or **-S** scope flag. Otherwise, or if the **--user** or **-U** scope flag is used, the new abbreviation will be available to all sessions.
 
-To add a global abbreviation, use the **--global** flag. Otherwise the new abbreviation will be a command abbreviation.
+To add a global abbreviation, use the **--global** flag. Otherwise, the new abbreviation will be a command abbreviation.
 
 ```shell:no-line-numbers
 % abbr add gcm='git checkout main'
@@ -69,7 +69,7 @@ Erase an abbreviation.
 
 Use the **--session** or **-S** scope flag to erase a session abbreviation. Otherwise, or if the **--user** or **-U** scope flag is used, a cross-session abbreviation will be erased.
 
-Use the **--global** flag to erase a session abbreviation. Otherwise a cross-session abbreviation will be erased.
+Use the **--global** flag to erase a session abbreviation. Otherwise, a cross-session abbreviation will be erased.
 
 ```shell:no-line-numbers
 % abbr gcm="git checkout main"
@@ -144,7 +144,7 @@ alias -S d='bin/deploy'
 % d[Space] # expands to bin/deploy
 ```
 
-Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double check the result before taking further actions.
+Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double-check the result before taking further actions.
 
 Use `--dry-run` to see what would result, without making any actual changes.
 
@@ -170,7 +170,7 @@ abbr import-fish file/to/save/fish/abbreviations/to
 # rm file/to/save/fish/abbreviations/to
 ```
 
-Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double check the result before taking further actions.
+Note that zsh-abbr does not lint the imported abbreviations. An effort is made to correctly wrap the expansion in single or double quotes, but it is possible that importing will add an abbreviation with a quotation mark problem in the expansion. It is up to the user to double-check the result before taking further actions.
 
 Use `--dry-run` to see what would result, without making any actual changes.
 
@@ -184,7 +184,7 @@ Add two abbreviations for every Git alias available in the current session: a gl
 
 Use `--file <config-file>` to use a config file instead of the one specified by GIT_CONFIG (see `man git-config`).
 
-Use the **--session**  or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** or **-U** scope flag is used, the Git abbreviations will be user.
+Use the **--session** or **-S** scope flag to create session abbreviations. Otherwise, or if the **--user** or **-U** scope flag is used, the Git abbreviations will be user.
 
 ```shell:no-line-numbers
 % git config alias.co checkout
@@ -207,7 +207,7 @@ Use the **--session**  or **-S** scope flag to create session abbreviations. Oth
 
 Note for users migrating from Oh-My-Zsh: [OMZ's Git aliases are shell aliases](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh), not aliases in the Git config. To add abbreviations for them, use **import-aliases**.
 
-Note that zsh-abbr does not lint the imported abbreviations. It is up to the user to double check the result before taking further actions.
+Note that zsh-abbr does not lint the imported abbreviations. It is up to the user to double-check the result before taking further actions.
 
 Use `--dry-run` to see what would result, without making any actual changes.
 
@@ -309,7 +309,7 @@ Rename an abbreviation.
 
 Use the **--session** or **-S** scope flag to rename a session abbreviation. Otherwise, or if the **--user** or **-U** scope flag is used, a cross-session abbreviation will be renamed.
 
-Use the **--global** flag to rename a global abbreviation. Otherwise a command abbreviation will be renamed.
+Use the **--global** flag to rename a global abbreviation. Otherwise, a command abbreviation will be renamed.
 
 Rename is scope- and type-specific. If you get a "no matching abbreviation" error, make sure you added the right flags (list abbreviations if you are not sure).
 

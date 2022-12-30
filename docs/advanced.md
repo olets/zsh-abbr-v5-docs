@@ -8,12 +8,12 @@ In addition to the following, setting `NO_COLOR` (regardless of its value) will 
 
 Variable | Type | Use | Default
 ---|---|---|---
-`ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbrevations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
+`ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbreviations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
 `ABBR_DEBUG` | integer | If non-zero, print debugging messages | 0
 `ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (see [Bindings](#bindings)) | 1
 `ABBR_DRY_RUN` | integer | If non-zero, use dry run mode without passing `--dry-run` | 0
 `ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (see [`add`](#add)) | 0
-`ABBR_PRECMD_LOGS` | interger | If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
+`ABBR_PRECMD_LOGS` | integer | If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
 `ABBR_QUIET` | integer | If non-zero, use quiet mode without passing `--quiet` | 0
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
 `ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. _Ends in `/`_ | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` *
@@ -40,7 +40,7 @@ Variable | Type | Value
 `ABBR_SOURCE_PATH` | string | Path to the `zsh-abbr.zsh`
 `ABBR_REGULAR_USER_ABBREVIATIONS` | associative array | The regular user abbreviations
 
-Each element in `ABBR_GLOBAL_SESSION_ABBREVIATIONS`, `ABBR_GLOBAL_USER_ABBREVIATIONS`, `ABBR_REGULAR_SESSION_ABBREVIATIONS`, and `ABBR_REGULAR_USER_ABBREVIATIONS` has the form `ABBREVIATION=EXPANSION`.The expansion value is quoted. Scripters will probably want to remove one level of quotes, using the [Q modifier](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Modifiers) (e.g. `for v in ${(Qv)ABBR_REGULAR_USER_ABBREVIATIONS}...`).
+Each element in `ABBR_GLOBAL_SESSION_ABBREVIATIONS`, `ABBR_GLOBAL_USER_ABBREVIATIONS`, `ABBR_REGULAR_SESSION_ABBREVIATIONS`, and `ABBR_REGULAR_USER_ABBREVIATIONS` has the form `ABBREVIATION=EXPANSION`. The expansion value is quoted. Scripters will probably want to remove one level of quotes, using the [Q modifier](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Modifiers) (e.g. `for v in ${(Qv)ABBR_REGULAR_USER_ABBREVIATIONS}...`).
 
 ## Storage and manual editing
 
@@ -48,7 +48,7 @@ User abbreviations live in a plain text file which you can edit directly, share,
 
 zsh-abbr automatically keeps the user abbreviations storage file alphabetized, with all global user abbreviations before the first regular user abbreviation.
 
-Every time an `abbr` command is run, the session's updates its user abbreviatons with the latest from the user abbreviations file. This should add no appreciable time, but you prefer it can be turned off by setting `ABBR_AUTOLOAD=0`.
+Every time an `abbr` command is run, the session's updates its user abbreviations with the latest from the user abbreviations file. This should add no appreciable time, but you prefer it can be turned off by setting `ABBR_AUTOLOAD=0`.
 
 To refresh the user abbreviations from the user abbreviation, run `abbr load` (or any other `abbr` command).
 
@@ -66,9 +66,9 @@ There are three available widgets:
 
 Widget | Behavior | Default binding
 ---|---|---
-`abbr-expand` | If following an abbreviation, expands it.<br>Replaces deprecated `_abbr_expand_widget` | Not bound
-`abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line.<br>Replaces deprecated `_abbr_expand_and_accept` | <kbd>Enter</kbd>
-`abbr-expand-and-space` | If following an abbreviation, expands it; then adds a space<br>Replaces deprecated `_abbr_expand_and_space` | <kbd>Space</kbd>
+`abbr-expand` | If following an abbreviation, expands it.<br> Replaces deprecated `_abbr_expand_widget` | Not bound
+`abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line.<br> Replaces deprecated `_abbr_expand_and_accept` | <kbd>Enter</kbd>
+`abbr-expand-and-space` | If following an abbreviation, expands it; then adds a space.<br> Replaces deprecated `_abbr_expand_and_space` | <kbd>Space</kbd>
 
 In the following example, additional bindings are added such that <kbd>Ctrl</kbd><kbd>e</kbd> expands abbreviations without adding a trailing space and <kbd>Ctrl</kbd><kbd>a</kbd> has the same behavior as <kbd>Space</kbd>.
 

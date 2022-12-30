@@ -1,6 +1,6 @@
 # zsh-abbr ![v4.8.4](https://img.shields.io/badge/release-v4.8.4-blue)
 
-**abbr** is the zsh manager for auto-expanding abbreviations - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.
+**zsh-abbr** is the zsh manager for auto-expanding abbreviations - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.
 
 For example, a frequently-run command like `git checkout` can be abbreviated to `gco` (or even `co` or `c` or anything else). Type <kbd>Space</kbd> after an abbreviation to expand it. Type <kbd>Enter</kbd> after an abbreviation to expand it and run the expansion. To prevent expansion, add <kbd>Ctrl</kbd> (<kbd>Ctrl</kbd><kbd>Space</kbd> / <kbd>Ctrl</kbd><kbd>Enter</kbd>) or add a delimiter like `;` after the abbreviation.
 
