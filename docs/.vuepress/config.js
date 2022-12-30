@@ -190,6 +190,27 @@ export default {
         target: "_self",
       },
     ],
+    sidebar: [
+      {
+        text: "Introduction",
+        link: "/",
+      },
+      "/installation.md",
+      {
+        text: "Reference",
+        link: "/reference.md",
+        children: [
+          "/scopes.md",
+          "/types.md",
+          "/commands.md",
+          "/advanced.md",
+          "/performance.md",
+        ],
+      },
+      "/contributing.md",
+      "/license.md",
+      "/uninstalling.md",
+    ],
     sidebarDepth: 3,
     themePlugins: {
       externalLinkIcon: false,
