@@ -27,12 +27,10 @@ Install dependencies by running
 pnpm install
 ```
 
-### Update external content
-
-Some content is managed in the zsh-abbr repo. To update this repo's copy, run
+### Update Algolia index
 
 ```shell
-pnpm update-external-content
+pnpm algolia:index
 ```
 
 ### Serve and watch

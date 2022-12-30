@@ -4,6 +4,7 @@
   "description": "Documentation for zsh-abbr v4.x",
   "main": "index.js",
   "scripts": {
+    "algolia:index": "docker run --platform=linux/amd64 -it --env-file=./.env -e \"CONFIG=$(node docsearch.config.js)\" algolia/docsearch-scraper",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
@@ -16,13 +17,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@algolia/client-search": "4.9.1",
     "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.60",
     "@vuepress/plugin-shiki": "2.0.0-beta.60",
     "@vuepress/plugin-toc": "2.0.0-beta.60",
+    "dotenv": "^16.0.3",
     "vue": "^3.2.45",
     "vuepress": "2.0.0-beta.60"
   },
   "peerDependencies": {
+    "@algolia/client-search": "4.9.1",
     "@vuepress/client": "2.0.0-beta.60",
     "vue": "^3.2.45"
   }
