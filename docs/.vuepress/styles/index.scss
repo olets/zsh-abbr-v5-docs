@@ -78,3 +78,7 @@ main {
     text-decoration: underline;
   }
 }
+
+div[class*=language-] > button.copy-code-button {
+  opacity: 1 !important;
+}

@@ -1,4 +1,5 @@
 import * as dotenv from 'dotenv';
+import { copyCodePlugin } from "vuepress-plugin-copy-code2";
 dotenv.config()
 import { defaultTheme } from 'vuepress';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
@@ -240,6 +241,10 @@ export default {
 
   // plugins
   plugins: [
+    // https://vuepress-theme-hope.github.io/v2/copy-code/
+    copyCodePlugin({
+      pure: true,
+    }),
     // https://v2.vuepress.vuejs.org/reference/plugin/docsearch.html
     docsearchPlugin({
       apiKey: process.env.SEARCH_KEY,
