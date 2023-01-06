@@ -19,15 +19,9 @@ Variable | Type | <div style="width: 300px">Use</div> | Default
 `ABBR_PRECMD_LOGS` | integer | If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
 `ABBR_QUIET` | integer | If non-zero, use quiet mode without passing `--quiet` | 0
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
-`ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. _Ends in `/`_ | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` *
-`ABBR_USER_ABBREVIATIONS_FILE` | String | Path to the file user abbreviation are stored in (see [Storage and manual editing](#storage-and-manual-editing)) | `$XDG_CONFIG_HOME/zsh/abbreviations` if you have `XDG_CONFIG_HOME` defined\*\*, otherwise `$HOME/.config/zsh/abbreviations` \*\*\*
+`ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. _Ends in `/`_ | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` <br><br> If changing this, you may want to delete the default directory.
+`ABBR_USER_ABBREVIATIONS_FILE` | String | Path to the file user abbreviation are stored in (see [Storage and manual editing](#storage-and-manual-editing)) | `${XDG_CONFIG_HOME:-$HOME/.config}/zsh-abbr/user-abbreviations` <br><br> with legacy support for using `${XDG_CONFIG_HOME:-$HOME/.config}/zsh/abbreviations` instead if a file exists at that path <br><br> If changing this, you may want to delete the default file.
 `NO_COLOR` | mixed | If set (to any value or no value at all) abbr will not use color in its output. See <https://no-color.org/>.
-
-\* If changing this, you may want to delete the default directory.
-
-\*\* Unless you've been using zsh-abbr without a customized `ABBR_USER_ABBREVIATIONS_FILE` since before `XDG_CONFIG_HOME` support was added (v4.8.0). In that case zsh-abbr will still find your pre-4.8.0 `$HOME/.config/zsh/abbreviations`.
-
-\*\*\* If changing this, you may want to delete the default file.
 
 ## Exported variables
 
