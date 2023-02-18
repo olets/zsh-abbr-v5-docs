@@ -11,9 +11,14 @@ These docs are for the v5 beta. See the [pre-release discussion](https://github.
 For v4 docs see <https://v4.zsh-abbr.olets.dev>
 :::
 
-zsh-abbr will not affect time between prompts. The following is the impact of zsh-abbr on time to start a new session, profiled with `zprof` and `zinit light olets/zsh-abbr`.
+zsh-abbr adds roughly 13ms + 1.65ms/abbreviation to first prompt lag, 20ms + 1.65ms/abbreviation to first command lag, and 13ms + 1.65ms/abbreviation to exit time.
 
-Machine | Initialization overhead | Time per user abbreviation
----|---|---
-macOS 10.15 on early-2015 MacBook Pro (2.9 GHz Intel Core i5, 16 GB), zsh 5.8, zinit 3.1, iTerm2 3.3.12 | Approx. 120ms | Approx. 1ms
-macOS 11.2.1 on 2020 MacBook Pro (M1, 16 GB), zsh 5.8, zinit 3.7, iTerm 3.4.4 | Approx. 40ms | Under 1ms
+Explanations of the measures are at <https://github.com/romkatv/zsh-bench#what-it-measures>.
+
+Raw single-run data is available at <https://oletsdev.notion.site/oletsdev/zsh-abbr-f2f3a1de08f14c8f8686ece171175400>.
+
+The performance suite uses [zsh-bench](https://github.com/romkatv/zsh-bench). Run the performance suite with
+
+```shell
+zsh-bench --isolation docker --config-dir ./perf -- not-installed fresh-install zero-abbreviations ten-abbreviations one-hundred-abbreviations
+```
