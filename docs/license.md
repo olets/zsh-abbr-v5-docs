@@ -4,6 +4,10 @@ sidebarDepth: 0
 
 # License
 
+:::tip
+These are the v4 docs. For v5 docs see <https://zsh-abbr.olets.dev>
+:::
+
 <a href="https://www.github.com/olets/zsh-abbr">zsh-abbr</a> 4.x by <a href="https://www.github.com/olets">Henry Bley-Vroman</a> is licensed under a license which is the unmodified text of <a href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> and ethics conditions taken without modification from <a href="https://firstdonoharm.dev/version/2/1/license.html">Hippocratic License 2.1</a>. It is not affiliated with Creative Commons or the Organization for Ethical Source.
 
 Human-readable summary of (and not a substitute for) the [LICENSE](https://github.com/olets/zsh-abbr/blob/v4/LICENSE) file:

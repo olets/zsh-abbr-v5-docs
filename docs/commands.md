@@ -1,5 +1,9 @@
 # Commands
 
+:::tip
+These are the v4 docs. For v5 docs see <https://zsh-abbr.olets.dev>
+:::
+
 zsh-abbr has commands to add, rename, and erase abbreviations; to add abbreviations for every alias or Git alias; to list the available abbreviations with or without their expansions; and to create aliases from abbreviations.
 
 `abbr` with no arguments is shorthand for `abbr list`. `abbr ...` with arguments is shorthand for `abbr add ...`.
