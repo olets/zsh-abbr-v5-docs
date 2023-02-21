@@ -6,11 +6,6 @@ next:
 
 # Performance
 
-:::danger
-These docs are for the v5 beta. See the [pre-release discussion](https://github.com/olets/zsh-abbr/discussions/64).  
-For v4 docs see <https://v4.zsh-abbr.olets.dev>
-:::
-
 zsh-abbr adds roughly 13ms + 1.65ms/abbreviation to first prompt lag, 20ms + 1.65ms/abbreviation to first command lag, and 13ms + 1.65ms/abbreviation to exit time.
 
 Explanations of the measures are at <https://github.com/romkatv/zsh-bench#what-it-measures>.

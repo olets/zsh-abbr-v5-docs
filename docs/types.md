@@ -1,10 +1,5 @@
 # Types
 
-:::danger
-These docs are for the v5 beta. See the [pre-release discussion](https://github.com/olets/zsh-abbr/discussions/64).  
-For v4 docs see <https://v4.zsh-abbr.olets.dev>
-:::
-
 Some zsh-abbr commands take a **type** parameter. There are two supported scopes: **regular** and **global**. Regular abbreviations expand only at the start of the command line. Global abbreviations expand anywhere in the command line.
 
 Regular is the default type.

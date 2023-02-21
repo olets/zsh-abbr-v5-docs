@@ -1,10 +1,5 @@
 # Migrating between versions
 
-:::danger
-These docs are for the v5 beta. See the [pre-release discussion](https://github.com/olets/zsh-abbr/discussions/64).  
-For v4 docs see <https://v4.zsh-abbr.olets.dev>
-:::
-
 [[toc]]
 
 ## Upgrading v4 to v5
