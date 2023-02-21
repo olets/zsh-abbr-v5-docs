@@ -3,8 +3,8 @@ prev:
   text: Performance
   link: /performance
 next:
-  text: Community
-  link: /community
+  text: Migrating between versions
+  link: /migrating-between-versions/
 ---
 
 # Contributing

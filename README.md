@@ -15,10 +15,6 @@ Source for [zsh-abbr](https://github.com/olets/zsh-abbr/tree/v5)'s documentation
 
 ## Development
 
-### Clone
-
-This project uses Git submodules. When cloning, add the `--recurse-submodules` flag to your `git clone` command.
-
 ### Setup
 
 Run
@@ -39,14 +35,6 @@ pnpm
 
 ```shell
 pnpm algolia:index
-```
-
-### Update external content
-
-Some content is managed in the zsh-abbr repo. To update this repo's copy, run
-
-```shell
-pnpm update-external-content
 ```
 
 ### Serve and watch

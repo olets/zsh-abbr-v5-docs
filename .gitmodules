@@ -1,4 +1,0 @@
-[submodule "zsh-abbr"]
-	path = zsh-abbr
-	url = https://github.com/olets/zsh-abbr
-	branch = v5
