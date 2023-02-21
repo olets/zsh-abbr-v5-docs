@@ -1,5 +1,9 @@
 # Installation
 
+:::tip
+These are the v4 docs. For v5 docs see <https://zsh-abbr.olets.dev>
+:::
+
 [[toc]]
 
 ## Package
@@ -7,7 +11,7 @@
 zsh-abbr is available on Homebrew. Run
 
 ```
-brew install olets/tap/zsh-abbr
+brew install olets/tap/zsh-abbr@4
 ```
 
 and follow the post-install instructions logged to the terminal.

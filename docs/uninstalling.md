@@ -1,5 +1,9 @@
 # Uninstalling
 
+:::tip
+These are the v4 docs. For v5 docs see <https://zsh-abbr.olets.dev>
+:::
+
 Delete the session data storage directory
 
 ```shell:no-line-numbers
