@@ -184,18 +184,18 @@ export default {
       },
       {
         text: "Changelog",
-        link: "https://github.com/olets/zsh-abbr/blob/v5/CHANGELOG.md",
+        link: "https://github.com/olets/zsh-abbr/blob/main/CHANGELOG.md",
         target: "_self",
       },
       {
         text: "License",
-        link: "https://github.com/olets/zsh-abbr/blob/v5/LICENSE",
+        link: "https://github.com/olets/zsh-abbr/blob/main/LICENSE",
         target: "_self",
       },
       // Manual instead of with defaultTheme's `repo` so that we can specify the `target`
       {
         text: "GitHub",
-        link: "https://github.com/olets/zsh-abbr/tree/v5",
+        link: "https://github.com/olets/zsh-abbr",
         target: "_self",
       },
     ],
