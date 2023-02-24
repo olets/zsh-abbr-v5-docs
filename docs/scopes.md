@@ -1,5 +1,5 @@
 ---
-prev: /reference.md
+prev: /reference.html
 ---
 
 # Scopes

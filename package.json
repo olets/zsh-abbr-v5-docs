@@ -6,7 +6,8 @@
   "scripts": {
     "algolia:index": "docker run --platform=linux/amd64 -it --env-file=./.env -e \"CONFIG=$(node docsearch.config.js)\" algolia/docsearch-scraper",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "check-links": "blc https://v4.zsh-abbr.olets.dev -ro"
   },
   "keywords": [
     "zsh",
@@ -30,5 +31,8 @@
     "@algolia/client-search": "4.9.1",
     "@vuepress/client": "2.0.0-beta.60",
     "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "broken-link-checker": "^0.7.8"
   }
 }
