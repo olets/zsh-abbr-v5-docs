@@ -228,6 +228,7 @@ export default {
             },
           ],
         },
+        "/external/community.md",
         "/migrating-between-versions",
         "/uninstalling",
       ],

@@ -7,6 +7,7 @@
     "algolia:index": "docker run --platform=linux/amd64 -it --env-file=./.env -e \"CONFIG=$(node docsearch.config.js)\" algolia/docsearch-scraper",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "update-external-content": "git submodule update --remote && cp ./zsh-abbr/community.md ./docs/external/community.md",
     "upgrade-vuepress": "pnpm add vue@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-shiki@next @vuepress/plugin-toc@next vuepress@next vuepress-plugin-copy-code2@next"
   },
   "keywords": [],
