@@ -209,7 +209,7 @@ export default {
         "/essential-commands",
         {
           text: "Reference",
-          link: "/scopes",
+          link: "/scopes.html",
           children: [
             "/scopes",
             "/types",
@@ -220,11 +220,11 @@ export default {
         },
         {
           text: "Contributing",
-          link: "/contributing/",
+          link: "/contributing.html",
           children: [
             {
               text: "Sponsoring",
-              link: "/contributing#sponsoring",
+              link: "/contributing.html#sponsoring",
             },
           ],
         },

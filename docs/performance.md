@@ -1,7 +1,7 @@
 ---
 next:
   text: Contributing
-  link: /contributing/
+  link: /contributing.html
 ---
 
 # Performance

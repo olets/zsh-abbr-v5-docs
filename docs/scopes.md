@@ -1,7 +1,7 @@
 ---
 prev:
   text: Essential commands
-  link: /essential-commands
+  link: /essential-commands.html
 ---
 
 # Scopes
