@@ -4,7 +4,7 @@
 
 ## Upgrading v4 to v5
 
-1. If you've set up something custom with [Advanced&nbsp;>&nbsp;Widgets&nbsp;and&nbsp;key&nbsp;bindings](/advanced#widgets-and-key-bindings) and are coming from a 4.x version less than 4.8.1, migrate off deprecated functions.
+1. If you've set up something custom with [Advanced&nbsp;>&nbsp;Widgets&nbsp;and&nbsp;key&nbsp;bindings](/advanced.html#widgets-and-key-bindings) and are coming from a 4.x version less than 4.8.1, migrate off deprecated functions.
     - Instead of `_abbr_widget_expand` use `abbr-expand`
     - Instead of `_abbr_widget_expand_and_accept` use `abbr-expand-and-accept`
     - Instead of `_abbr_widget_expand_and_space` use `abbr-expand-and-space`
