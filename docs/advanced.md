@@ -118,6 +118,14 @@ ZSH_HIGHLIGHT_REGEXP=('^[[:blank:][:space:]]*('${(j:|:)${(k)ABBR_REGULAR_USER_AB
 ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('${(j:|:)${(k)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
 ```
 
+NOTE: you probably also have to enable regex completions from the zsh-syntax-highlighting plugin, as it is disabled natively. Currently that is achieved by doing the following:
+
+```shell:no-line-numbers
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main regexp)
+```
+
+Please refer to: [The zsh-syntax-highlighting docs for it](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters.md#how-to-activate-highlighters).
+
 ## vi mode compatibility
 
 Switching to vi mode —with plain old `bindkey -v` or with plugin vi/Vim mode plugin that calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. For example, the simplest `.zshrc` for a zinit user would be
