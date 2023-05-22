@@ -93,7 +93,48 @@ These integrations are not regularly tested. It is possible that they are out of
 
 ### Syntax highlighting
 
-[fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting) users see [#24](https://github.com/olets/zsh-abbr/issues/24).
+#### fast-syntax-highlighting
+
+To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr and all abbreviations are loaded.
+
+> Known limitation: the following zsh-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? See [zsh-abbr#24](https://github.com/olets/zsh-abbr/issues/24).
+
+```shell
+chroma_single_word() {
+  (( next_word = 2 | 8192 ))
+
+  local __first_call="$1" __wrd="$2" __start_pos="$3" __end_pos="$4"
+  local __style
+
+  (( __first_call )) && { __style=${FAST_THEME_NAME}alias }
+  [[ -n "$__style" ]] && (( __start=__start_pos-${#PREBUFFER}, __end=__end_pos-${#PREBUFFER}, __start >= 0 )) && reply+=("$__start $__end ${FAST_HIGHLIGHT_STYLES[$__style]}")
+
+  (( this_word = next_word ))
+  _start_pos=$_end_pos
+
+  return 0
+}
+
+register_single_word_chroma() {
+  local word=$1
+  if [[ -x $(command -v $word) ]] || [[ -n $FAST_HIGHLIGHT["chroma-$word"] ]]; then
+    return 1
+  fi
+
+  FAST_HIGHLIGHT+=( "chroma-$word" chroma_single_word )
+  return 0
+}
+
+if [[ -n $FAST_HIGHLIGHT ]]; then
+  for abbr in ${(f)"$(abbr list-abbreviations)"}; do
+    if [[ $abbr != *' '* ]]; then
+      register_single_word_chroma ${(Q)abbr}
+    fi
+  done
+fi
+```
+
+#### zsh-syntax-highlighting
 
 To highlight user abbreviations that will expand, [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr is loaded.
 
