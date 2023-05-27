@@ -5,7 +5,7 @@
 ## `add`
 
 ```shell:no-line-numbers
-abbr [(add | -a)] [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [--force] ABBREVIATION=EXPANSION
+abbr [(add | -a)] [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] ABBREVIATION=EXPANSION
 ```
 
 Add a new abbreviation.
@@ -230,7 +230,7 @@ alias -g g=git
 ## `git`
 
 ```shell:no-line-numbers
-abbr [(git | g)] [<SCOPE>] [--dry-run] [(--quiet | --quieter)] [--force] ABBREVIATION=EXPANSION
+abbr [(git | g)] [<SCOPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] ABBREVIATION=EXPANSION
 ```
 
 Add two new abbreviations:
@@ -518,7 +518,7 @@ Log profile information for debugging.
 ## `rename`
 
 ```shell:no-line-numbers
-abbr (rename | R) [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] OLD NEW
+abbr (rename | R) [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] OLD NEW
 ```
 
 Rename an abbreviation.
@@ -547,7 +547,9 @@ Use `--dry-run` to see what would result, without making any actual changes.
 
 User abbreviations can also be manually renamed in the user abbreviations file. See [Advanced&nbsp;>&nbsp;Storage and manual editing](/advanced.html#storage-and-manual-editing).
 
-Conflicts will error or warn. See [add](#add) for details.
+Conflicts will error or warn. To continue regardless, use `--force`. To silence the warning, use `--quieter`.
+
+Rename runs an `add` command and an `erase` command. See [add](#add) and [erase](#erase) for details.
 
 ## `version`
 
