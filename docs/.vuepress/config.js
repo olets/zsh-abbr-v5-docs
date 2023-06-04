@@ -151,12 +151,18 @@ export default {
   description: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
 
   markdown: {
+    headers: {
+      level: [2, 3, 4],
+    },
     links: {
       externalAttrs: {
         class: "external-link",
         rel: "",
         target: "",
       }
+    },
+    toc: {
+      level: [2, 3, 4],
     }
   },
 
