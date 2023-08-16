@@ -38,7 +38,7 @@ pnpm
 ### Update Algolia index
 
 ```shell
-pnpm algolia:index
+pnpm search:index
 ```
 
 ### Update external content
