@@ -95,7 +95,7 @@ These integrations are not regularly tested. It is possible that they are out of
 
 #### fast-syntax-highlighting
 
-To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr and all abbreviations are loaded.
+To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr and all abbreviations are loaded.
 
 > Known limitation: the following zsh-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? See [zsh-abbr#24](https://github.com/olets/zsh-abbr/issues/24).
 
