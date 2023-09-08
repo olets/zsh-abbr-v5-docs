@@ -116,7 +116,7 @@ export default {
     [
       "script",
       {
-        src: "https://innovate-remarkable.olets.dev/script.js",
+        src: "https://cdn.usefathom.com/script.js",
         'data-site': "PSZVZLUT",
         'defer': true,
       }
