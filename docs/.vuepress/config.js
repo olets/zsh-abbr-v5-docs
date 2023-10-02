@@ -182,7 +182,7 @@ export default {
         text: "v5.x",
         children: [
           {
-            text: "4.x",
+            text: "v4.x",
             "link": "https://v4.zsh-abbr.olets.dev",
             target: "_self",
           },
