@@ -169,7 +169,7 @@ export default {
         text: "v4.x",
         children: [
           {
-            text: "5.x",
+            text: "v5.x",
             "link": "https://zsh-abbr.olets.dev",
             target: "_self",
           },
