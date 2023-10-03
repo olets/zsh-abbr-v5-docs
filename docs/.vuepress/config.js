@@ -110,13 +110,19 @@ export default {
       },
     ],
 
-    // Fathom analytics
+    // Analytics
     [
       "script",
       {
         src: "https://cdn.usefathom.com/script.js",
         'data-site': "VZXVXKRZ",
         'defer': true,
+      }
+    ],
+    [
+      "script",
+      {
+        src: "/js/analytics.js",
       }
     ],
 
