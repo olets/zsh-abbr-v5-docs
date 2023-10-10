@@ -60,8 +60,10 @@ There are three available widgets:
 Widget | Behavior | Default binding
 ---|---|---
 `abbr-expand` | If following an abbreviation, expands it | Not bound
-`abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line | <kbd>Enter</kbd>
-`abbr-expand-and-space` | If following an abbreviation, expands it; then adds a space | <kbd>Space</kbd>
+`abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line | <kbd>Enter</kbd> (`" "`)
+`abbr-expand-and-space` | If following an abbreviation, expands it; then adds a space | <kbd>Space</kbd> (`"^ "`); in search mode, <kbd>Ctrl Space</kbd> (`-M isearch "^ "`)
+
+zsh-abbr also binds <kbd>Ctrl Space</kbd> (`"^ "`) to `magic-space` and, in search mode, <kbd>Space</kbd> (`-M isearch " "`) to `magic-space`.
 
 In the following example, additional bindings are added such that <kbd>Ctrl</kbd><kbd>e</kbd> expands abbreviations without adding a trailing space and <kbd>Ctrl</kbd><kbd>a</kbd> has the same behavior as <kbd>Space</kbd>.
 
