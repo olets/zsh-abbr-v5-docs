@@ -87,6 +87,16 @@ bindkey "^ " abbr-expand-and-space
 # -- snip --
 ```
 
+### Alternative keymaps
+
+By default, zsh-abbr is only enabled for the default keymap. To enable a widget for another keymap, run `bindkey -M`. For example, the following extends zsh-abbr's default behavior to the `viins` keymap:
+
+```shell:no-line-numbers
+bindkey -M viins " " abbr-expand-and-space
+bindkey -M viins "^ " magic-space
+bindkey -M viins "^M" abbr-expand-and-accept
+```
+
 ## Integrations
 
 :::warning
@@ -170,7 +180,7 @@ exec zsh
 
 ### vi mode
 
-Switching to vi mode —with plain old `bindkey -v` or with a vi/Vim mode plugin that calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. 
+Switching to vi mode —with `bindkey -v` or software which calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. 
 
 ```shell{4}:no-line-numbers
 # .zshrc
