@@ -44,11 +44,11 @@ zsh: command not found: s
 
 ## Global
 
-Regular abbreviations expand everywhere.
+Global abbreviations expand everywhere.
 
 To scope a zsh-abbr command to the user, pass the `--global` flag or its shorthand `-g`.
 
-In the following examples, global abbreviations expand at the start of the line but not in other positions:
+In the following examples, global abbreviations can expand at any positions:
 
 
 ```shell{5}:no-line-numbers
