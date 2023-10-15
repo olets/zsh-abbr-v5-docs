@@ -48,7 +48,7 @@ Global abbreviations expand everywhere.
 
 To scope a zsh-abbr command to the user, pass the `--global` flag or its shorthand `-g`.
 
-In the following examples, global abbreviations can expand at any positions:
+In the following examples, global abbreviations expand at the start of the line and also in other positions:
 
 
 ```shell{5}:no-line-numbers
