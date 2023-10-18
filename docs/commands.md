@@ -5,7 +5,7 @@
 ## `add`
 
 ```shell:no-line-numbers
-abbr [(add | -a)] [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] ABBREVIATION=EXPANSION
+abbr [(add | a)] [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] ABBREVIATION=EXPANSION
 ```
 
 Add a new abbreviation.
