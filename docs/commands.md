@@ -262,7 +262,7 @@ Show the manpage.
 ## `import-aliases`
 
 ```shell:no-line-numbers
-abbr import-aliases [<type>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] 
+abbr import-aliases [<TYPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] 
 ```
 
 Add regular abbreviations for every regular alias in the session, and global abbreviations for every global alias in the session.
@@ -298,7 +298,7 @@ Will skip, with a warning, if the alias has the same name as a command or an exi
 ## `import-fish`
 
 ```shell:no-line-numbers
-abbr import-fish [<SCOPE>] FILE [--dry-run] [(--quiet | --quieter)] [(-f | --force)]
+abbr import-fish [<SCOPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] FILE
 ```
 
 Import fish abbr-syntax abbreviations (`abbreviation expansion` as compared to zsh abbr's `abbreviation=expansion`).
@@ -342,7 +342,7 @@ For users migrating from Oh-My-Zsh: [OMZ's Git aliases are shell aliases](https:
 abbr import-git-aliases [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] [--file <config-file>] [--prefix <ABBREVIATION prefix>]
 ```
 
-Add an abbreviation for every Git alias available in the current session. The EXPANSION is prefixed with `git[Space]`.
+Add regular abbreviations for every Git alias in the current session. The EXPANSION is prefixed with `git[Space]`.
 
 ```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
