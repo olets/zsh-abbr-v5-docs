@@ -11,7 +11,7 @@ Variable | Type | <div style="width: 300px">Use</div> | Default
 `ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (see [Widgets&nbsp;and&nbsp;key&nbsp;bindings](#widgets-and-key-bindings)) | 1
 `ABBR_DRY_RUN` | integer | If non-zero, use dry run mode without passing `--dry-run` | 0
 `ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (see [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`add`](/commands.html#add)) | 0
-`ABBR_PRECMD_LOGS` | integer | If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
+`ABBR_PRECMD_LOGS` | integer | ⚠️ DEPRECATED ⚠️ If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
 `ABBR_QUIET` | integer | If non-zero, use quiet mode without passing `--quiet` | 0
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
 `ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. _Ends in `/`_ | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` <br><br> If changing this, you may want to delete the default directory.
@@ -26,7 +26,7 @@ Variable | Type | Value
 ---|---|---
 `ABBR_GLOBAL_SESSION_ABBREVIATIONS` | associative array | The global session abbreviations
 `ABBR_GLOBAL_USER_ABBREVIATIONS` | associative array | The global user abbreviations
-`ABBR_PRECMD_MESSAGE` | prompt string | Message shown by `precmd` hook if `ABBR_PRECMD_LOGS` is non-zero
+`ABBR_PRECMD_MESSAGE` | prompt string | ⚠️ DEPRECATED ⚠️ Message shown by `precmd` hook if `ABBR_PRECMD_LOGS` is non-zero
 `ABBR_REGULAR_SESSION_ABBREVIATIONS` | associative array | The regular session abbreviations
 `ABBR_SOURCE_PATH` | string | Path to the `zsh-abbr.zsh`
 `ABBR_REGULAR_USER_ABBREVIATIONS` | associative array | The regular user abbreviations
