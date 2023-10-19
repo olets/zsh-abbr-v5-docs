@@ -26,14 +26,21 @@ Variable | Type | Value
 ---|---|---
 `ABBR_GLOBAL_SESSION_ABBREVIATIONS` | associative array | The global session abbreviations
 `ABBR_GLOBAL_USER_ABBREVIATIONS` | associative array | The global user abbreviations
-`ABBR_INITIALIZING` | integer | Set to `1` when zsh-abbr is initializing
-`ABBR_LOADING_USER_ABBREVIATIONS` | integer | Set to `1` when the interactive shell is refreshing its list of user abbreviations, otherwise not set
 `ABBR_PRECMD_MESSAGE` | prompt string | Message shown by `precmd` hook if `ABBR_PRECMD_LOGS` is non-zero
 `ABBR_REGULAR_SESSION_ABBREVIATIONS` | associative array | The regular session abbreviations
 `ABBR_SOURCE_PATH` | string | Path to the `zsh-abbr.zsh`
 `ABBR_REGULAR_USER_ABBREVIATIONS` | associative array | The regular user abbreviations
 
 Each element in `ABBR_GLOBAL_SESSION_ABBREVIATIONS`, `ABBR_GLOBAL_USER_ABBREVIATIONS`, `ABBR_REGULAR_SESSION_ABBREVIATIONS`, and `ABBR_REGULAR_USER_ABBREVIATIONS` has the form `ABBREVIATION=EXPANSION`. The expansion value is quoted. Scripters will probably want to remove one level of quotes, using the [Q modifier](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Modifiers) (e.g. `for v in ${(Qv)ABBR_REGULAR_USER_ABBREVIATIONS}...`).
+
+### Transient exported variables
+
+zsh-abbr exports the following variables in limited contexts:
+
+Variable | Type | Value
+---|---|---
+`ABBR_INITIALIZING` | integer | Set to `1` when zsh-abbr is initializing, otherwise not set
+`ABBR_LOADING_USER_ABBREVIATIONS` | integer | Set to `1` when the interactive shell is refreshing its list of user abbreviations, otherwise not set
 
 ## Storage and manual editing
 
