@@ -197,6 +197,11 @@ export default {
         link: "https://github.com/olets/zsh-abbr/tree/v4",
         target: "_self",
       },
+      {
+        text: "olets.dev",
+        link: "https://olets.dev",
+        target: "_self",
+      },
     ],
     sidebar: [
       {
