@@ -61,6 +61,55 @@ Added the regular user abbreviation `git cp`
 If the above example excites you, check out zsh-abbr's [git command](/commands.html#git). It streamlines the process of creating Git-related abbreviations!
 :::
 
+## Use cursor markers
+
+You can tell zsh-abbr to move the cursor to somewhere in the expansion after expanding. Toggle on `ABBR_SET_EXPANSION_CURSOR`:
+
+```shell
+# .zshrc
+ABBR_SET_EXPANSION_CURSOR=1
+```
+
+and then use `ABBR_EXPANSION_CURSOR_MARKER` in your abbreviations:
+
+```shell
+% abbr git m="commit -m \"%\""
+Added the regular user abbreviation `m`
+Added the global user abbreviation `git m`
+% m[SPACE] # expands to `git commit -m "[CURSOR]"`
+```
+
+You can use this to disable the default key binding's trailing space:
+
+```shell
+% abbr hasspace=yes
+% abbr nospace=no%
+% hasspace[SPACE]nospace[SPACE]ne # `yes none`
+```
+
+You can even move the cursor when not expanding, to build command "templates". Toggle on `ABBR_SET_LINE_CURSOR`:
+
+```shell
+# .zshrc
+ABBR_SET_LINE_CURSOR=1
+```
+
+and then use `ABBR_LINE_CURSOR_MARKER` in your abbreviations:
+
+```shell
+% ABBR_SET_EXPANSION_CURSOR=1
+% ABBR_SET_LINE_CURSOR=1
+% abbr template="a%b % c%d"
+% template[SPACE] # expands to `a[CURSOR]b % c%d`, thanks to ABBR_SET_EXPANSION_CURSOR
+% a[type xSPACE]b % c%d # cursor moves: `ax b [CURSOR] c %`, thanks to ABBR_SET_LINE_CURSOR
+% ax b [type ySPACE] c%d # cursor moves: `ax b y c [CURSOR]`, thanks to ABBR_SET_LINE_CURSOR
+% ax b y c [CURSOR]
+```
+
+::: tip
+Learn how to customize cursor markers in [Advanced > Configuration Variables](/advanced.html#configuration-variables)
+:::
+
 ## Ditch aliases
 
 Find you **prefer abbreviations to aliases**? zsh-abbr makes it easy to create abbreviations from your aliases. The aliases are left **untouched**, so you can still use them when you want to… or delete them!
