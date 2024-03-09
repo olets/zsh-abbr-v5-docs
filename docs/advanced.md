@@ -10,10 +10,14 @@ Variable | Type | <div style="width: 300px">Use</div> | Default
 `ABBR_DEBUG` | integer | If non-zero, print debugging messages | 0
 `ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (see [Widgets&nbsp;and&nbsp;key&nbsp;bindings](#widgets-and-key-bindings)) | 1
 `ABBR_DRY_RUN` | integer | If non-zero, use dry run mode without passing `--dry-run` | 0
+`ABBR_EXPANSION_CURSOR_MARKER` | string | See `ABBR_SET_EXPANSION_CURSOR` | `$ABBR_LINE_CURSOR_MARKER`
 `ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (see [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`add`](/commands.html#add)) | 0
+`ABBR_LINE_CURSOR_MARKER` | string | See `ABBR_SET_LINE_CURSOR` | %
 `ABBR_PRECMD_LOGS` | integer | ⚠️ DEPRECATED ⚠️ If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
 `ABBR_QUIET` | integer | If non-zero, use quiet mode without passing `--quiet` | 0
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
+`ABBR_SET_EXPANSION_CURSOR` | integer | If non-zero and the expansion includes `ABBR_EXPANSION_CURSOR_MARKER`, `abbr-expand` will replace the expansion's first instance of `ABBR_EXPANSION_CURSOR_MARKER` with the cursor, and `abbr-expand-and-insert`'s bound key will not be inserted at the end of the expansion (see also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
+`ABBR_SET_LINE_CURSOR` | integer | If non-zero and `abbr-expand` didn't place the cursor (because the `ABBR_SET_EXPANSION_CURSOR` is zero or the expansion did not include `ABBR_EXPANSION_CURSOR_MARKER`), `abbr-expand-and-insert` will replace the line's first instance of `ABBR_LINE_CURSOR_MARKER` with the cursor instead of inserting its bound key at the end of the expansion (see also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
 `ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. _Ends in `/`_ | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` <br><br> If changing this, you may want to delete the default directory.
 `ABBR_USER_ABBREVIATIONS_FILE` | String | Path to the file user abbreviation are stored in (see [Storage and manual editing](#storage-and-manual-editing)) | `${XDG_CONFIG_HOME:-$HOME/.config}/zsh-abbr/user-abbreviations` <br><br> with legacy support for using `${XDG_CONFIG_HOME:-$HOME/.config}/zsh/abbreviations` instead if a file exists at that path <br><br> If changing this, you may want to delete the default file.
 `NO_COLOR` | mixed | If set (to any value or no value at all) abbr will not use color in its output. See <https://no-color.org/>.
@@ -68,7 +72,8 @@ Widget | Behavior | Default binding
 ---|---|---
 `abbr-expand` | If following an abbreviation, expands it | Not bound
 `abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line | <kbd>Enter</kbd> (`" "`)
-`abbr-expand-and-space` | If following an abbreviation, expands it; then adds a space | <kbd>Space</kbd> (`"^ "`); in search mode, <kbd>Ctrl Space</kbd> (`-M isearch "^ "`)
+`abbr-expand-and-insert` | If following an abbreviation, expands it; then adds a space | <kbd>Space</kbd> (`"^ "`); in search mode, <kbd>Ctrl Space</kbd> (`-M isearch "^ "`)
+`abbr-expand-and-space` | ⚠️ DEPRECATED ⚠️ Alias for `abbr-expand-and-insert` | Not bound
 
 zsh-abbr also binds <kbd>Ctrl Space</kbd> (`"^ "`) to `magic-space` and, in search mode, <kbd>Space</kbd> (`-M isearch " "`) to `magic-space`.
 
@@ -78,7 +83,7 @@ In the following example, additional bindings are added such that <kbd>Ctrl</kbd
 % cat ~/.zshrc
 # -- snip --
 bindkey "^E" abbr-expand
-bindkey "^A" abbr-expand-and-space
+bindkey "^A" abbr-expand-and-insert
 # -- snip --
 ```
 
@@ -88,7 +93,7 @@ To prevent the creation of the default bindings, set `ABBR_DEFAULT_BINDINGS` to 
 % cat ~/.zshrc
 # -- snip --
 ABBR_DEFAULT_BINDINGS=0
-bindkey "^ " abbr-expand-and-space
+bindkey "^ " abbr-expand-and-insert
 # -- snip --
 # load zsh-abbr
 # -- snip --
@@ -99,7 +104,7 @@ bindkey "^ " abbr-expand-and-space
 By default, zsh-abbr is only enabled for the default keymap. To enable a widget for another keymap, run `bindkey -M`. For example, the following extends zsh-abbr's default behavior to the `viins` keymap:
 
 ```shell:no-line-numbers
-bindkey -M viins " " abbr-expand-and-space
+bindkey -M viins " " abbr-expand-and-insert
 bindkey -M viins "^ " magic-space
 bindkey -M viins "^M" abbr-expand-and-accept
 ```
