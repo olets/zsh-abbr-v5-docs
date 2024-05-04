@@ -124,6 +124,8 @@ To highlight user abbreviations that will expand, [fast-syntax-highlighting](htt
 > Known limitation: the following fast-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? See [zsh-abbr#24](https://github.com/olets/zsh-abbr/issues/24).
 
 ```shell
+# load zsh-abbr, then
+
 chroma_single_word() {
   (( next_word = 2 | 8192 ))
 
@@ -170,6 +172,8 @@ Linux:
 
 <!-- has line numbers because these are lines in a file -->
 ```shell
+# load zsh-abbr, then
+
 ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
 ZSH_HIGHLIGHT_REGEXP+=('^[[:blank:][:space:]]*('${(j:|:)${(Qk)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' <styles for regular abbreviations>)
 ZSH_HIGHLIGHT_REGEXP+=('\<('${(j:|:)${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
@@ -179,6 +183,8 @@ macOS:
 
 <!-- has line numbers because these are lines in a file -->
 ```shell
+# load zsh-abbr, then
+
 ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
 ZSH_HIGHLIGHT_REGEXP=('^[[:blank:][:space:]]*('${(j:|:)${(Qk)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' <styles for regular abbreviations>)
 ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('${(j:|:)${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
