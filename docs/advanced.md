@@ -48,7 +48,11 @@ Variable | Type | Value
 
 ## Storage and manual editing
 
-User abbreviations live in a plain text file which you can edit directly, share, keep in version control, etc. Abbreviations in this file are loaded when each new session is opened; non-`abbr` commands will be ignored and then excised from the file.
+User abbreviations live in a plain text file which you can edit directly, share, keep in version control, etc.
+
+The path to the file is stored in the `ABBR_USER_ABBREVIATIONS_FILE` configuration variable. See [Configuration variables](#configuration-variables) for details.
+
+Abbreviations in this file are loaded when each new session is opened; non-`abbr` commands will be ignored and then excised from the file.
 
 zsh-abbr automatically keeps the user abbreviations storage file alphabetized, with all global user abbreviations before the first regular user abbreviation.
 
