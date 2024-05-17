@@ -1,4 +1,4 @@
-# zsh-abbr-v5-docs ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr-v5-docs)
+# zsh-abbr-v5-docs
 
 Source for [zsh-abbr](https://github.com/olets/zsh-abbr/tree/v5)'s documentation. Read the documentation at <https://zsh-abbr.olets.dev/>.
 
