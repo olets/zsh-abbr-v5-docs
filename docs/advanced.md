@@ -182,11 +182,13 @@ Linux:
 ```shell
 # load zsh-abbr, then
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
-ZSH_HIGHLIGHT_REGEXP+=('^[[:blank:][:space:]]*('${(j:|:)${(Qk)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' <styles for regular abbreviations>)
-ZSH_HIGHLIGHT_REGEXP+=('\<('${(j:|:)${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
 # make sure to replace `<styles for …>` (see above)
 
+(( ${#ABBR_REGULAR_USER_ABBREVIATIONS} )) && {
+  ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
+  ZSH_HIGHLIGHT_REGEXP+=('^[[:blank:][:space:]]*('${(j:|:)${(Qk)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' <styles for regular abbreviations>)
+  ZSH_HIGHLIGHT_REGEXP+=('\<('${(j:|:)${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
+}
 ```
 
 macOS:
@@ -195,11 +197,13 @@ macOS:
 ```shell
 # load zsh-abbr, then
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
-ZSH_HIGHLIGHT_REGEXP=('^[[:blank:][:space:]]*('${(j:|:)${(Qk)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' <styles for regular abbreviations>)
-ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('${(j:|:)${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
 # make sure to replace `<styles for …>` (see above)
 
+(( ${#ABBR_REGULAR_USER_ABBREVIATIONS} )) && {
+  ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
+  ZSH_HIGHLIGHT_REGEXP=('^[[:blank:][:space:]]*('${(j:|:)${(Qk)ABBR_REGULAR_USER_ABBREVIATIONS}}')$' <styles for regular abbreviations>)
+  ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]('${(j:|:)${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}}')$' <styles for global abbreviations>)
+}
 ```
 
 After adding the snippets, all new terminals will use them. To use them in an already-open terminal, restart zsh in that terminal:
