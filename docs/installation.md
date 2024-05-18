@@ -4,6 +4,8 @@
 
 ## Package
 
+### Homebrew
+
 zsh-abbr is available on Homebrew. Run
 
 ```shell:no-line-numbers
@@ -11,6 +13,15 @@ brew install olets/tap/zsh-abbr
 ```
 
 and follow the post-install instructions logged to the terminal.
+
+### Linux package repositories
+
+Community members have created packages in some Linux distros' package repositories. These include
+
+- [Arch](https://aur.archlinux.org/packages/zsh-abbr)
+- [NixOS](https://search.nixos.org/packages?show=zsh-abbr)
+
+There may be others out there. If you know of another, please make a pull request to this page!
 
 ## Plugin
 
