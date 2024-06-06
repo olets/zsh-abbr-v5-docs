@@ -258,17 +258,17 @@ export default {
 
   // plugins
   plugins: [
-    // https://vuepress-theme-hope.github.io/v2/copy-code/
+    // https://ecosystem.vuejs.press/plugins/features/copy-code.html
     copyCodePlugin({
       pure: true,
     }),
-    // https://v2.vuepress.vuejs.org/reference/plugin/docsearch.html
+    // https://ecosystem.vuejs.press/plugins/search/docsearch.html
     docsearchPlugin({
       apiKey: process.env.SEARCH_KEY,
       appId: process.env.APPLICATION_ID,
       indexName: process.env.INDEX_NAME,
     }),
-    // https://v2.vuepress.vuejs.org/reference/plugin/shiki.html
+    // https://ecosystem.vuejs.press/plugins/markdown/shiki.html
     shikiPlugin({
       // only github-dark and slack-dark pass color accessibility
       theme: "github-dark",
