@@ -223,7 +223,7 @@ export default {
           link: "/",
         },
         "/installation",
-        "/essential-commands",
+        "/usage",
         {
           text: "Reference",
           link: "/scopes.html",
