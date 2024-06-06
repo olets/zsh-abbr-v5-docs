@@ -61,7 +61,7 @@ Added the regular user abbreviation `git cp`
 If the above example excites you, check out zsh-abbr's [git command](/commands.html#git). It streamlines the process of creating Git-related abbreviations!
 :::
 
-## Use cursor markers
+## Place the cursor
 
 You can tell zsh-abbr to move the cursor to somewhere in the expansion after expanding. Toggle on `ABBR_SET_EXPANSION_CURSOR`:
 
