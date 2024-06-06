@@ -394,7 +394,7 @@ Use `--file <config-file>` to use a config file instead of the default (see `man
 Added the regular user abbreviation `co`
 ```
 
-Use `--prefix <prefix>` to add a prefix to the ABBREVIATION.
+Use `--prefix <ABBREVIATION prefix>` to add a prefix to the ABBREVIATION.
 
 ```text:no-line-numbers
 # Git config file, likely ~/.gitconfig
