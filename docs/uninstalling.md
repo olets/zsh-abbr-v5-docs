@@ -15,7 +15,7 @@ If you want to delete the user abbreviations file,
 If you haven't customized `$ABBR_USER_ABBREVIATIONS_FILE`, you will probably want to delete its parent directory
 
 ```shell:no-line-numbers
-# see if there's anything in there
+# check whether there's anything in there
 % ls $ABBR_USER_ABBREVIATIONS_FILE:h
 # IF you want to delete it
 % rm -rf $ABBR_USER_ABBREVIATIONS_FILE:h

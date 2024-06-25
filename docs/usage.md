@@ -12,7 +12,7 @@ Added the regular user abbreviation `hw`
 %
 ```
 
-> By default, abbreviations are **immediately available to all current and future sessions** (that is, in all open and future terminals). You can also create **session** abbreviations which are available only in the session they are created in. See [Usage&nbsp;>&nbsp;Scope](/scopes.html).
+> By default, abbreviations are **immediately available to all current and future sessions** (that is, in all open and future terminals). You can also create **session** abbreviations which are available only in the session they are created in. Read [Usage&nbsp;>&nbsp;Scope](/scopes.html).
 
 ## Expand them
 
@@ -34,7 +34,7 @@ hello world
 %
 ```
 
-> By default, abbreviations only **expand at the start of the command line**. These are called **"regular"** abbreviations. You can also create **"global" abbreviations which expand everywhere**. See [Usage&nbsp;>&nbsp;Type](/types.html).
+> By default, abbreviations only **expand at the start of the command line**. These are called **"regular"** abbreviations. You can also create **"global" abbreviations which expand everywhere**. Read [Usage&nbsp;>&nbsp;Type](/types.html).
 
 As seen above, the EXPANSION can be more than one word. The ABBREVIATION can be too. This lets you create context-dependent abbreviations:
 
@@ -107,7 +107,7 @@ and then use `ABBR_LINE_CURSOR_MARKER` in your abbreviations:
 ```
 
 :::warning Known limitation
-`ABBR_EXPANSION_CURSOR_MARKER` cannot be `^`. See [issue #140](https://github.com/olets/zsh-abbr/issues/140) for details.
+`ABBR_EXPANSION_CURSOR_MARKER` cannot be `^`. Read [issue #140](https://github.com/olets/zsh-abbr/issues/140) for details.
 :::
 
 ::: tip
@@ -118,7 +118,7 @@ Learn how to customize cursor markers in [Advanced > Configuration Variables](/a
 
 Find you **prefer abbreviations to aliases**? zsh-abbr makes it easy to create abbreviations from your aliases. The aliases are left **untouched**, so you can still use them when you want to… or delete them!
 
-zsh-abbr has support for importing both [**zsh** aliases](https://zsh.sourceforge.io/Intro/intro_8.html) and [**Git** aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases). See
+zsh-abbr has support for importing both [**zsh** aliases](https://zsh.sourceforge.io/Intro/intro_8.html) and [**Git** aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases). Learn more at:
 
 - [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`import-aliases`](/commands.html#import-aliases)
 - [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`import-git-aliases`](/commands.html#import-git-aliases).

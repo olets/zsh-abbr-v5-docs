@@ -6,21 +6,21 @@
 
 Variable | Type | <div style="width: 300px">Use</div> | Default | Limitations
 ---|---|---|---|---
-`ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbreviations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
+`ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbreviations file (read [Storage and manual editing](#storage-and-manual-editing)) | 1
 `ABBR_DEBUG` | integer | If non-zero, print debugging messages | 0
-`ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (see [Widgets&nbsp;and&nbsp;key&nbsp;bindings](#widgets-and-key-bindings)) | 1
+`ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (read [Widgets&nbsp;and&nbsp;key&nbsp;bindings](#widgets-and-key-bindings)) | 1
 `ABBR_DRY_RUN` | integer | If non-zero, use dry run mode without passing `--dry-run` | 0
-`ABBR_EXPANSION_CURSOR_MARKER` | string | See `ABBR_SET_EXPANSION_CURSOR` | `$ABBR_LINE_CURSOR_MARKER` | Cannot contain `^`. See [issue #140](https://github.com/olets/zsh-abbr/issues/140).
-`ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (see [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`add`](/commands.html#add)) | 0
-`ABBR_LINE_CURSOR_MARKER` | string | See `ABBR_SET_LINE_CURSOR` | %
+`ABBR_EXPANSION_CURSOR_MARKER` | string | Read `ABBR_SET_EXPANSION_CURSOR` in this table | `$ABBR_LINE_CURSOR_MARKER` | Cannot contain `^`. Read [issue #140](https://github.com/olets/zsh-abbr/issues/140).
+`ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (read [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`add`](/commands.html#add)) | 0
+`ABBR_LINE_CURSOR_MARKER` | string | Read `ABBR_SET_LINE_CURSOR` in this table | %
 `ABBR_PRECMD_LOGS` | integer | ⚠️ DEPRECATED ⚠️ If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
 `ABBR_QUIET` | integer | If non-zero, use quiet mode without passing `--quiet` | 0
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
-`ABBR_SET_EXPANSION_CURSOR` | integer | If non-zero and the expansion includes `ABBR_EXPANSION_CURSOR_MARKER`, `abbr-expand` will replace the expansion's first instance of `ABBR_EXPANSION_CURSOR_MARKER` with the cursor, and `abbr-expand-and-insert`'s bound key will not be inserted at the end of the expansion (see also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
-`ABBR_SET_LINE_CURSOR` | integer | If non-zero and `abbr-expand` didn't place the cursor (because the `ABBR_SET_EXPANSION_CURSOR` is zero or the expansion did not include `ABBR_EXPANSION_CURSOR_MARKER`), `abbr-expand-and-insert` will replace the line's first instance of `ABBR_LINE_CURSOR_MARKER` with the cursor instead of inserting its bound key at the end of the expansion (see also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
+`ABBR_SET_EXPANSION_CURSOR` | integer | If non-zero and the expansion includes `ABBR_EXPANSION_CURSOR_MARKER`, `abbr-expand` will replace the expansion's first instance of `ABBR_EXPANSION_CURSOR_MARKER` with the cursor, and `abbr-expand-and-insert`'s bound key will not be inserted at the end of the expansion (read also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
+`ABBR_SET_LINE_CURSOR` | integer | If non-zero and `abbr-expand` didn't place the cursor (because the `ABBR_SET_EXPANSION_CURSOR` is zero or the expansion did not include `ABBR_EXPANSION_CURSOR_MARKER`), `abbr-expand-and-insert` will replace the line's first instance of `ABBR_LINE_CURSOR_MARKER` with the cursor instead of inserting its bound key at the end of the expansion (read also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
 `ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` for users without privileges,<br>`${${TMPDIR:-/tmp}%/}/zsh-abbr/` for users with privileges (e.g. `su`)<br><br> If changing this, you may want to delete the default directory.<br>As of v5.7.0, custom values for this variable do not have to end in `/`.
-`ABBR_USER_ABBREVIATIONS_FILE` | String | Path to the file user abbreviation are stored in (see [Storage and manual editing](#storage-and-manual-editing)) | `${XDG_CONFIG_HOME:-$HOME/.config}/zsh-abbr/user-abbreviations` <br><br> with legacy support for using `${XDG_CONFIG_HOME:-$HOME/.config}/zsh/abbreviations` instead if a file exists at that path <br><br> If changing this, you may want to delete the default file.
-`NO_COLOR` | mixed | If set (to any value or no value at all) abbr will not use color in its output. See <https://no-color.org/>.
+`ABBR_USER_ABBREVIATIONS_FILE` | String | Path to the file user abbreviation are stored in (read [Storage and manual editing](#storage-and-manual-editing)) | `${XDG_CONFIG_HOME:-$HOME/.config}/zsh-abbr/user-abbreviations` <br><br> with legacy support for using `${XDG_CONFIG_HOME:-$HOME/.config}/zsh/abbreviations` instead if a file exists at that path <br><br> If changing this, you may want to delete the default file.
+`NO_COLOR` | mixed | If set (to any value or no value at all) abbr will not use color in its output. Learn more at <https://no-color.org/>.
 
 ## Exported variables
 
@@ -50,7 +50,7 @@ Variable | Type | Value
 
 User abbreviations live in a plain text file which you can edit directly, share, keep in version control, etc.
 
-The path to the file is stored in the `ABBR_USER_ABBREVIATIONS_FILE` configuration variable. See [Configuration variables](#configuration-variables) for details.
+The path to the file is stored in the `ABBR_USER_ABBREVIATIONS_FILE` configuration variable. Read [Configuration variables](#configuration-variables) for details.
 
 Abbreviations in this file are loaded when each new session is opened; non-`abbr` commands will be ignored and then excised from the file.
 
@@ -126,7 +126,7 @@ These integrations are not regularly tested. It is possible that they are out of
 To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr and all abbreviations are loaded.
 
 > Known limitations:
-> 1. the following fast-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? See [zsh-abbr#24](https://github.com/olets/zsh-abbr/issues/24).
+> 1. the following fast-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? Read [zsh-abbr#24](https://github.com/olets/zsh-abbr/issues/24).
 > 1. Only and all of the abbreviations defined when the shell was started will be highlighted. fast-syntax-highlighting won't know about any abbreviation additions, erasures, or renames. To update fast-syntax-highlighting, open a new terminal, or restart the shell by running `exec zsh`.
 
 ```shell
@@ -168,7 +168,7 @@ fi
 
 #### zsh-syntax-highlighting
 
-To highlight user abbreviations that will expand, [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr is loaded. For more info see the [zsh-syntax-highlighting regexp highlighter documentation](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md).
+To highlight user abbreviations that will expand, [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr is loaded. For more info read the [zsh-syntax-highlighting regexp highlighter documentation](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md).
 
 Replace `<styles for …>` with a [zsh character highlighting](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting) string (start at "The available types of highlighting are the following."). For example `fg=blue`, `fg=blue,bg=red,bold`, etc.
 
@@ -182,7 +182,7 @@ Linux:
 ```shell
 # load zsh-abbr, then
 
-# make sure to replace `<styles for …>` (see above)
+# make sure to replace `<styles for …>` (read above)
 
 (( ${#ABBR_REGULAR_USER_ABBREVIATIONS} )) && {
   ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
@@ -197,7 +197,7 @@ macOS:
 ```shell
 # load zsh-abbr, then
 
-# make sure to replace `<styles for …>` (see above)
+# make sure to replace `<styles for …>` (read above)
 
 (( ${#ABBR_REGULAR_USER_ABBREVIATIONS} )) && {
   ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
