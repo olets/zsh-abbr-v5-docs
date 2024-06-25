@@ -10,6 +10,10 @@ abbr [(add | a)] [<SCOPE>] [<TYPE>] [--dry-run] [(--quiet | --quieter)] [(-f | -
 
 Add a new abbreviation.
 
+:::warning Known limitation
+Abbreviations and expansions cannot have an exclamation point (`!`). See [issue #84](https://github.com/olets/zsh-abbr/issues/84) for details. If that's a dealbreaker for you, you can downgrade to v4.x. See [Migrating between versions](./migrating-between-versions.md).
+:::
+
 ```shell{1-2}:no-line-numbers
 % abbr add hw="echo hello world"
 Added the regular user abbreviation `hw`
