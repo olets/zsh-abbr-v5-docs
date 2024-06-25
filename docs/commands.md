@@ -28,7 +28,7 @@ Added the regular user abbreviation `hw`
 %
 ```
 
-As seen above, the EXPANSION can be more than one word. The ABBREVIATION can be too. This lets you create context-dependent abbreviations:
+As demonstrated above, the EXPANSION can be more than one word. The ABBREVIATION can be too. This lets you create context-dependent abbreviations:
 
 ```shell{3-4}:no-line-numbers
 % abbr "git cp"="git cherry-pick"

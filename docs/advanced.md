@@ -30,7 +30,7 @@ Variable | Type | Value
 ---|---|---
 `ABBR_GLOBAL_SESSION_ABBREVIATIONS` | associative array | The global session abbreviations
 `ABBR_GLOBAL_USER_ABBREVIATIONS` | associative array | The global user abbreviations
-`ABBR_PRECMD_MESSAGE` | prompt string | ⚠️ DEPRECATED ⚠️ Message shown by `precmd` hook if `ABBR_PRECMD_LOGS` is non-zero
+`ABBR_PRECMD_MESSAGE` | prompt string | ⚠️ DEPRECATED ⚠️ Message printed by `precmd` hook if `ABBR_PRECMD_LOGS` is non-zero
 `ABBR_REGULAR_SESSION_ABBREVIATIONS` | associative array | The regular session abbreviations
 `ABBR_SOURCE_PATH` | string | Path to the `zsh-abbr.zsh`
 `ABBR_REGULAR_USER_ABBREVIATIONS` | associative array | The regular user abbreviations

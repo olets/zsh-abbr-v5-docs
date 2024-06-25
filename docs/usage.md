@@ -36,7 +36,7 @@ hello world
 
 > By default, abbreviations only **expand at the start of the command line**. These are called **"regular"** abbreviations. You can also create **"global" abbreviations which expand everywhere**. Read [Usage&nbsp;>&nbsp;Type](/types.html).
 
-As seen above, the EXPANSION can be more than one word. The ABBREVIATION can be too. This lets you create context-dependent abbreviations:
+As demonstrated above, the EXPANSION can be more than one word. The ABBREVIATION can be too. This lets you create context-dependent abbreviations:
 
 ```shell{3-4}:no-line-numbers
 % abbr "git cp"="git cherry-pick"
