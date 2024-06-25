@@ -135,6 +135,10 @@ abbr (erase | e) [<SCOPE>] [<TYPE>] [--dry-run] [--quiet] ABBREVIATION
 
 Erase an abbreviation.
 
+:::warning Known limitation
+`abbr erase` cannot erase abbreviations which contain certain non-alphanumeric characters. See [issue #118](https://github.com/olets/zsh-abbr/issues/118) for details.
+:::
+
 ```shell{5-6}:no-line-numbers
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
