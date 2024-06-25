@@ -106,6 +106,10 @@ and then use `ABBR_LINE_CURSOR_MARKER` in your abbreviations:
 % ax b y c [CURSOR]
 ```
 
+:::warning Known limitation
+`ABBR_EXPANSION_CURSOR_MARKER` cannot be `^`. See [issue #140](https://github.com/olets/zsh-abbr/issues/140) for details.
+:::
+
 ::: tip
 Learn how to customize cursor markers in [Advanced > Configuration Variables](/advanced.html#configuration-variables)
 :::

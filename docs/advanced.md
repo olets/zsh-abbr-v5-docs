@@ -4,13 +4,13 @@
 
 ## Configuration variables
 
-Variable | Type | <div style="width: 300px">Use</div> | Default
----|---|---|---
+Variable | Type | <div style="width: 300px">Use</div> | Default | Limitations
+---|---|---|---|---
 `ABBR_AUTOLOAD` | integer | If non-zero, automatically account for updates to the user abbreviations file (see [Storage and manual editing](#storage-and-manual-editing)) | 1
 `ABBR_DEBUG` | integer | If non-zero, print debugging messages | 0
 `ABBR_DEFAULT_BINDINGS` | integer | If non-zero, add the default bindings (see [Widgets&nbsp;and&nbsp;key&nbsp;bindings](#widgets-and-key-bindings)) | 1
 `ABBR_DRY_RUN` | integer | If non-zero, use dry run mode without passing `--dry-run` | 0
-`ABBR_EXPANSION_CURSOR_MARKER` | string | See `ABBR_SET_EXPANSION_CURSOR` | `$ABBR_LINE_CURSOR_MARKER`
+`ABBR_EXPANSION_CURSOR_MARKER` | string | See `ABBR_SET_EXPANSION_CURSOR` | `$ABBR_LINE_CURSOR_MARKER` | Cannot contain `^`. See [issue #140](https://github.com/olets/zsh-abbr/issues/140).
 `ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (see [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`add`](/commands.html#add)) | 0
 `ABBR_LINE_CURSOR_MARKER` | string | See `ABBR_SET_LINE_CURSOR` | %
 `ABBR_PRECMD_LOGS` | integer | ⚠️ DEPRECATED ⚠️ If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
