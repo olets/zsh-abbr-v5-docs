@@ -1,8 +1,8 @@
-import * as dotenv from 'dotenv';
-import { defaultTheme } from 'vuepress';
-import { docsearchPlugin } from '@vuepress/plugin-docsearch';
-import { shikiPlugin } from '@vuepress/plugin-shiki';
-import { tocPlugin } from '@vuepress/plugin-toc';
+import * as dotenv from "dotenv";
+import { defaultTheme } from "vuepress";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { shikiPlugin } from "@vuepress/plugin-shiki";
+import { tocPlugin } from "@vuepress/plugin-toc";
 
 export default {
   // https://v2.vuepress.vuejs.org/reference/config.html#head
@@ -64,15 +64,13 @@ export default {
     ],
 
     // social metas
-    [
-      "meta",
-      { property: "og:title", content: "zsh-abbr" },
-    ],
+    ["meta", { property: "og:title", content: "zsh-abbr" }],
     [
       "meta",
       {
         property: "og:description",
-        content: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
+        content:
+          "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
       },
     ],
     [
@@ -99,7 +97,8 @@ export default {
       "meta",
       {
         name: "twitter:description",
-        content: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
+        content:
+          "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
       },
     ],
     [
@@ -115,35 +114,38 @@ export default {
       "script",
       {
         src: "https://cdn.usefathom.com/script.js",
-        'data-site': "VZXVXKRZ",
-        'defer': true,
-      }
+        "data-site": "VZXVXKRZ",
+        defer: true,
+      },
     ],
     [
       "script",
       {
         src: "/js/analytics.js",
-      }
+      },
     ],
 
     // Font
     [
-      "link", {
-        "rel": "preconnect",
-        "href": "https://fonts.googleapis.com"
+      "link",
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
       },
     ],
     [
-      "link", {
-        "rel": "preconnect",
-        "href": "https://fonts.gstatic.com",
-        "crossorigin": "true",
+      "link",
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "true",
       },
     ],
     [
-      "link", {
-        "href": "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
-        "rel": "stylesheet",
+      "link",
+      {
+        href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
+        rel: "stylesheet",
       },
     ],
   ],
@@ -152,7 +154,8 @@ export default {
   // https://v2.vuepress.vuejs.org/guide/configuration.html#site-config
   lang: "en-US",
   title: "zsh-abbr v4",
-  description: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
+  description:
+    "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
 
   markdown: {
     links: {
@@ -160,8 +163,8 @@ export default {
         class: "external-link",
         rel: "",
         target: "",
-      }
-    }
+      },
+    },
   },
 
   // theme and its config
@@ -176,10 +179,10 @@ export default {
         children: [
           {
             text: "v5.x",
-            "link": "https://zsh-abbr.olets.dev",
+            link: "https://zsh-abbr.olets.dev",
             target: "_self",
           },
-        ]
+        ],
       },
       {
         text: "Changelog",
