@@ -191,6 +191,16 @@ export default {
         text: "v5",
         children: [
           {
+            text: "v6",
+            link: "https://v6.zsh-abbr.olets.dev",
+            target: "_self",
+          },
+          {
+            text: "v5",
+            link: "",
+            target: "_self",
+          },
+          {
             text: "v4",
             link: "https://v4.zsh-abbr.olets.dev",
             target: "_self",
