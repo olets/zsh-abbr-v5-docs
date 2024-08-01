@@ -175,11 +175,21 @@ export default {
     docsRepo: "olets/zsh-abbr-v4-docs",
     navbar: [
       {
-        text: "v4.x",
+        text: "v4",
         children: [
           {
-            text: "v5.x",
+            text: "v6",
+            link: "https://v6.zsh-abbr.olets.dev",
+            target: "_self",
+          },
+          {
+            text: "v5",
             link: "https://zsh-abbr.olets.dev",
+            target: "_self",
+          },
+          {
+            text: "v4",
+            link: "",
             target: "_self",
           },
         ],
