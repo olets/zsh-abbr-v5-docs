@@ -232,3 +232,7 @@ for substitution in ${(f)"$(defaults read ~/Library/Preferences/.GlobalPreferenc
   abbr add [options] "$substitution"
 done
 ```
+
+### Suggestions
+
+For [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) integration, use [zsh-autosuggestions-abbreviations-strategy](https://github.com/olets/zsh-autosuggestions-abbreviations-strategy).
