@@ -15,10 +15,18 @@ brew install olets/tap/zsh-abbr
 and follow the post-install instructions logged to the terminal.
 
 :::tip
-`brew upgrade` will upgrade you to the latest version, even if it's a major version change. Want to stay on this major version until you _choose_ to upgrade to the next? Instead of the above command, run 
+`brew upgrade` will upgrade you to the latest version, even if it's a major version change.
+
+Want to stay on this major version until you _choose_ to upgrade to the next? When installing zsh-abbr with Homebrew for the first time, run
 
 ```shell:no-line-numbers
 brew install olets/tap/zsh-abbr@5
+```
+
+If you've already installed `olets/tap/zsh-abbr` with Homebrew, you can switch to the v5 formula by running
+
+```shell:no-line-numbers
+brew uninstall --force zsh-abbr && brew install olets/tap/zsh-abbr@5
 ```
 :::
 
