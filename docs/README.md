@@ -1,7 +1,10 @@
 # zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr)
 
-![splash card: the text '% abbr' as green neon lettering](/images/zsh-abbr.png)
+:::danger Heads Up
+v6 is coming, with breaking changes. If you do advanced configuration, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
+:::
 
+![splash card: the text '% abbr' as green neon lettering](/images/zsh-abbr.png)
 
 **zsh-abbr** is the zsh manager for **auto-expanding abbreviations** - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.
 

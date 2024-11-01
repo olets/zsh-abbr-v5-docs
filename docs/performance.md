@@ -6,6 +6,10 @@ next:
 
 # Performance
 
+:::danger Heads Up
+v6 is coming, with breaking changes. If you do advanced configuration, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
+:::
+
 zsh-abbr adds roughly 13ms + 1.65ms/abbreviation to first prompt lag, 20ms + 1.65ms/abbreviation to first command lag, and 13ms + 1.65ms/abbreviation to exit time.
 
 Explanations of the measures are at <https://github.com/romkatv/zsh-bench#what-it-measures>.

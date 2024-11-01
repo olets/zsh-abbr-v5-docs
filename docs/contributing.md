@@ -9,6 +9,10 @@ next:
 
 # Contributing
 
+:::danger Heads Up
+v6 is coming, with breaking changes. If you do advanced configuration, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
+:::
+
 Thanks for your interest. Contributions are welcome!
 
 Both zsh-abbr and its documentation are released with a Contributor Code of Conduct. By participating in either project you agree to abide by its terms.
