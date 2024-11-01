@@ -32,6 +32,10 @@ brew uninstall --force zsh-abbr && brew install olets/tap/zsh-abbr@5
 
 ### Linux package repositories
 
+::: warning
+These may lag behind the official release channels.
+:::
+
 Community members have created packages in some Linux distros' package repositories. These include
 
 - [Arch](https://aur.archlinux.org/packages/zsh-abbr)
