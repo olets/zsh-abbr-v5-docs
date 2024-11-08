@@ -1,7 +1,7 @@
 # Migrating between versions
 
 :::danger Heads Up
-v6 is coming, with breaking changes. If you do advanced configuration, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
+v6 is coming, with breaking changes for users with advanced configurations. If that's you, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
 :::
 
 [[toc]]
