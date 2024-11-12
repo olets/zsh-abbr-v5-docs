@@ -1,4 +1,4 @@
-# zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr)
+# zsh-abbr ![GitHub release (latest v5)](https://img.shields.io/github/v/release/olets/zsh-abbr?filter=v5.*&label=legacy%20release&color=A20707)
 
 :::tip Heads Up
 v6 is out. See [the v5.x -> v6.x migration guide](https://zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6)
