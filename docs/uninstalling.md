@@ -1,7 +1,7 @@
 # Uninstalling
 
-:::danger Heads Up
-v6 is coming, with breaking changes for users with advanced configurations. If that's you, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
+:::tip Heads Up
+v6 is out. See [the v5.x -> v6.x migration guide](https://zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6)
 :::
 
 Delete the session data storage directory

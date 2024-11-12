@@ -1,7 +1,7 @@
 # Types
 
-:::danger Heads Up
-v6 is coming, with breaking changes for users with advanced configurations. If that's you, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
+:::tip Heads Up
+v6 is out. See [the v5.x -> v6.x migration guide](https://zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6)
 :::
 
 Some zsh-abbr commands take a **type** parameter. There are two supported scopes: **regular** and **global**. Regular abbreviations expand only at the start of the command line. Global abbreviations expand anywhere in the command line.

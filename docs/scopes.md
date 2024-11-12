@@ -6,8 +6,8 @@ prev:
 
 # Scopes
 
-:::danger Heads Up
-v6 is coming, with breaking changes for users with advanced configurations. If that's you, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
+:::tip Heads Up
+v6 is out. See [the v5.x -> v6.x migration guide](https://zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6)
 :::
 
 Some zsh-abbr commands take a **scope** parameter. There are two supported scopes: **session** and **user**. Session abbreviations are available in the terminal session they are created in. User abbreviations are available in all terminal sessions.

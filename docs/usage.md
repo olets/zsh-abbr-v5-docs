@@ -1,7 +1,7 @@
 # Essential commands
 
-:::danger Heads Up
-v6 is coming, with breaking changes for users with advanced configurations. If that's you, read [the v5.x -> v6.x migration guide](https://v6.zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6) and/or read about [pinning v5.x](./installation.md).
+:::tip Heads Up
+v6 is out. See [the v5.x -> v6.x migration guide](https://zsh-abbr.olets.dev/migrating-between-versions.html#upgrading-from-v5-to-v6)
 :::
 
 zsh-abbr has broad capabilities for managing abbreviations. Add, rename, erase, import, export. Customize the interactive behavior. Customize where data is stored. There's a lot you can learn. Here's what you need to know:
